@@ -4,7 +4,7 @@ from time import sleep
 
 class Response(object):
 
-    def __init__(self, connection, string, cooldown = 10):
+    def __init__(self, connection, string, cooldown=10):
         self.connection = connection
         self.string = string
         if isinstance(cooldown, int):

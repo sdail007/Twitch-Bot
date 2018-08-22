@@ -4,7 +4,8 @@ from InvocationList import InvocationList
 
 class ChatMessage(object):
     MessageReceived = InvocationList()
-    regex = re.compile('(?P<Sender>.*)!(.*)\\b(?P<MessageType>\\S+)\\b #(?P<Channel>.*)')
+    regex = re.compile(r'(?P<Sender>.*)!(.*)\b(?P<MessageType>\S+)\b'
+                       r' #(?P<Channel>.*)')
 
     def __init__(self, string):
         if not isinstance(string, str):
@@ -26,7 +27,6 @@ class ChatMessage(object):
 
 
 class PrivMsg(ChatMessage):
-
     def __init__(self, string):
         pass
 
