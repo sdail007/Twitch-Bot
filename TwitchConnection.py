@@ -40,7 +40,11 @@ class TwitchConnection(object):
         def on_close(ws):
             print 'Closed'
 
-        self.ws = websocket.WebSocketApp('wss://irc-ws.chat.twitch.tv:443', on_message=on_message, on_close=on_close, on_error=on_error, on_open=on_open)
+        self.ws = websocket.WebSocketApp('wss://irc-ws.chat.twitch.tv:443',
+                                         on_message=on_message,
+                                         on_close=on_close,
+                                         on_error=on_error,
+                                         on_open=on_open)
 
     def start(self):
         self.ws.run_forever()
