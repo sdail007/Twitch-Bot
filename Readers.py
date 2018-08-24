@@ -14,11 +14,11 @@ class Triggers(object):
         with codecs.open(file, encoding="utf-8-sig", mode="r") as f:
             stuff = json.load(f, encoding="utf-8")
 
-        self.Triggers = {"key": "value"}
+        self.Triggers = {}
         for key, value in stuff.items():
             t = Trigger(value)
             self.Triggers[key] = t
-            print "triggers-loaded: ",t
+            print "triggers-loaded: ", t
         return
 
 
@@ -29,7 +29,7 @@ class Cooldowns(object):
         with codecs.open(file, encoding="utf-8-sig", mode="r") as f:
             stuff = json.load(f, encoding="utf-8")
 
-        self.Cooldowns = {"key": "value"}
+        self.Cooldowns = {}
         for key, value in stuff.items():
             c = Cooldown(value["Timeout"])
             self.Cooldowns[key] = c
@@ -46,7 +46,7 @@ class Responses(object):
         with codecs.open(file, encoding="utf-8-sig", mode="r") as f:
             stuff = json.load(f, encoding="utf-8")
 
-        self.Responses = {"key": "value"}
+        self.Responses = {}
         for key, value in stuff.items():
             match = Responses.fkregex.match(value["cooldown"])
             if match:

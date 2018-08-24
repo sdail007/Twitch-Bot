@@ -10,7 +10,7 @@ class Trigger(object):
     def invoke(self, message):
         if message.Message != self.text:
             return
-        print str(self) + " triggered"
+
         self.Triggered.invoke(message)
 
     def __str__(self):

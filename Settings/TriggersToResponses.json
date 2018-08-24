@@ -12,7 +12,7 @@
   "3" :
   {
     "Trigger" : "3",
-    "Response" : "3"
+    "Response" :"3"
   },
   "4" :
   {
@@ -27,6 +27,28 @@
   "6" :
   {
     "Trigger" : "6",
+    "Response" : "6"
+  },
+  "7" :
+  {
+    "Trigger" : "7",
     "Response" : "7"
+  },
+  "8" :
+  {
+    "Trigger" : "8",
+    "Response" : "8"
+  }
+  ,
+  "9" :
+  {
+    "Trigger" : "9",
+    "Response" : "9"
+  }
+  ,
+  "10" :
+  {
+    "Trigger" : "10",
+    "Response" : "10"
   }
 }

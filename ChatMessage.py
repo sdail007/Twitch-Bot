@@ -1,6 +1,4 @@
-#Embedded file name: C:\Users\Stephen\PycharmProjects\TwitchPlaysTicTacToe\ChatMessage.py
 import re
-from InvocationList import InvocationList
 
 class ChatMessage(object):
     regex = re.compile(r'(?P<Sender>.*)!(.*)\b(?P<MessageType>\S+)\b'

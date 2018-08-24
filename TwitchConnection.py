@@ -17,9 +17,11 @@ class TwitchConnection(object):
 
         def on_message(ws, message):
             message = message.rstrip('\r\n')
+
             if message == TwitchConnection.ping:
                 self.pong()
                 return
+
             chat_message = ChatMessage(message)
             self.MessageReceived.invoke(chat_message)
 
