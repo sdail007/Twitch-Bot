@@ -1,9 +1,8 @@
-#Embedded file name: C:\Users\Stephen\PycharmProjects\TwitchPlaysTicTacToe\Response.py
 from Cooldown import Cooldown
 from time import sleep
 
-class Response(object):
 
+class Response(object):
     def __init__(self, connection, string, cooldown=10):
         self.connection = connection
         self.string = string
@@ -29,7 +28,6 @@ class Response(object):
 
 
 class SoundResponse(Response):
-
     def __init__(self, soundFile, trigger):
         self.soundFile = soundFile
         self.trigger = trigger

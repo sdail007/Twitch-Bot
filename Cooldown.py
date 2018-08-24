@@ -1,4 +1,3 @@
-#Embedded file name: C:\Users\Stephen\PycharmProjects\TwitchPlaysTicTacToe\Cooldown.py
 import datetime
 from datetime import timedelta
 

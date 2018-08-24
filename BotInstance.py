@@ -1,8 +1,7 @@
 import thread
-import os
-from AuthenticatedUser import AuthenticatedUser
 from TwitchConnection import TwitchConnection
 import Readers
+
 
 class BotInstance(object):
     def __init__(self, user, channel, dir):
@@ -13,16 +12,16 @@ class BotInstance(object):
         self.responses = Readers.Responses(dir, self.connection, self.cooldowns)
         self.links = Readers.Links(dir)
 
-        def MessageReceived(msg):
-            print(msg)
-            for key, value in self.triggers.Triggers.items():
-                value.invoke(msg)
-
         for key, value in self.links.__dict__.items():
             r = self.responses.Responses[value["Response"]]
             t = self.triggers.Triggers[value["Trigger"]]
             r.addTrigger(t)
             print "linking: ", t, " to ", r
+
+        def MessageReceived(msg):
+            print(msg)
+            for key, value in self.triggers.Triggers.items():
+                value.invoke(msg)
 
         self.connection.MessageReceived.add(MessageReceived)
 

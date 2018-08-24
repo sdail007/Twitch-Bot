@@ -22,7 +22,4 @@ class ChatMessage(object):
 
 class PrivMsg(ChatMessage):
     def __init__(self, string):
-        pass
-
-    def invoke(self):
-        pass
+        return

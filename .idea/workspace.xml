@@ -60,11 +60,8 @@
       <file leaf-file-name="Thing.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Thing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="e#1#10#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -72,8 +69,8 @@
       <file leaf-file-name="BotInstance.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BotInstance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+            <state relative-caret-position="204">
+              <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -84,8 +81,8 @@
       <file leaf-file-name="TwitchConnection.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TwitchConnection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="46" lean-forward="true" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+            <state relative-caret-position="-128">
+              <caret line="30" column="54" lean-forward="true" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
               <folding>
                 <element signature="e#95#111#0" expanded="true" />
               </folding>
@@ -96,8 +93,8 @@
       <file leaf-file-name="Readers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Readers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+            <state relative-caret-position="416">
+              <caret line="75" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -107,37 +104,19 @@
       </file>
       <file leaf-file-name="ChatMessage.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChatMessage.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="Trigger.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Trigger.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Settings_Module.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/OneDrive/Streamlabs Chatbot/Services/Scripts/lib/Settings_Module.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+            <state>
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="soundPlayer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/OneDrive/Streamlabs Chatbot/Services/Scripts/lib/soundPlayer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="59" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="59" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#86#127#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -146,8 +125,8 @@
       <file leaf-file-name="Response.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Response.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+            <state relative-caret-position="340">
+              <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
               <folding>
                 <element signature="e#87#116#0" expanded="true" />
               </folding>
@@ -159,7 +138,9 @@
         <entry file="file://$PROJECT_DIR$/Cooldown.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="86" lean-forward="true" selection-start-column="86" selection-end-column="86" />
+              <folding>
+                <element signature="e#87#102#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -181,24 +162,24 @@
       <list>
         <option value="$PROJECT_DIR$/Token.json" />
         <option value="$USER_HOME$/OneDrive/Streamlabs Chatbot/Services/Scripts/lib/Settings_Module.py" />
-        <option value="$PROJECT_DIR$/Cooldown.py" />
-        <option value="$PROJECT_DIR$/Response.py" />
-        <option value="$PROJECT_DIR$/TwitchConnection.py" />
-        <option value="$PROJECT_DIR$/Trigger.py" />
-        <option value="$PROJECT_DIR$/Readers.py" />
         <option value="$PROJECT_DIR$/Triggers.json" />
         <option value="$PROJECT_DIR$/Responses.json" />
         <option value="$PROJECT_DIR$/TriggersToResponses.json" />
-        <option value="$PROJECT_DIR$/ChatMessage.py" />
         <option value="$PROJECT_DIR$/Cooldowns.json" />
+        <option value="$PROJECT_DIR$/Trigger.py" />
+        <option value="$PROJECT_DIR$/Cooldown.py" />
+        <option value="$PROJECT_DIR$/Response.py" />
+        <option value="$PROJECT_DIR$/ChatMessage.py" />
+        <option value="$PROJECT_DIR$/Readers.py" />
+        <option value="$PROJECT_DIR$/TwitchConnection.py" />
         <option value="$PROJECT_DIR$/BotInstance.py" />
         <option value="$PROJECT_DIR$/Thing.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-15" />
-    <option name="y" value="45" />
+    <option name="x" value="436" />
+    <option name="y" value="37" />
     <option name="width" value="2211" />
     <option name="height" value="2061" />
   </component>
@@ -296,17 +277,104 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Thing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BotInstance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
           <folding>
-            <element signature="e#1#10#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TwitchConnection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="25" column="46" lean-forward="true" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+          <folding>
+            <element signature="e#95#111#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Readers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatMessage.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Trigger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#86#127#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/OneDrive/Streamlabs Chatbot/Services/Scripts/lib/Settings_Module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/OneDrive/Streamlabs Chatbot/Services/Scripts/lib/soundPlayer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="59" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+          <folding>
+            <element signature="e#87#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cooldown.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="86" lean-forward="true" selection-start-column="86" selection-end-column="86" />
+          <folding>
+            <element signature="e#87#102#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Thing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -429,9 +497,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="47" column="26" lean-forward="true" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
-          <folding>
-            <element signature="e#1#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -483,39 +548,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cooldown.py">
+    <entry file="file://$USER_HOME$/OneDrive/Streamlabs Chatbot/Services/Scripts/lib/soundPlayer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="86" lean-forward="true" selection-start-column="86" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Response.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+        <state relative-caret-position="102">
+          <caret line="7" column="59" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="59" />
           <folding>
-            <element signature="e#87#116#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Trigger.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChatMessage.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Readers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -548,16 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TwitchConnection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="46" lean-forward="true" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
-          <folding>
-            <element signature="e#95#111#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/OneDrive/Streamlabs Chatbot/Services/Scripts/lib/Settings_Module.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -568,20 +596,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/OneDrive/Streamlabs Chatbot/Services/Scripts/lib/soundPlayer.py">
+    <entry file="file://$PROJECT_DIR$/Cooldown.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="59" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="59" />
+        <state>
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#87#102#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+          <folding>
+            <element signature="e#87#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Trigger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#86#127#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatMessage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Readers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TwitchConnection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-128">
+          <caret line="30" column="54" lean-forward="true" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+          <folding>
+            <element signature="e#95#111#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BotInstance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+        <state relative-caret-position="204">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -590,11 +663,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Thing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#1#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
         </state>
       </provider>
     </entry>

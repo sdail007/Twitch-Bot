@@ -7,6 +7,7 @@ from Trigger import Trigger
 from Cooldown import Cooldown
 from Response import Response
 
+
 class Triggers(object):
     def __init__(self, folder):
         file = os.path.join(folder, "Triggers.json")
@@ -72,4 +73,3 @@ class Links(object):
 
     def __iter__(self):
         return self.__dict__
-

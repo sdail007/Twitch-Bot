@@ -1,9 +1,9 @@
-#Embedded file name: C:\Users\Stephen\PycharmProjects\TwitchPlaysTicTacToe\TwitchConnection.py
 import websocket
 import thread
 from ChatMessage import ChatMessage
 from AuthenticatedUser import AuthenticatedUser
 from InvocationList import InvocationList
+
 
 class TwitchConnection(object):
     ping = 'PING :tmi.twitch.tv'
@@ -19,14 +19,13 @@ class TwitchConnection(object):
             message = message.rstrip('\r\n')
 
             if message == TwitchConnection.ping:
-                self.pong()
+                self.ws.send('PONG :tmi.twitch.tv')
                 return
 
             chat_message = ChatMessage(message)
             self.MessageReceived.invoke(chat_message)
 
         def on_open(ws):
-
             def run(*args):
                 self.ws.send('PASS ' + self.user.token)
                 self.ws.send('NICK ' + self.user.nick)
@@ -34,7 +33,6 @@ class TwitchConnection(object):
                 self.ws.send('CAP REQ :twitch.tv/tags')
                 self.ws.send('CAP REQ :twitch.tv/membership')
                 self.ws.send('CAP REQ :twitch.tv/commands')
-
             thread.start_new_thread(run, ())
 
         def on_error(ws, error):
@@ -53,17 +51,13 @@ class TwitchConnection(object):
     def start(self):
         self.ws.run_forever()
 
-    def __del__(self):
-        self.ws.send('PART #' + self.channel)
-        self.ws.close()
-
-    def pong(self):
-        self.ws.send('PONG :tmi.twitch.tv')
-        print 'pong'
-
     def send_message(self, message):
 
         def run(*args):
             self.ws.send('PRIVMSG #' + self.channel + ' :' + message)
 
         thread.start_new_thread(run, ())
+
+    def __del__(self):
+        self.ws.send('PART #' + self.channel)
+        self.ws.close()

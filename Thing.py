@@ -1,6 +1,6 @@
 import os
 from AuthenticatedUser import AuthenticatedUser
-from BotInstance import  BotInstance
+from BotInstance import BotInstance
 
 if __name__ == "__main__":
     tokenFile = os.path.join(os.path.dirname(__file__), "Token.json")

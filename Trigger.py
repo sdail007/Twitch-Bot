@@ -1,4 +1,3 @@
-#Embedded file name: C:\Users\Stephen\PycharmProjects\TwitchPlaysTicTacToe\Trigger.py
 from InvocationList import InvocationList
 import re
 
