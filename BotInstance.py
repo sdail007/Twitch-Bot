@@ -16,7 +16,7 @@ class BotInstance(object):
             r = self.responses.Responses[value["Response"]]
             t = self.triggers.Triggers[value["Trigger"]]
             r.addTrigger(t)
-            print "linking: ", t, " to ", r
+            #print "linking: ", t, " to ", r
 
         def MessageReceived(msg):
             print(msg)

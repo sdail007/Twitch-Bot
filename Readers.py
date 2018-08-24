@@ -19,7 +19,7 @@ class Triggers(object):
         for key, value in stuff.items():
             t = Trigger(value)
             self.Triggers[key] = t
-            print "triggers-loaded: ", t
+            #print "triggers-loaded: ", t
         return
 
 
@@ -34,7 +34,7 @@ class Cooldowns(object):
         for key, value in stuff.items():
             c = Cooldown(value["Timeout"])
             self.Cooldowns[key] = c
-            print "cooldowns-loaded: ", c
+            #print "cooldowns-loaded: ", c
         return
 
 
@@ -58,7 +58,7 @@ class Responses(object):
 
             r = Response(connection, value["text"], cooldown)
             self.Responses[key] = r
-            print "responses-loaded: ",  r
+            #print "responses-loaded: ",  r
         return
 
 

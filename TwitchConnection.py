@@ -12,7 +12,7 @@ class TwitchConnection(object):
         if not isinstance(user, AuthenticatedUser):
             raise TypeError('user must be set to an AuthenticatedUser')
         self.user = user
-        self.channel = channel
+        self.channel = channel.lower()
         self.MessageReceived = InvocationList()
 
         def on_message(ws, message):
@@ -33,6 +33,8 @@ class TwitchConnection(object):
                 self.ws.send('CAP REQ :twitch.tv/tags')
                 self.ws.send('CAP REQ :twitch.tv/membership')
                 self.ws.send('CAP REQ :twitch.tv/commands')
+
+                print "Connected to ", self.channel
             thread.start_new_thread(run, ())
 
         def on_error(ws, error):
