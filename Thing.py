@@ -7,45 +7,35 @@ from ChatMessage import ChatMessage
 from Response import Response
 from Cooldown import Cooldown
 
-global connection
+import Readers
 
-def MessageReceived(msg):
-    print(msg)
-    for trigger in Trigger.Triggers:
-        trigger.invoke(msg)
+global connection
 
 
 if __name__ == "__main__":
     tokenFile = os.path.join(os.path.dirname(__file__), "Token.json")
     botuser = AuthenticatedUser(tokenFile)
 
-    connection = TwitchConnection(botuser, 'truelove429')
+    connection = TwitchConnection(botuser, 'fullgrowngaming')
 
-    ChatMessage.MessageReceived.add(MessageReceived)
+    def MessageReceived(msg):
+        print(msg)
+        for key, value in triggers.Triggers.items():
+            value.invoke(msg)
 
-    eevee = Trigger("!eevee")
-    r1 = Response(connection, "Hi I'm Eevee", 0)
-    r1.addTrigger(eevee)
+    dir = os.path.dirname(__file__)
+    triggers = Readers.Triggers(dir)
+    cooldowns = Readers.Cooldowns(dir)
+    responses = Readers.Responses(dir, connection, cooldowns)
+    links = Readers.Links(dir)
 
-    vulpix = Trigger("!vulpix")
-    r2 = Response(connection, "Hi I'm Vulpix", 0)
-    r2.addTrigger(vulpix)
+    for key, value in links.__dict__.items():
+        r = responses.Responses[value["Response"]]
+        t = triggers.Triggers[value["Trigger"]]
+        r.addTrigger(t)
+        print "linking: ", t, " to ", r
 
-    stone = Cooldown(10)
-
-    vaporeon = Trigger("!water")
-    flareon = Trigger("!fire")
-    jolteon = Trigger("!thunder")
-
-    rv = Response(connection, "/color Blue\n/me MWEEE I'm Vaporeon!", stone)
-    rf = Response(connection, "/color FireBrick\n/me MWEEE I'm Flareon!",
-                  stone)
-    rj = Response(connection, "/color GoldenRod\n/me MWEEE I'm Jolteon!",
-                  stone)
-
-    rv.addTrigger(vaporeon)
-    rf.addTrigger(flareon)
-    rj.addTrigger(jolteon)
+    connection.MessageReceived.add(MessageReceived)
 
     def startBot():
         global connection

@@ -14,3 +14,6 @@ class Cooldown(object):
             return False
         self.lastUsed = datetime.datetime.now()
         return True
+
+    def __str__(self):
+        return str(self.cooldown)

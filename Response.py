@@ -24,6 +24,9 @@ class Response(object):
                 self.connection.send_message(m)
                 sleep(0.5)
 
+    def __str__(self):
+        return self.string + " " + str(self.cooldown)
+
 
 class SoundResponse(Response):
 

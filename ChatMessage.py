@@ -3,7 +3,6 @@ import re
 from InvocationList import InvocationList
 
 class ChatMessage(object):
-    MessageReceived = InvocationList()
     regex = re.compile(r'(?P<Sender>.*)!(.*)\b(?P<MessageType>\S+)\b'
                        r' #(?P<Channel>.*)')
 
@@ -21,9 +20,6 @@ class ChatMessage(object):
 
     def __str__(self):
         return self.Sender + ': ' + self.Message
-
-    def invoke(self):
-        ChatMessage.MessageReceived.invoke(self)
 
 
 class PrivMsg(ChatMessage):

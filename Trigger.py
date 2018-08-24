@@ -3,24 +3,21 @@ from InvocationList import InvocationList
 import re
 
 class Trigger(object):
-    Triggers = []
-
     def __init__(self, text):
         self.text = text
         self.Triggered = InvocationList()
-        Trigger.Triggers.append(self)
 
     def invoke(self, message):
         if message.Message != self.text:
             return
+        print str(self) + " triggered"
         self.Triggered.invoke(message)
 
-    def __del__(self):
-        Trigger.Triggers.remove(self)
+    def __str__(self):
+        return self.text
 
 
 class RegexTrigger(Trigger):
-
     def __init__(self, text):
         super(text)
         self.Regex = re.compile(text)

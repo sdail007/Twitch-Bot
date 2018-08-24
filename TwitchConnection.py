@@ -3,6 +3,7 @@ import websocket
 import thread
 from ChatMessage import ChatMessage
 from AuthenticatedUser import AuthenticatedUser
+from InvocationList import InvocationList
 
 class TwitchConnection(object):
     ping = 'PING :tmi.twitch.tv'
@@ -12,6 +13,7 @@ class TwitchConnection(object):
             raise TypeError('user must be set to an AuthenticatedUser')
         self.user = user
         self.channel = channel
+        self.MessageReceived = InvocationList()
 
         def on_message(ws, message):
             message = message.rstrip('\r\n')
@@ -19,7 +21,7 @@ class TwitchConnection(object):
                 self.pong()
                 return
             chat_message = ChatMessage(message)
-            chat_message.invoke()
+            self.MessageReceived.invoke(chat_message)
 
         def on_open(ws):
 
