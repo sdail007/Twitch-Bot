@@ -13,26 +13,31 @@ class BotInstance(object):
         self.responses = Readers.Responses(dir, self.connection, self.cooldowns)
         self.links = Readers.Links(dir)
 
+        self.components = []
+
         for key, value in self.links.__dict__.items():
             r = self.responses.Responses[value["Response"]]
             t = self.triggers.Triggers[value["Trigger"]]
             r.addTrigger(t)
             #print "linking: ", t, " to ", r
 
-        self.eevee = Eevee(self.connection)
+        self.components.append(Eevee(self.connection))
 
         def MessageReceived(msg):
             print(msg)
             for key, value in self.triggers.Triggers.items():
                 value.invoke(msg)
-            self.eevee.MessageReceived(msg)
+            for component in self.components:
+                for trigger in component.triggers:
+                    trigger.invoke(msg)
 
         self.connection.MessageReceived.add(MessageReceived)
 
-        def startBot():
-            self.connection.start()
+        thread.start_new_thread(self.connection.start(), ())
 
-        thread.start_new_thread(startBot, ())
+    def shutdown(self):
+        for component in self.components:
+            component.shutdown()
 
     def send_message(self, msg):
         self.connection.send_message(msg)

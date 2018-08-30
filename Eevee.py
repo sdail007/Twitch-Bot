@@ -1,18 +1,18 @@
 from EeveeResponse import EeveeResponse
 from RockPaperScissors import *
+from BotComponent import BotComponent
 
 
-class Eevee(object):
+class Eevee(BotComponent):
     MIN_HAPPINESS = 0
     MAX_HAPPINESS = 600
 
     HappinessTick = 60
 
     def __init__(self, connection):
-        self.connection = connection
+        super(Eevee, self).__init__(connection)
 
         self.Happiness = 300
-        self.triggers = []
         self.t = None
 
         def HappyTick():
@@ -31,11 +31,7 @@ class Eevee(object):
         HappyTick()
         return
 
-    def __del__(self):
-        self.STAHP()
-        return
-
-    def STAHP(self):
+    def shutdown(self):
         self.t.cancel()
         return
 

@@ -3,26 +3,30 @@ from threading import Timer
 import random
 from Trigger import *
 from Response import *
+from BotComponent import BotComponent
 
 
 class RockPaperScissorsGame(object):
     Games = {}
 
     @classmethod
-    def Initialize(cls, eevee):
+    def Initialize(cls, component):
+        if not isinstance(component, BotComponent):
+            raise TypeError('component must be BotComponent')
+
         def startRPS(msg, *args):
             if msg.Sender in RockPaperScissorsGame.Games:
                 return
 
-            game = RockPaperScissorsGame(msg.Sender, eevee)
+            game = RockPaperScissorsGame(msg.Sender, component)
             RockPaperScissorsGame.Games[msg.Sender] = game
-            eevee.connection.send_message("LETS PLAY! GO!")
+            component.connection.send_message("LETS PLAY! GO!")
             game.rps.Start()
             return
 
         def playRPS(msg, *args):
             if msg.Sender not in RockPaperScissorsGame.Games:
-                eevee.connection.send_message("@" + msg.Sender + " we're not "
+                component.connection.send_message("@" + msg.Sender + " we're not "
                                                                  "playing "
                                                                  "silly!")
                 return
@@ -45,11 +49,11 @@ class RockPaperScissorsGame(object):
         rpsPlayResp.addTrigger(rpsP)
         rpsPlayResp.addTrigger(rpsS)
 
-        eevee.triggers.append(rps1)
-        eevee.triggers.append(rps2)
-        eevee.triggers.append(rpsR)
-        eevee.triggers.append(rpsP)
-        eevee.triggers.append(rpsS)
+        component.triggers.append(rps1)
+        component.triggers.append(rps2)
+        component.triggers.append(rpsR)
+        component.triggers.append(rpsP)
+        component.triggers.append(rpsS)
 
     def __init__(self, user, eevee):
         self.user = user
@@ -123,8 +127,9 @@ class RockPaperScissors(object):
         self.Timeout.cancel()
         playerMove = playerMove.lower()
 
-        if playerMove != RockPaperScissors.rock and playerMove != RockPaperScissors.paper \
-                and playerMove != RockPaperScissors.scissors:
+        if playerMove != RockPaperScissors.rock and \
+                playerMove != RockPaperScissors.paper and \
+                playerMove != RockPaperScissors.scissors:
             return
 
         value = random.randint(0, 2)
@@ -143,7 +148,7 @@ class RockPaperScissors(object):
         else:
             result = RockPaperScissors.loss
 
-        time.sleep(0.5)
+        time.sleep(1)
 
         self.onGameOver(result)
         return

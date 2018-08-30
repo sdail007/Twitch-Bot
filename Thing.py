@@ -25,7 +25,7 @@ def main(argv):
         message = raw_input('Do a barrel roll: ')
         print str(message)
 
-    bot.eevee.STAHP()
+    bot.shutdown()
 
 
 if __name__ == "__main__":

@@ -14,8 +14,8 @@
       <file leaf-file-name="Thing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Thing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="306">
+              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -23,12 +23,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Eevee.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BotInstance.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BotInstance.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Eevee.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Eevee.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="527">
+              <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BotComponent.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BotComponent.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RockPaperScissors.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RockPaperScissors.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -37,22 +71,10 @@
       <file leaf-file-name="Response.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Response.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="38" column="46" lean-forward="true" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+            <state relative-caret-position="187">
+              <caret line="11" column="63" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="63" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RockPaperScissors.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RockPaperScissors.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,19 +127,20 @@
         <option value="$PROJECT_DIR$/Trigger.py" />
         <option value="$PROJECT_DIR$/TwitchConnection.py" />
         <option value="$PROJECT_DIR$/EeveeResponse.py" />
-        <option value="$PROJECT_DIR$/BotInstance.py" />
-        <option value="$PROJECT_DIR$/Thing.py" />
         <option value="$PROJECT_DIR$/Response.py" />
         <option value="$PROJECT_DIR$/RockPaperScissors.py" />
+        <option value="$PROJECT_DIR$/Thing.py" />
         <option value="$PROJECT_DIR$/Eevee.py" />
+        <option value="$PROJECT_DIR$/BotComponent.py" />
+        <option value="$PROJECT_DIR$/BotInstance.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="940" />
-    <option name="y" value="691" />
-    <option name="width" value="815" />
-    <option name="height" value="543" />
+    <option name="x" value="25" />
+    <option name="y" value="10" />
+    <option name="width" value="2777" />
+    <option name="height" value="1979" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -186,10 +209,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1292" height="732" extended-state="6" />
+    <frame x="17" y="7" width="1851" height="1319" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13673139" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.094360694" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32930845" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.500348" side_tool="true" weight="0.542811" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32888147" />
@@ -197,7 +220,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32930845" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.2883772" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="right" id="Terminal" order="3" sideWeight="0.49965206" visible="true" weight="0.29126215" />
+      <window_info active="true" anchor="right" id="Terminal" order="3" sideWeight="0.49965206" visible="true" weight="0.34394193" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -236,13 +259,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TwitchConnection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="25" column="46" lean-forward="true" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Readers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -531,16 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BotInstance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TwitchConnection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -565,16 +571,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Thing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ChatMessage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -584,8 +580,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Response.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="38" column="46" lean-forward="true" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+        <state relative-caret-position="187">
+          <caret line="11" column="63" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="63" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
@@ -594,19 +590,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RockPaperScissors.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Thing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Eevee.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="527">
+          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BotComponent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BotInstance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
