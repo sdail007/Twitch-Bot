@@ -25,6 +25,8 @@ def main(argv):
         message = raw_input('Do a barrel roll: ')
         print str(message)
 
+    bot.eevee.STAHP()
+
 
 if __name__ == "__main__":
     main(sys.argv[1:])

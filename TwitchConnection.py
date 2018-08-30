@@ -54,7 +54,6 @@ class TwitchConnection(object):
         self.ws.run_forever()
 
     def send_message(self, message):
-
         def run(*args):
             self.ws.send('PRIVMSG #' + self.channel + ' :' + message)
 

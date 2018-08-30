@@ -1,6 +1,7 @@
 import thread
 from TwitchConnection import TwitchConnection
 import Readers
+from Eevee import Eevee
 
 
 class BotInstance(object):
@@ -18,10 +19,13 @@ class BotInstance(object):
             r.addTrigger(t)
             #print "linking: ", t, " to ", r
 
+        self.eevee = Eevee(self.connection)
+
         def MessageReceived(msg):
             print(msg)
             for key, value in self.triggers.Triggers.items():
                 value.invoke(msg)
+            self.eevee.MessageReceived(msg)
 
         self.connection.MessageReceived.add(MessageReceived)
 

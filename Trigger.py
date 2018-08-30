@@ -1,6 +1,7 @@
 from InvocationList import InvocationList
 import re
 
+
 class Trigger(object):
     def __init__(self, text):
         self.text = text
@@ -18,7 +19,7 @@ class Trigger(object):
 
 class RegexTrigger(Trigger):
     def __init__(self, text):
-        super(text)
+        super(RegexTrigger, self).__init__(text)
         self.Regex = re.compile(text)
 
     def invoke(self, message):
