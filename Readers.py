@@ -8,6 +8,15 @@ from Cooldown import Cooldown
 from Response import Response
 
 
+class Settings(object):
+    def __init__(self, folder, connection):
+        self.folder = folder
+        self.triggers = Triggers(self.folder)
+        self.cooldowns = Cooldowns(self.folder)
+        self.responses = Responses(self.folder, connection, self.cooldowns)
+        self.links = Links(self.folder)
+
+
 class Triggers(object):
     def __init__(self, folder):
         file = os.path.join(folder, "Triggers.json")
@@ -19,7 +28,6 @@ class Triggers(object):
         for key, value in stuff.items():
             t = Trigger(value)
             self.Triggers[key] = t
-            #print "triggers-loaded: ", t
         return
 
 
@@ -34,7 +42,6 @@ class Cooldowns(object):
         for key, value in stuff.items():
             c = Cooldown(value["Timeout"])
             self.Cooldowns[key] = c
-            #print "cooldowns-loaded: ", c
         return
 
 
@@ -58,7 +65,6 @@ class Responses(object):
 
             r = Response(connection, value["text"], cooldown)
             self.Responses[key] = r
-            #print "responses-loaded: ",  r
         return
 
 

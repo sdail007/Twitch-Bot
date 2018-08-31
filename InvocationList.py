@@ -1,4 +1,3 @@
-#Embedded file name: C:\Users\Stephen\PycharmProjects\TwitchPlaysTicTacToe\InvocationList.py
 
 
 class InvocationList(object):

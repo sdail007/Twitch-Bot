@@ -18,11 +18,11 @@ def main(argv):
 
     bot = BotInstance(botuser, channel, dir)
 
-    message = raw_input('Do a barrel roll: ')
+    message = raw_input('> ')
 
     while message != 'q':
         bot.send_message(message)
-        message = raw_input('Do a barrel roll: ')
+        message = raw_input('> ')
         print str(message)
 
     bot.shutdown()

@@ -19,7 +19,10 @@ class TwitchConnection(object):
             message = message.rstrip('\r\n')
 
             if message == TwitchConnection.ping:
-                self.ws.send('PONG :tmi.twitch.tv')
+                def pong(*args):
+                    self.ws.send('PONG :tmi.twitch.tv')
+
+                thread.start_new_thread(pong, ())
                 return
 
             chat_message = ChatMessage(message)
@@ -51,13 +54,15 @@ class TwitchConnection(object):
                                          on_open=on_open)
 
     def start(self):
-        self.ws.run_forever()
+        def run(*args):
+            self.ws.run_forever()
+        thread.start_new_thread(run, ())
 
     def send_message(self, message):
-        def run(*args):
+        def send(*args):
             self.ws.send('PRIVMSG #' + self.channel + ' :' + message)
-
-        thread.start_new_thread(run, ())
+            print self.user.nick + ": " + message
+        thread.start_new_thread(send, ())
 
     def __del__(self):
         self.ws.send('PART #' + self.channel)

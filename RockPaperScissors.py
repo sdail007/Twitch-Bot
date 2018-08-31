@@ -6,33 +6,54 @@ from Response import *
 from BotComponent import BotComponent
 
 
-class RockPaperScissorsGame(object):
+class RockPaperScissorsAddon(object):
     Games = {}
 
-    @classmethod
-    def Initialize(cls, component):
+    def __init__(self, component, adaptor):
         if not isinstance(component, BotComponent):
             raise TypeError('component must be BotComponent')
 
+        if not isinstance(adaptor, RockPaperScissorsAdaptor):
+            raise TypeError('adaptor must be RockPaperScissorsAdaptor')
+
+        self.adaptor = adaptor
+
+        def timeout():
+            self.adaptor.timeout()
+            return
+
+        def response(msg):
+            self.adaptor.response(msg)
+            return
+
+        def gameover(sender, result):
+            self.adaptor.gameover(result)
+            del RockPaperScissorsAddon.Games[sender.user]
+            return
+
         def startRPS(msg, *args):
-            if msg.Sender in RockPaperScissorsGame.Games:
+            if msg.Sender in RockPaperScissorsAddon.Games:
                 return
 
-            game = RockPaperScissorsGame(msg.Sender, component)
-            RockPaperScissorsGame.Games[msg.Sender] = game
-            component.connection.send_message("LETS PLAY! GO!")
-            game.rps.Start()
+            rps = RockPaperScissors(msg.Sender)
+            rps.onTimeout = timeout
+            rps.onResponse = response
+            rps.onGameOver = gameover
+
+            RockPaperScissorsAddon.Games[msg.Sender] = rps
+
+            rps.Start()
+            adaptor.started()
             return
 
         def playRPS(msg, *args):
-            if msg.Sender not in RockPaperScissorsGame.Games:
-                component.connection.send_message("@" + msg.Sender + " we're not "
-                                                                 "playing "
-                                                                 "silly!")
+
+            if msg.Sender not in RockPaperScissorsAddon.Games:
+                self.adaptor.unexpected_command(msg)
                 return
 
             move = msg.Message[1:]
-            RockPaperScissorsGame.Games[msg.Sender].rps.Play(move)
+            RockPaperScissorsAddon.Games[msg.Sender].Play(move)
             return
 
         rps1 = Trigger('!rockpaperscissors')
@@ -55,36 +76,21 @@ class RockPaperScissorsGame(object):
         component.triggers.append(rpsP)
         component.triggers.append(rpsS)
 
-    def __init__(self, user, eevee):
-        self.user = user
 
-        def timeout():
-            eevee.connection.send_message("Awww you said you'd play with me")
-            eevee.ChangeHappiness(-5)
-            return
+class RockPaperScissorsAdaptor(object):
+    def started(self):
+        return
 
-        def response(msg):
-            s = msg + "!!!!!!"
-            eevee.connection.send_message(s)
-            return
+    def timeout(self):
+        return
 
-        def gameover(win):
-            if win == RockPaperScissors.loss:
-                eevee.connection.send_message("You big meanie YesYou")
-                eevee.ChangeHappiness(-5)
-            elif win == RockPaperScissors.win:
-                eevee.connection.send_message("Yay I WIN!!!!")
-                eevee.ChangeHappiness(30)
-            else:
-                eevee.connection.send_message("Awww... Play again?")
-                eevee.ChangeHappiness(15)
-            del RockPaperScissorsGame.Games[self.user]
-            return
+    def response(self, msg):
+        return
 
-        self.rps = RockPaperScissors()
-        self.rps.onTimeout = timeout
-        self.rps.onResponse = response
-        self.rps.onGameOver = gameover
+    def gameover(self, result):
+        return
+
+    def unexpected_command(self, msg):
         return
 
 
@@ -103,7 +109,8 @@ class RockPaperScissors(object):
         2: scissors
     }
 
-    def __init__(self):
+    def __init__(self, user):
+        self.user = user
         self.onResponse = None
         self.onTimeout = None
         self.onGameOver = None
@@ -150,5 +157,5 @@ class RockPaperScissors(object):
 
         time.sleep(1)
 
-        self.onGameOver(result)
+        self.onGameOver(self, result)
         return
