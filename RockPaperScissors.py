@@ -43,7 +43,7 @@ class RockPaperScissorsAddon(object):
             RockPaperScissorsAddon.Games[msg.Sender] = rps
 
             rps.Start()
-            adaptor.started()
+            self.adaptor.started()
             return
 
         def playRPS(msg, *args):
@@ -128,7 +128,6 @@ class RockPaperScissors(object):
 
     def Play(self, playerMove):
         if not self.Timeout.is_alive():
-            self.onResponse("We're not playing, silly")
             return
 
         self.Timeout.cancel()

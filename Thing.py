@@ -1,6 +1,5 @@
 import os
 import sys
-import getopt
 from AuthenticatedUser import AuthenticatedUser
 from BotInstance import BotInstance
 

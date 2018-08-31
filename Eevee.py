@@ -2,6 +2,7 @@ from EeveeResponse import EeveeResponse
 from RockPaperScissors import *
 from BotComponent import BotComponent
 
+
 class Eevee(BotComponent):
     MIN_HAPPINESS = 0
     MAX_HAPPINESS = 600
@@ -19,9 +20,6 @@ class Eevee(BotComponent):
             self.t = Timer(Eevee.HappinessTick, HappyTick)
             self.t.start()
             return
-
-        self.rpsAdaptor = RockPaperScissorsEeveeAdaptor(self)
-        self.rps = RockPaperScissorsAddon(self, self.rpsAdaptor)
 
         eeveeTrigger = Trigger('!play')
         eeveeResponse = EeveeResponse(self, self.connection)
