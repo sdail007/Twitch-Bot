@@ -7,8 +7,6 @@ from BotComponent import BotComponent
 
 
 class RockPaperScissorsAddon(object):
-    Games = {}
-
     def __init__(self, component, adaptor):
         if not isinstance(component, BotComponent):
             raise TypeError('component must be BotComponent')
@@ -17,6 +15,7 @@ class RockPaperScissorsAddon(object):
             raise TypeError('adaptor must be RockPaperScissorsAdaptor')
 
         self.adaptor = adaptor
+        self.Games = {}
 
         def timeout():
             self.adaptor.timeout()
@@ -28,11 +27,11 @@ class RockPaperScissorsAddon(object):
 
         def gameover(sender, result):
             self.adaptor.gameover(result)
-            del RockPaperScissorsAddon.Games[sender.user]
+            del self.Games[sender.user]
             return
 
         def startRPS(msg, *args):
-            if msg.Sender in RockPaperScissorsAddon.Games:
+            if msg.Sender in self.Games:
                 return
 
             rps = RockPaperScissors(msg.Sender)
@@ -40,20 +39,19 @@ class RockPaperScissorsAddon(object):
             rps.onResponse = response
             rps.onGameOver = gameover
 
-            RockPaperScissorsAddon.Games[msg.Sender] = rps
+            self.Games[msg.Sender] = rps
 
             rps.Start()
             self.adaptor.started()
             return
 
         def playRPS(msg, *args):
-
-            if msg.Sender not in RockPaperScissorsAddon.Games:
+            if msg.Sender not in self.Games:
                 self.adaptor.unexpected_command(msg)
                 return
 
             move = msg.Message[1:]
-            RockPaperScissorsAddon.Games[msg.Sender].Play(move)
+            self.Games[msg.Sender].Play(move)
             return
 
         rps1 = Trigger('!rockpaperscissors')
