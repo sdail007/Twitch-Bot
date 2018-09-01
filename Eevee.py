@@ -1,6 +1,15 @@
+
+import codecs
+import json
+import os
+import random
+
 from EeveeResponse import EeveeResponse
 from RockPaperScissors import *
 from BotComponent import BotComponent
+
+#TODO: Threshold triggers
+#TODO: Rename and better identity
 
 
 class Eevee(BotComponent):
@@ -8,17 +17,47 @@ class Eevee(BotComponent):
     MAX_HAPPINESS = 600
 
     HappinessTick = 60
+    PlayTick = 10 * 60
 
-    def __init__(self, connection):
+    @classmethod
+    def GetPlayInterval(cls):
+        delta = random.randint(-3 * 60, 3 * 60)
+        wait = (7 * 60) + delta
+        return wait
+
+    def getHappinessThreshold(self):
+        happiness = int(self.Settings["Happiness"])
+        happiness = happiness - (happiness % 100)
+        return happiness
+
+    def __init__(self, connection, settings_dir):
         super(Eevee, self).__init__(connection)
 
-        self.Happiness = 300
-        self.t = None
+        self.happyfile = os.path.join(settings_dir, "Eevee.json")
+        with codecs.open(self.happyfile, encoding="utf-8-sig", mode="r") as f:
+            self.Settings = json.load(f, encoding="utf-8")
 
         def HappyTick():
             self.ChangeHappiness(-1)
-            self.t = Timer(Eevee.HappinessTick, HappyTick)
-            self.t.start()
+
+            self.happinessTimer = Timer(Eevee.HappinessTick, HappyTick)
+            self.happinessTimer.start()
+            return
+
+        def PlayWithMe():
+            happiness = self.getHappinessThreshold()
+            responseDict = self.Settings["Responses"]
+
+            responses = responseDict[str(happiness)]
+            response_count = len(responses)
+
+            index = random.randint(0, response_count - 1)
+
+            response = responses[index]
+
+            self.connection.send_message(response)
+            self.playTimer = Timer(Eevee.GetPlayInterval(), PlayWithMe)
+            self.playTimer.start()
             return
 
         eeveeTrigger = Trigger('!play')
@@ -26,11 +65,16 @@ class Eevee(BotComponent):
         eeveeResponse.addTrigger(eeveeTrigger)
         self.triggers.append(eeveeTrigger)
 
-        HappyTick()
+        self.happinessTimer = Timer(Eevee.HappinessTick, HappyTick)
+        self.happinessTimer.start()
+
+        self.playTimer = Timer(Eevee.GetPlayInterval(), PlayWithMe)
+        self.playTimer.start()
         return
 
     def shutdown(self):
-        self.t.cancel()
+        self.happinessTimer.cancel()
+        self.playTimer.cancel()
         return
 
     def MessageReceived(self, msg):
@@ -39,7 +83,10 @@ class Eevee(BotComponent):
         return
 
     def ChangeHappiness(self, value):
-        self.Happiness += value
+        self.Settings["Happiness"] += value
+
+        with codecs.open(self.happyfile, encoding="utf-8-sig", mode="w+") as f:
+            json.dump(self.Settings, f, encoding="utf-8")
         return
 
 

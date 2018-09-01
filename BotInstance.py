@@ -3,11 +3,12 @@ from Readers import *
 from Eevee import *
 from RockPaperScissors import *
 
+
 class BotInstance(object):
-    def __init__(self, user, channel, dir):
+    def __init__(self, user, channel, settings_dir):
         self.connection = TwitchConnection(user, channel)
 
-        self.settings = Settings(dir, self.connection)
+        self.settings = Settings(settings_dir, self.connection)
 
         self.components = []
         self.addons = []
@@ -17,7 +18,7 @@ class BotInstance(object):
             t = self.settings.triggers.Triggers[value["Trigger"]]
             r.addTrigger(t)
 
-        self.eevee = Eevee(self.connection)
+        self.eevee = Eevee(self.connection, settings_dir)
         self.rpsAdaptor = RockPaperScissorsEeveeAdaptor(self.eevee)
         self.rps = RockPaperScissorsAddon(self.eevee, self.rpsAdaptor)
 

@@ -5,7 +5,7 @@ import re
 
 from Trigger import Trigger
 from Cooldown import Cooldown
-from Response import Response
+from TwitchConnection import Response
 
 
 class Settings(object):

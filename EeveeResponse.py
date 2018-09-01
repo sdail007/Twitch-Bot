@@ -10,6 +10,6 @@ class EeveeResponse(ResponseBase):
 
     def respond(self, message):
         self.eevee.ChangeHappiness(20)
-        s = r"I'm so happy " + str(self.eevee.Happiness)
+        s = r"I'm so happy " + str(self.eevee.Settings["Happiness"])
         self.connection.send_message(s)
         return

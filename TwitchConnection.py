@@ -1,8 +1,11 @@
 import websocket
 import thread
+from time import sleep
+
 from ChatMessage import ChatMessage
 from AuthenticatedUser import AuthenticatedUser
 from InvocationList import InvocationList
+from Response import ResponseBase
 
 
 class TwitchConnection(object):
@@ -67,3 +70,20 @@ class TwitchConnection(object):
     def __del__(self):
         self.ws.send('PART #' + self.channel)
         self.ws.close()
+
+
+class Response(ResponseBase):
+    def __init__(self, connection, string, cooldown=10):
+        super(Response, self).__init__(cooldown)
+        self.connection = connection
+        self.string = string
+
+    def respond(self, message):
+        print message.Message
+        if self.cooldown.Consume():
+            for m in self.string.split('\n'):
+                self.connection.send_message(m)
+                sleep(0.5)
+
+    def __str__(self):
+        return self.string + " " + str(self.cooldown)
