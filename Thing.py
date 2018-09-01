@@ -13,9 +13,9 @@ def main(argv):
 
     tokenFile = os.path.join(os.path.dirname(__file__), "Token.json")
     botuser = AuthenticatedUser(tokenFile)
-    dir = os.path.join(os.path.dirname(__file__), "Settings")
+    settings_dir = os.path.join(os.path.dirname(__file__), "Settings")
 
-    bot = BotInstance(botuser, channel, dir)
+    bot = BotInstance(botuser, channel, settings_dir)
 
     message = raw_input('> ')
 

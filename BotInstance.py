@@ -1,7 +1,7 @@
 from TwitchConnection import TwitchConnection
 from Readers import *
 from Eevee import *
-from RockPaperScissors import *
+from EeveeSettings import EeveeSettings
 
 
 class BotInstance(object):
@@ -18,7 +18,9 @@ class BotInstance(object):
             t = self.settings.triggers.Triggers[value["Trigger"]]
             r.addTrigger(t)
 
-        self.eevee = Eevee(self.connection, settings_dir)
+        eevee_settings = EeveeSettings(os.path.join(settings_dir, "Eevee.json"))
+
+        self.eevee = Eevee(self.connection, eevee_settings)
         self.rpsAdaptor = RockPaperScissorsEeveeAdaptor(self.eevee)
         self.rps = RockPaperScissorsAddon(self.eevee, self.rpsAdaptor)
 

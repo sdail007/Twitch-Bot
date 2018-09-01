@@ -1,1 +1,25 @@
-﻿{"Responses": {"200": ["I can haz treat *tilts head*"], "300": ["Pweeez cuddle with me :3"], "0": ["Bellly Rubs NOW"], "400": ["Don't forget about mweevee"], "100": ["Did you forget about me???"], "500": ["Won't you play a game with me?"]}, "Happiness": 361}
+﻿{
+    "Happiness": 324, 
+    "Hunger": 243, 
+    "Responses": {
+        "0": [
+            "Bellly Rubs NOW"
+        ], 
+        "100": [
+            "Did you forget about me?"
+        ], 
+        "200": [
+            "I can haz treat *tilts head*"
+        ], 
+        "300": [
+            "Pweeez cuddle with me :3"
+        ], 
+        "400": [
+            "Don't forget about mweevee"
+        ], 
+        "500": [
+            "Let's play a game!"
+        ]
+    }, 
+    "settings_file": "Settings\\Eevee.json"
+}

@@ -14,6 +14,7 @@ class RockPaperScissorsAddon(object):
         if not isinstance(adaptor, RockPaperScissorsAdaptor):
             raise TypeError('adaptor must be RockPaperScissorsAdaptor')
 
+        self.triggers = []
         self.adaptor = adaptor
         self.Games = {}
 
@@ -74,8 +75,15 @@ class RockPaperScissorsAddon(object):
         component.triggers.append(rpsP)
         component.triggers.append(rpsS)
 
+        self.triggers.append(rps1)
+        self.triggers.append(rps2)
+        self.adaptor.register(self)
+
 
 class RockPaperScissorsAdaptor(object):
+    def register(self, addon):
+        return
+
     def started(self):
         return
 
