@@ -18,8 +18,9 @@ class RockPaperScissorsAddon(object):
         self.adaptor = adaptor
         self.Games = {}
 
-        def timeout():
+        def timeout(sender):
             self.adaptor.timeout()
+            del self.Games[sender.user]
             return
 
         def response(msg):
@@ -120,6 +121,8 @@ class RockPaperScissors(object):
         self.onResponse = None
         self.onTimeout = None
         self.onGameOver = None
+
+        #timer
         self.Timeout = None
         return
 
@@ -160,7 +163,7 @@ class RockPaperScissors(object):
         else:
             result = RockPaperScissors.loss
 
-        time.sleep(1)
+        time.sleep(1.2)
 
         self.onGameOver(self, result)
         return

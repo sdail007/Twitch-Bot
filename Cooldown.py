@@ -1,11 +1,12 @@
 import datetime
 from datetime import timedelta
 
-class Cooldown(object):
 
+class Cooldown(object):
     def __init__(self, sec):
         self.cooldown = sec
-        self.lastUsed = datetime.datetime.now() - timedelta(seconds=self.cooldown)
+        self.lastUsed = datetime.datetime.now() - timedelta(seconds=self.
+                                                            cooldown)
 
     def Consume(self):
         threshold = datetime.datetime.now() - timedelta(seconds=self.cooldown)

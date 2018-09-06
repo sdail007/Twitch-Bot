@@ -23,7 +23,6 @@ class Hunger(BotComponent):
             return
 
         def treat(msg, *args):
-            print "treateeeed"
             self.Update(50)
             self.connection.send_message("om nom nom nom")
             return

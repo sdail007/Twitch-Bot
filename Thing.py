@@ -2,7 +2,7 @@ import os
 import sys
 from AuthenticatedUser import AuthenticatedUser
 from BotInstance import BotInstance
-
+from PokeBlockGame import *
 
 def main(argv):
     if len(argv) != 1:

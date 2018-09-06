@@ -1,22 +1,20 @@
 import websocket
 import thread
-from time import sleep
 
 from ChatMessage import ChatMessage
 from AuthenticatedUser import AuthenticatedUser
-from InvocationList import InvocationList
-from Response import ResponseBase
+from ChatInterface import ChatInterface
 
 
-class TwitchConnection(object):
+class TwitchConnection(ChatInterface):
     ping = 'PING :tmi.twitch.tv'
 
     def __init__(self, user, channel):
         if not isinstance(user, AuthenticatedUser):
             raise TypeError('user must be set to an AuthenticatedUser')
+        super(TwitchConnection, self).__init__()
         self.user = user
         self.channel = channel.lower()
-        self.MessageReceived = InvocationList()
 
         def on_message(ws, message):
             message = message.rstrip('\r\n')
@@ -29,7 +27,7 @@ class TwitchConnection(object):
                 return
 
             chat_message = ChatMessage(message)
-            self.MessageReceived.invoke(chat_message)
+            self.MessageReceived.invoke(self, chat_message)
 
         def on_open(ws):
             def run(*args):
@@ -72,18 +70,3 @@ class TwitchConnection(object):
         self.ws.close()
 
 
-class Response(ResponseBase):
-    def __init__(self, connection, string, cooldown=10):
-        super(Response, self).__init__(cooldown)
-        self.connection = connection
-        self.string = string
-
-    def respond(self, message):
-        print message.Message
-        if self.cooldown.Consume():
-            for m in self.string.split('\n'):
-                self.connection.send_message(m)
-                sleep(0.5)
-
-    def __str__(self):
-        return self.string + " " + str(self.cooldown)

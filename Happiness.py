@@ -2,6 +2,7 @@ from threading import Timer
 from BotComponent import BotComponent
 import random
 
+
 class Happiness(BotComponent):
     MIN_HAPPINESS = 0
     MAX_HAPPINESS = 600

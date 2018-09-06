@@ -5,15 +5,15 @@ import re
 
 from Trigger import Trigger
 from Cooldown import Cooldown
-from TwitchConnection import Response
+from Response import Response
 
 
 class Settings(object):
-    def __init__(self, folder, connection):
+    def __init__(self, folder):
         self.folder = folder
         self.triggers = Triggers(self.folder)
         self.cooldowns = Cooldowns(self.folder)
-        self.responses = Responses(self.folder, connection, self.cooldowns)
+        self.responses = Responses(self.folder, self.cooldowns)
         self.links = Links(self.folder)
 
 
@@ -48,7 +48,7 @@ class Cooldowns(object):
 class Responses(object):
     fkregex = re.compile(r"^\{(?P<cooldown>\S+)\}$")
 
-    def __init__(self, folder, connection, cooldowns):
+    def __init__(self, folder, cooldowns):
         file = os.path.join(folder, "Responses.json")
 
         with codecs.open(file, encoding="utf-8-sig", mode="r") as f:
@@ -63,7 +63,7 @@ class Responses(object):
             else:
                 cooldown = int(value["cooldown"])
 
-            r = Response(connection, value["text"], cooldown)
+            r = Response(value["text"], cooldown)
             self.Responses[key] = r
         return
 

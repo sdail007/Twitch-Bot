@@ -2,13 +2,14 @@ from TwitchConnection import TwitchConnection
 from Readers import *
 from Eevee import *
 from EeveeSettings import EeveeSettings
+from PokeBlockGame import PokeBlockGameAddon
 
 
 class BotInstance(object):
     def __init__(self, user, channel, settings_dir):
         self.connection = TwitchConnection(user, channel)
 
-        self.settings = Settings(settings_dir, self.connection)
+        self.settings = Settings(settings_dir)
 
         self.components = []
         self.addons = []
@@ -24,15 +25,18 @@ class BotInstance(object):
         self.rpsAdaptor = RockPaperScissorsEeveeAdaptor(self.eevee)
         self.rps = RockPaperScissorsAddon(self.eevee, self.rpsAdaptor)
 
+        self.bbAdaptor = EeveePokeBlockGameAdaptor(self.eevee)
+        self.berryBlender = PokeBlockGameAddon(self.eevee, self.bbAdaptor)
+
         self.components.append(self.eevee)
 
-        def MessageReceived(msg):
+        def MessageReceived(sender, msg):
             print(msg)
             for key, value in self.settings.triggers.Triggers.items():
-                value.invoke(msg)
+                value.invoke(sender, msg)
             for component in self.components:
                 for trigger in component.triggers:
-                    trigger.invoke(msg)
+                    trigger.invoke(sender, msg)
 
         self.connection.MessageReceived.add(MessageReceived)
         self.connection.start()

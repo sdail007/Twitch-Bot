@@ -7,11 +7,17 @@ class Trigger(object):
         self.text = text
         self.Triggered = InvocationList()
 
-    def invoke(self, message):
-        if message.Message != self.text:
+    def invoke(self, sender, message):
+        parts = message.Message.split(' ', 1)
+        if parts[0].lower() != self.text.lower():
             return
 
-        self.Triggered.invoke(message)
+        message.Command = parts[0]
+
+        if len(parts) > 1:
+            message.Params = parts[1]
+
+        self.Triggered.invoke(sender, message)
 
     def __str__(self):
         return self.text
@@ -22,7 +28,7 @@ class RegexTrigger(Trigger):
         super(RegexTrigger, self).__init__(text)
         self.Regex = re.compile(text)
 
-    def invoke(self, message):
+    def invoke(self, sender, message):
         if not re.match(message.Message):
             return
-        self.Triggered.invoke(message)
+        self.Triggered.invoke(sender, message)
