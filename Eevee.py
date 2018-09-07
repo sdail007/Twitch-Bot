@@ -3,7 +3,7 @@ from PokeBlockGame import *
 from BotComponent import BotComponent
 from Happiness import Happiness
 from Hunger import Hunger
-
+from DressUp import *
 
 class Eevee(BotComponent):
     def __init__(self, connection, settings):
@@ -12,8 +12,9 @@ class Eevee(BotComponent):
 
         self.happiness = Happiness(connection, self.settings)
         self.hunger = Hunger(connection, self.settings)
+        self.dressUp = DressUp(connection, self.settings, self.happiness)
 
-        def printPlayCommands(msg, *args):
+        def printPlayCommands(sender, msg, *args):
             cmds = [t.text for t in self.happiness.triggers]
             cmdstring = ", ".join(cmds)
             output = "I can play games! " + cmdstring
@@ -26,6 +27,7 @@ class Eevee(BotComponent):
         self.triggers.append(eeveeTrigger)
 
         self.triggers.extend(self.hunger.triggers)
+        self.triggers.extend(self.dressUp.triggers)
         return
 
     def shutdown(self):

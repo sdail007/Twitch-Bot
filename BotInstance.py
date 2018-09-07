@@ -3,21 +3,18 @@ from Readers import *
 from Eevee import *
 from EeveeSettings import EeveeSettings
 from PokeBlockGame import PokeBlockGameAddon
+from DressUp import *
 
 
 class BotInstance(object):
     def __init__(self, user, channel, settings_dir):
         self.connection = TwitchConnection(user, channel)
 
-        self.settings = Settings(settings_dir)
-
         self.components = []
         self.addons = []
 
-        for key, value in self.settings.links.__dict__.items():
-            r = self.settings.responses.Responses[value["Response"]]
-            t = self.settings.triggers.Triggers[value["Trigger"]]
-            r.addTrigger(t)
+        self.extraCommands = CustomCommandGroup(settings_dir, self.connection)
+        self.components.append(self.extraCommands)
 
         eevee_settings = EeveeSettings(os.path.join(settings_dir, "Eevee.json"))
 
@@ -32,8 +29,6 @@ class BotInstance(object):
 
         def MessageReceived(sender, msg):
             print(msg)
-            for key, value in self.settings.triggers.Triggers.items():
-                value.invoke(sender, msg)
             for component in self.components:
                 for trigger in component.triggers:
                     trigger.invoke(sender, msg)

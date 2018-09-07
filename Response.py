@@ -41,7 +41,7 @@ class CodeResponse(ResponseBase):
         return
 
     def respond(self, sender, message):
-        self.func(message, self.args)
+        self.func(sender, message, self.args)
         return
 
 

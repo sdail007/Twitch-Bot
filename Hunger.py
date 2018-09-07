@@ -22,7 +22,7 @@ class Hunger(BotComponent):
             self.hungerTimer.start()
             return
 
-        def treat(msg, *args):
+        def treat(sender, msg, *args):
             self.Update(50)
             self.connection.send_message("om nom nom nom")
             return

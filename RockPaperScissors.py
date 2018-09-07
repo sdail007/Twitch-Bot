@@ -32,7 +32,7 @@ class RockPaperScissorsAddon(object):
             del self.Games[sender.user]
             return
 
-        def startRPS(msg, *args):
+        def startRPS(sender, msg, *args):
             if msg.Sender in self.Games:
                 return
 
@@ -47,7 +47,7 @@ class RockPaperScissorsAddon(object):
             self.adaptor.started()
             return
 
-        def playRPS(msg, *args):
+        def playRPS(sender, msg, *args):
             if msg.Sender not in self.Games:
                 self.adaptor.unexpected_command(msg)
                 return

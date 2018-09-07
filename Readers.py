@@ -6,15 +6,26 @@ import re
 from Trigger import Trigger
 from Cooldown import Cooldown
 from Response import Response
+from BotComponent import BotComponent
 
 
-class Settings(object):
-    def __init__(self, folder):
+class CustomCommandGroup(BotComponent):
+    def __init__(self, folder, connection):
+        super(CustomCommandGroup, self).__init__(connection)
+
         self.folder = folder
-        self.triggers = Triggers(self.folder)
+        self.ts = Triggers(self.folder)
         self.cooldowns = Cooldowns(self.folder)
         self.responses = Responses(self.folder, self.cooldowns)
         self.links = Links(self.folder)
+
+        for key, value in self.links.__dict__.items():
+            r = self.responses.Responses[value["Response"]]
+            t = self.ts.Triggers[value["Trigger"]]
+            r.addTrigger(t)
+
+        for trigger in self.ts.Triggers.values():
+            self.triggers.append(trigger)
 
 
 class Triggers(object):

@@ -1,6 +1,7 @@
 ﻿{
-    "Happiness": 19, 
-    "Hunger": 466, 
+    "Happiness": 288, 
+    "Hunger": 485, 
+    "Outfit": "Espeon", 
     "Responses": {
         "0": [
             "Bellly Rubs NOW"

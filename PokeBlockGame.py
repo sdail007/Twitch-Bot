@@ -21,14 +21,14 @@ class PokeBlockGameAddon(object):
             self.adaptor.gameover(berries)
             return
 
-        def game_start(msg, *args):
+        def game_start(sender, msg, *args):
             self.game = PokeBlockGame()
             self.game.onGameOver = game_end
             self.game.start()
             self.adaptor.started()
             return
 
-        def play(msg, *args):
+        def play(sender, msg, *args):
             self.game.play(msg.Sender, msg.Params)
             return
 

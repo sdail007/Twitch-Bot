@@ -8,45 +8,5 @@
   {
     "text" : "Hi I'm Vulpix",
     "cooldown" : "0"
-  },
-  "3" :
-  {
-    "text" : "/color Blue\n/me MWEEE I'm Vaporeon!",
-    "cooldown" : "{stone}"
-  },
-  "4" :
-  {
-    "text" : "/color Coral\n/me MWEEE I'm Flareon!",
-    "cooldown" : "{stone}"
-  },
-  "5" :
-  {
-    "text" : "/color YellowGreen\n/me MWEEE I'm Jolteon!",
-    "cooldown" : "{stone}"
-  },
-  "6" :
-  {
-    "text" : "/color BlueViolet\n/me MWEEE I'm Espeon!",
-    "cooldown" : "{stone}"
-  },
-  "7" :
-  {
-   "text" : "/color GoldenRod\n/me MWEEE I'm Umbreon!",
-    "cooldown" : "{stone}"
-  },
-  "8" :
-  {
-   "text" : "/color Green\n/me MWEEE I'm Leafeon!",
-    "cooldown" : "{stone}"
-  },
-  "9" :
-  {
-   "text" : "/color DodgerBlue\n/me MWEEE I'm Glaceon!",
-    "cooldown" : "{stone}"
-  },
-  "10" :
-  {
-    "text" : "/color HotPink\n/me MWEEE I'm Sylveon!",
-    "cooldown" : "{stone}"
   }
 }
