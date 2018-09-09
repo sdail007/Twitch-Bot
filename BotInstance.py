@@ -1,5 +1,5 @@
 from TwitchConnection import TwitchConnection
-from Readers import *
+from CustomCommandGroup import *
 from Eevee import *
 from EeveeSettings import EeveeSettings
 from PokeBlockGame import PokeBlockGameAddon

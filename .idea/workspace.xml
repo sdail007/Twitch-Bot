@@ -42,16 +42,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Triggers.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Settings/Triggers.json">
+      <file leaf-file-name="EeveeSettings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EeveeSettings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+            <state relative-caret-position="272">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DressUp.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DressUp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DressUp.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
@@ -105,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Readers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Readers.py">
+      <file leaf-file-name="CustomCommandGroup.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CustomCommandGroup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+            <state relative-caret-position="269">
+              <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -117,23 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Eevee.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Eevee.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Settings/Eevee.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RockPaperScissors.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RockPaperScissors.py">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -174,7 +165,6 @@
         <option value="$PROJECT_DIR$/Eevee/Eevee.json" />
         <option value="$PROJECT_DIR$/Settings/eeveeSEttings.json" />
         <option value="$PROJECT_DIR$/Eevee.json" />
-        <option value="$PROJECT_DIR$/EeveeSettings.py" />
         <option value="$PROJECT_DIR$/Settings/Hunger.py" />
         <option value="$PROJECT_DIR$/ChatInterface.py" />
         <option value="$PROJECT_DIR$/BotComponent.py" />
@@ -197,14 +187,15 @@
         <option value="$PROJECT_DIR$/BotInstance.py" />
         <option value="$PROJECT_DIR$/Readers.py" />
         <option value="$PROJECT_DIR$/DressUp.py" />
+        <option value="$PROJECT_DIR$/EeveeSettings.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="172" />
-    <option name="y" value="132" />
-    <option name="width" value="2061" />
-    <option name="height" value="1791" />
+    <option name="x" value="-1763" />
+    <option name="y" value="1064" />
+    <option name="width" value="1703" />
+    <option name="height" value="991" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -218,11 +209,6 @@
             <path>
               <item name="Twitch-Bot" type="b2602c69:ProjectViewProjectNode" />
               <item name="Twitch-Bot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Twitch-Bot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Twitch-Bot" type="462c0819:PsiDirectoryNode" />
-              <item name="Settings" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -276,18 +262,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="115" y="88" width="1374" height="1194" extended-state="0" />
-    <editor active="true" />
+    <frame x="-1861" y="1097" width="1703" height="991" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31488407" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25285286" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32930845" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.500348" side_tool="true" weight="0.542811" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.40737242" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.40737242" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32930845" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.2883772" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" x="-881" y="1195" width="838" height="873" id="Terminal" order="10" sideWeight="0.49965206" type="WINDOWED" visible="true" weight="0.36970684" />
+      <window_info active="true" anchor="bottom" x="-1432" y="1132" width="838" height="873" id="Terminal" order="10" sideWeight="0.49965206" type="WINDOWED" visible="true" weight="0.36970684" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -482,13 +467,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EeveeSettings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ChatInterface.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -608,29 +586,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Settings/Eevee.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Response.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="26" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Happiness.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="49" lean-forward="true" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -666,12 +627,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Readers.py">
+    <entry file="file://$PROJECT_DIR$/Happiness.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+        <state relative-caret-position="306">
+          <caret line="18" column="49" lean-forward="true" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -683,6 +644,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/EeveeSettings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CustomCommandGroup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DressUp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -690,6 +671,13 @@
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Settings/Eevee.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>
