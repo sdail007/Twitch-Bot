@@ -1,44 +1,30 @@
-from threading import Timer
-from BotComponent import BotComponent
 from Trigger import Trigger
 from Response import CodeResponse
+from HealthBase import HealthBase
 
 
-class Hunger(BotComponent):
-    MIN_HUNGER = 0
-    MAX_HUNGER = 600
-
-    Tick = 36
-
-    def __init__(self, connection, eevee_settings):
-        super(Hunger, self).__init__(connection)
-        self.settings = eevee_settings
-        self.commands = []
-
-        def HungerTick():
-            self.Update(-1)
-
-            self.hungerTimer = Timer(Hunger.Tick, HungerTick)
-            self.hungerTimer.start()
-            return
+class Hunger(HealthBase):
+    def __init__(self, connection, settings=None):
+        super(Hunger, self).__init__(connection, settings)
 
         def treat(sender, msg, *args):
             self.Update(50)
             self.connection.send_message("om nom nom nom")
             return
 
+        def printEatCommands(sender, msg, *args):
+            cmds = [t.text for t in self.triggers]
+            cmdstring = ", ".join(cmds)
+            output = "I can eat things! " + cmdstring
+            self.connection.send_message(output)
+            return
+
+        eeveeTrigger = Trigger('!eat')
+        eeveeResponse = CodeResponse(5, printEatCommands)
+        eeveeResponse.addTrigger(eeveeTrigger)
+        self.triggers.append(eeveeTrigger)
+
         eeveeTrigger = Trigger('!treat')
         eeveeResponse = CodeResponse(5, treat)
         eeveeResponse.addTrigger(eeveeTrigger)
         self.triggers.append(eeveeTrigger)
-
-        self.hungerTimer = Timer(Hunger.Tick, HungerTick)
-        self.hungerTimer.start()
-
-    def Clamp(self, value):
-        return min(max(Hunger.MIN_HUNGER, value), Hunger.MAX_HUNGER)
-
-    def Update(self, value):
-        newHunger = self.settings.Hunger + value
-        self.settings.Hunger = self.Clamp(newHunger)
-        self.settings.save()

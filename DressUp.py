@@ -1,4 +1,3 @@
-from threading import Timer
 from BotComponent import BotComponent
 from Trigger import Trigger
 from Response import *
@@ -13,9 +12,8 @@ class Outfit(object):
         return
 
 
-class DressUp(BotComponent):
-
-    outfits = {
+class Wardrobe(object):
+    Outfits = {
         "Flareon": Outfit("Coral"),
         "Vaporeon": Outfit("Blue"),
         "Jolteon": Outfit("YellowGreen"),
@@ -26,30 +24,32 @@ class DressUp(BotComponent):
         "Sylveon": Outfit("HotPink")
     }
 
-    def __init__(self, connection, eevee_settings, happiness):
+
+class DressUp(BotComponent):
+    def __init__(self, connection, happiness,
+                 settings=Wardrobe.Outfits["Flareon"]):
         super(DressUp, self).__init__(connection)
 
         self.happiness = happiness
-        self.outfit = DressUp.outfits[eevee_settings.Outfit]
+        self.outfitKey = settings["Outfit"]
+        self.outfit = Wardrobe.Outfits[self.outfitKey]
 
         stone = Cooldown(10)
 
         flareon = Trigger("!fire")
         vaporeon = Trigger("!water")
         jolteon = Trigger("!thunder")
-
         espeon = Trigger("!sunlight")
         umbreon = Trigger("!moonlight")
-
         glaceon = Trigger("!ice")
         leafeon = Trigger("!moss")
-
         sylveon = Trigger("!amie")
 
         def ChangeForms(sender, msg, *args):
             newForm = args[0][0]
-            self.outfit = DressUp.outfits[newForm]
-            eevee_settings.Outfit = newForm
+            self.outfitKey = newForm
+            self.outfit = Wardrobe.Outfits[self.outfitKey]
+
             self.happiness.Update(50)
 
             sender.send_message("/color {}".format(self.outfit.color))
@@ -84,3 +84,9 @@ class DressUp(BotComponent):
         self.triggers.append(leafeon)
         self.triggers.append(sylveon)
         return
+
+    def dump_as_dict(self):
+        '''
+        :return:
+        '''
+        return {"Outfit": self.outfitKey}

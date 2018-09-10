@@ -1,9 +1,7 @@
 from TwitchConnection import TwitchConnection
 from CustomCommandGroup import *
 from Eevee import *
-from EeveeSettings import EeveeSettings
 from PokeBlockGame import PokeBlockGameAddon
-from DressUp import *
 
 
 class BotInstance(object):
@@ -16,9 +14,9 @@ class BotInstance(object):
         self.extraCommands = CustomCommandGroup(settings_dir, self.connection)
         self.components.append(self.extraCommands)
 
-        eevee_settings = EeveeSettings(os.path.join(settings_dir, "Eevee.json"))
+        settings = os.path.join(settings_dir, "Eevee.json")
+        self.eevee = Eevee(self.connection, settings)
 
-        self.eevee = Eevee(self.connection, eevee_settings)
         self.rpsAdaptor = RockPaperScissorsEeveeAdaptor(self.eevee)
         self.rps = RockPaperScissorsAddon(self.eevee, self.rpsAdaptor)
 

@@ -1,22 +1,35 @@
 {
-  "Responses":
-  {
-    "0": [
-      "Bellly Rubs NOW"],
-    "100": [
-      "Did you forget about me?"
+  "DressUp": {
+    "Outfit": "Jolteon"
+  },
+  "Happiness": {
+    "CurrentValue": 488,
+    "Responses": {
+      "0": [
+        "Bellly Rubs NOW",
+        "Did you forget about me?",
+        "Don't forget about mweevee"
       ],
-    "200": [
-      "I can haz treat *tilts head*"
+      "200": [
+        "Pweeez cuddle with me :3"
       ],
-    "300": [
-      "Pweeez cuddle with me :3"
-    ],
-    "400": [
-      "Don't forget about mweevee"
-    ],
-    "500": [
-      "Let's play a game!"
-    ]},
-  "Happiness": 333
+      "400": [
+        "Let's play a game!"
+      ]
+    }
+  },
+  "Hunger": {
+    "CurrentValue" : 236,
+    "Responses": {
+      "0": [
+        "I'm sooooo hungrryyyyyy"
+      ],
+      "200": [
+        ""
+      ],
+      "400": [
+        "I can haz treat *tilts head*"
+      ]
+    }
+  }
 }

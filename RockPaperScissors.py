@@ -129,7 +129,7 @@ class RockPaperScissors(object):
     def Start(self):
         def timeout():
             if self.onTimeout is not None:
-                self.onTimeout()
+                self.onTimeout(self)
 
         self.Timeout = Timer(10, timeout)
         self.Timeout.start()

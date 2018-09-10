@@ -52,3 +52,4 @@ class SoundResponse(ResponseBase):
 
     def respond(self, sender, message):
         pass
+

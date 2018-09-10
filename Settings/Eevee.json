@@ -1,26 +1,35 @@
 ﻿{
-    "Happiness": 288, 
-    "Hunger": 415, 
-    "Outfit": "Espeon", 
-    "Responses": {
-        "0": [
-            "Bellly Rubs NOW"
-        ], 
-        "100": [
-            "Did you forget about me?"
-        ], 
-        "200": [
-            "I can haz treat *tilts head*"
-        ], 
-        "300": [
-            "Pweeez cuddle with me :3"
-        ], 
-        "400": [
-            "Don't forget about mweevee"
-        ], 
-        "500": [
-            "Let's play a game!"
-        ]
+    "DressUp": {
+        "Outfit": "Vaporeon"
     }, 
-    "settings_file": "Settings\\Eevee.json"
+    "Happiness": {
+        "CurrentValue": 598, 
+        "Responses": {
+            "0": [
+                "Bellly Rubs NOW", 
+                "Did you forget about me?", 
+                "Don't forget about mweevee"
+            ], 
+            "200": [
+                "Pweeez cuddle with me :3"
+            ], 
+            "400": [
+                "Let's play a game!"
+            ]
+        }
+    }, 
+    "Hunger": {
+        "CurrentValue": 384, 
+        "Responses": {
+            "0": [
+                "I'm sooooo hungrryyyyyy"
+            ], 
+            "200": [
+                ""
+            ], 
+            "400": [
+                "I can haz treat *tilts head*"
+            ]
+        }
+    }
 }
