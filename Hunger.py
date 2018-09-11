@@ -13,9 +13,8 @@ class Hunger(HealthBase):
             return
 
         def printEatCommands(sender, msg, *args):
-            cmds = [t.text for t in self.triggers]
-            cmdstring = ", ".join(cmds)
-            output = "I can eat things! " + cmdstring
+            cmds = ", ".join(map(str, self.triggers))
+            output = "I can eat things! " + cmds
             self.connection.send_message(output)
             return
 

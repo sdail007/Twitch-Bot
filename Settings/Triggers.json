@@ -1,4 +1,10 @@
-{
-  "1": "!eevee",
-  "2": "!vulpix"
-}
+﻿[
+    {
+        "ID": 1, 
+        "Text": "!eevee"
+    }, 
+    {
+        "ID": 2, 
+        "Text": "!vulpix"
+    }
+]

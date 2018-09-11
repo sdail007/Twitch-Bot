@@ -3,7 +3,7 @@
         "Outfit": "Vaporeon"
     }, 
     "Happiness": {
-        "CurrentValue": 598, 
+        "CurrentValue": 535, 
         "Responses": {
             "0": [
                 "Bellly Rubs NOW", 
@@ -19,7 +19,7 @@
         }
     }, 
     "Hunger": {
-        "CurrentValue": 384, 
+        "CurrentValue": 167, 
         "Responses": {
             "0": [
                 "I'm sooooo hungrryyyyyy"

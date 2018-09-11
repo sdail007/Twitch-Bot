@@ -8,9 +8,8 @@ class Happiness(HealthBase):
         super(Happiness, self).__init__(connection, settings)
 
         def printPlayCommands(sender, msg, *args):
-            cmds = [t.text for t in self.triggers]
-            cmdstring = ", ".join(cmds)
-            output = "I can play games! " + cmdstring
+            cmds = ", ".join(map(str, self.triggers))
+            output = "I can play games! " + cmds
             self.connection.send_message(output)
             return
 

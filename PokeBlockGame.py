@@ -46,7 +46,7 @@ class PokeBlockGameAddon(object):
 
         berryTrigger = Trigger("!berries")
         berryResponse = Response("My favorite cooking ingredients: " +
-                                 ", ".join(PokeBlockGame.berries), 10)
+                                 ", ".join(PokeBlockGame.berries))
         berryResponse.addTrigger(berryTrigger)
 
         component.triggers.append(start)

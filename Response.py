@@ -1,5 +1,6 @@
-from Cooldown import Cooldown
+from Cooldown import *
 from time import sleep
+
 
 class ResponseBase(object):
     def __init__(self, cooldown=10):
@@ -18,9 +19,26 @@ class ResponseBase(object):
 
 
 class Response(ResponseBase):
-    def __init__(self, string, cooldown=10):
+    @classmethod
+    def fromSettings(cls, settings, cooldownProvider=CooldownProvider([])):
+        ID = settings["ID"]
+        string = settings["text"]
+        cooldown = cooldownProvider.GetCooldown(settings["cooldown"])
+        return cls(string, cooldown, ID)
+
+    def __init__(self, string, cooldown=10, ID=0):
         super(Response, self).__init__(cooldown)
+        self.ID = ID
         self.string = string
+        return
+
+    def dumpAsDict(self):
+        return {"ID": self.ID, "text": self.string,
+                "cooldown": self.cooldown.getKey()}
+
+    #def __init__(self, string, cooldown=10):
+    #    super(Response, self).__init__(cooldown)
+    #    self.string = string
 
     def respond(self, sender, message):
         print message.Message
@@ -31,6 +49,9 @@ class Response(ResponseBase):
 
     def __str__(self):
         return self.string + " " + str(self.cooldown)
+
+    def __repr__(self):
+        return str(self)
 
 
 class CodeResponse(ResponseBase):

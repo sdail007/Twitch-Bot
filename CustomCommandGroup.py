@@ -4,7 +4,7 @@ import json
 import re
 
 from Trigger import Trigger
-from Cooldown import Cooldown
+from Cooldown import *
 from Response import Response
 from BotComponent import BotComponent
 
@@ -14,79 +14,64 @@ class CustomCommandGroup(BotComponent):
         super(CustomCommandGroup, self).__init__(connection)
 
         self.folder = folder
-        self.ts = Triggers(self.folder)
-        self.cooldowns = Cooldowns(self.folder)
-        self.responses = Responses(self.folder, self.cooldowns)
-        self.links = Links(self.folder)
+        self.cooldowns = []
+        self.responses = []
+        provider = CooldownProvider(self.cooldowns)
 
-        for key, value in self.links.__dict__.items():
-            r = self.responses.Responses[value["Response"]]
-            t = self.ts.Triggers[value["Trigger"]]
-            r.addTrigger(t)
+        file = os.path.join(self.folder, "Triggers.json")
+        with codecs.open(file, encoding="utf-8-sig", mode="r") as f:
+            for trigger in json.load(f, encoding="utf-8"):
+                self.triggers.append(Trigger.fromSettings(trigger))
 
-        for trigger in self.ts.Triggers.values():
-            self.triggers.append(trigger)
-
-
-class Triggers(object):
-    def __init__(self, folder):
-        file = os.path.join(folder, "Triggers.json")
+        file = os.path.join(self.folder, "Cooldowns.json")
 
         with codecs.open(file, encoding="utf-8-sig", mode="r") as f:
-            stuff = json.load(f, encoding="utf-8")
+            for cd in json.load(f, encoding="utf-8"):
+                self.cooldowns.append(Cooldown.fromSettings(cd))
 
-        self.Triggers = {}
-        for key, value in stuff.items():
-            t = Trigger(value)
-            self.Triggers[key] = t
+        file = os.path.join(self.folder, "Responses.json")
+
+        with codecs.open(file, encoding="utf-8-sig", mode="r") as f:
+            for response in json.load(f, encoding="utf-8"):
+                self.responses.append(Response.fromSettings(response, provider))
+
+        file = os.path.join(self.folder, "TriggersToResponses.json")
+        with codecs.open(file, encoding="utf-8-sig", mode="r") as f:
+            for link in json.load(f, encoding="utf-8"):
+                responseKey = link["Response"]
+                triggerKey = link["Trigger"]
+                r = next((x for x in self.responses if x.ID == int(responseKey)),
+                     None)
+                t = next((x for x in self.triggers if x.ID == int(triggerKey)),
+                     None)
+                r.addTrigger(t)
+
+    def save(self):
+        file = os.path.join(self.folder, "Triggers.json")
+        with codecs.open(file, encoding="utf-8-sig", mode="w+") as f:
+            output = [t.dumpAsDict() for t in self.triggers]
+            json.dump(output, f, encoding="utf-8", indent=4,
+                      sort_keys=True)
+
+        file = os.path.join(self.folder, "Cooldowns.json")
+        with codecs.open(file, encoding="utf-8-sig", mode="w+") as f:
+            output = [t.dumpAsDict() for t in self.cooldowns]
+            json.dump(output, f, encoding="utf-8", indent=4,
+                      sort_keys=True)
+
+        file = os.path.join(self.folder, "Responses.json")
+        with codecs.open(file, encoding="utf-8-sig", mode="w+") as f:
+            output = [t.dumpAsDict() for t in self.responses]
+            json.dump(output, f, encoding="utf-8", indent=4,
+                      sort_keys=True)
+            '''
+        file = os.path.join(self.folder, "TriggersToResponses.json")
+        with codecs.open(file, encoding="utf-8-sig", mode="w+") as f:
+            json.dump(self.triggers, f, encoding="utf-8", indent=4,
+                      sort_keys=True)
+                      '''
         return
 
-
-class Cooldowns(object):
-    def __init__(self, folder):
-        file = os.path.join(folder, "Cooldowns.json")
-
-        with codecs.open(file, encoding="utf-8-sig", mode="r") as f:
-            stuff = json.load(f, encoding="utf-8")
-
-        self.Cooldowns = {}
-        for key, value in stuff.items():
-            c = Cooldown(value["Timeout"])
-            self.Cooldowns[key] = c
+    def shutdown(self):
+        self.save()
         return
-
-
-class Responses(object):
-    fkregex = re.compile(r"^\{(?P<cooldown>\S+)\}$")
-
-    def __init__(self, folder, cooldowns):
-        file = os.path.join(folder, "Responses.json")
-
-        with codecs.open(file, encoding="utf-8-sig", mode="r") as f:
-            stuff = json.load(f, encoding="utf-8")
-
-        self.Responses = {}
-        for key, value in stuff.items():
-            match = Responses.fkregex.match(value["cooldown"])
-            if match:
-                fk = match.groupdict()["cooldown"]
-                cooldown = cooldowns.Cooldowns[fk]
-            else:
-                cooldown = int(value["cooldown"])
-
-            r = Response(value["text"], cooldown)
-            self.Responses[key] = r
-        return
-
-
-class Links(object):
-    def __init__(self, folder):
-        file = os.path.join(folder, "TriggersToResponses.json")
-        with codecs.open(file, encoding="utf-8-sig", mode="r") as f:
-            self.__dict__ = json.load(f, encoding="utf-8")
-
-    def __getitem__(self, item):
-        return self.__dict__[item]
-
-    def __iter__(self):
-        return self.__dict__

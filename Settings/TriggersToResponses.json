@@ -1,12 +1,10 @@
-{
-  "1" :
+[
   {
     "Trigger" : "1",
     "Response" : "1"
   },
-  "2" :
   {
     "Trigger" : "2",
     "Response" : "2"
   }
-}
+]

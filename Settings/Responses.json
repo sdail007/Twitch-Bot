@@ -1,12 +1,12 @@
-{
-  "1" :
-  {
-    "text" : "Hi I'm Eevee",
-    "cooldown" : "0"
-  },
-  "2" :
-  {
-    "text" : "Hi I'm Vulpix",
-    "cooldown" : "0"
-  }
-}
+﻿[
+    {
+        "ID": 1, 
+        "cooldown": 1, 
+        "text": "Hi I'm Eevee!"
+    }, 
+    {
+        "ID": 2, 
+        "cooldown": 10, 
+        "text": "Hi I'm Vulpix!"
+    }
+]
