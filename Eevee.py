@@ -80,6 +80,7 @@ class Eevee(BotComponent):
         self.playTimer.cancel()
         self.happiness.healthTimer.cancel()
         self.hunger.healthTimer.cancel()
+        self.dressUp.shutdown()
 
         with codecs.open(self.save_file, encoding="utf-8-sig", mode="w+") as f:
             json.dump(self.dump_as_dict(), f, encoding="utf-8", indent=4,
