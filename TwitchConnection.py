@@ -20,6 +20,8 @@ class TwitchConnection(ChatInterface):
         def on_message(ws, message):
             message = message.rstrip('\r\n')
 
+            print message
+
             #pong when pinged (IRC compliance)
             if message == TwitchConnection.ping:
                 def pong(*args):
