@@ -151,6 +151,6 @@ class TagsCapability(object):
                            r'#(?P<channel>[^;]*)')
 
     def __init__(self):
-
+        self.subscriptionmessage = r'CAP REQ :twitch.tv/tags'
         return
 
