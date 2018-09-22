@@ -11,74 +11,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MembershipCapability.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MembershipCapability.py">
+      <file leaf-file-name="TwitchConnection.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Twitch/TwitchConnection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MembershipTests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MembershipTests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="6" selection-end-column="5" />
+            <state relative-caret-position="206">
+              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="TagsCapability.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TagsCapability.py">
+        <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/TagsCapability.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1785">
+            <state relative-caret-position="1396">
               <caret line="105" column="68" selection-start-line="105" selection-start-column="46" selection-end-line="105" selection-end-column="68" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommandsCapability.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CommandsCapability.py">
+      <file leaf-file-name="ChatMessage.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Twitch/ChatMessage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChatMessage.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ChatMessage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommandsTests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CommandsTests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TagsTests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TagsTests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TwitchConnection.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TwitchConnection.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="45" column="54" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="54" />
+            <state relative-caret-position="340">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -105,10 +63,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Token.json" />
-        <option value="$USER_HOME$/OneDrive/Streamlabs Chatbot/Services/Scripts/lib/Settings_Module.py" />
-        <option value="$PROJECT_DIR$/Triggers.json" />
-        <option value="$PROJECT_DIR$/Responses.json" />
         <option value="$PROJECT_DIR$/TriggersToResponses.json" />
         <option value="$PROJECT_DIR$/Cooldowns.json" />
         <option value="$PROJECT_DIR$/venv/EeveeTrigger.py" />
@@ -116,7 +70,6 @@
         <option value="$PROJECT_DIR$/EeveeResponses.json" />
         <option value="$PROJECT_DIR$/EeveeResponse.py" />
         <option value="$PROJECT_DIR$/Eevee/EeveeSettings.py" />
-        <option value="$PROJECT_DIR$/Eevee/Eevee.py" />
         <option value="$PROJECT_DIR$/Eevee/Happiness.py" />
         <option value="$PROJECT_DIR$/Eevee/Eevee.json" />
         <option value="$PROJECT_DIR$/Eevee.json" />
@@ -133,7 +86,6 @@
         <option value="$PROJECT_DIR$/BotInstance.py" />
         <option value="$PROJECT_DIR$/PokeBlockGame.py" />
         <option value="$PROJECT_DIR$/Settings/TriggersToResponses.json" />
-        <option value="$PROJECT_DIR$/Happiness.py" />
         <option value="$PROJECT_DIR$/Hunger.py" />
         <option value="$PROJECT_DIR$/Trigger.py" />
         <option value="$PROJECT_DIR$/Settings/Triggers.json" />
@@ -148,20 +100,28 @@
         <option value="$PROJECT_DIR$/TwitchCapability.py" />
         <option value="$PROJECT_DIR$/TwitchConnection.py" />
         <option value="$PROJECT_DIR$/TagsCapability.py" />
-        <option value="$PROJECT_DIR$/Thing.py" />
         <option value="$PROJECT_DIR$/TagsTests.py" />
         <option value="$PROJECT_DIR$/MembershipCapability.py" />
         <option value="$PROJECT_DIR$/MembershipTests.py" />
         <option value="$PROJECT_DIR$/CommandsTests.py" />
         <option value="$PROJECT_DIR$/CommandsCapability.py" />
+        <option value="$PROJECT_DIR$/Happiness.py" />
+        <option value="$PROJECT_DIR$/Eevee/Eevee.py" />
+        <option value="$PROJECT_DIR$/BotParts/ChatMessage.py" />
+        <option value="$PROJECT_DIR$/Thing.py" />
+        <option value="$PROJECT_DIR$/BotComponents/CustomCommandGroup.py" />
+        <option value="$PROJECT_DIR$/BotComponents/PokeBlockGame.py" />
+        <option value="$PROJECT_DIR$/BotComponents/RockPaperScissors.py" />
+        <option value="$PROJECT_DIR$/Twitch/ChatMessage.py" />
+        <option value="$PROJECT_DIR$/Twitch/TwitchConnection.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1101" />
-    <option name="y" value="441" />
-    <option name="width" value="1938" />
-    <option name="height" value="1098" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="34" />
+    <option name="y" value="42" />
+    <option name="width" value="3425" />
+    <option name="height" value="2027" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -174,6 +134,22 @@
             <path>
               <item name="Twitch-Bot" type="b2602c69:ProjectViewProjectNode" />
               <item name="Twitch-Bot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Twitch-Bot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Twitch-Bot" type="462c0819:PsiDirectoryNode" />
+              <item name="Settings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Twitch-Bot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Twitch-Bot" type="462c0819:PsiDirectoryNode" />
+              <item name="Twitch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Twitch-Bot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Twitch-Bot" type="462c0819:PsiDirectoryNode" />
+              <item name="Twitch" type="462c0819:PsiDirectoryNode" />
+              <item name="Capabilities" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -189,10 +165,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Stephen\PycharmProjects\TwitchBot\Twitch-Bot" />
-      <recent name="C:\Users\Stephen\PycharmProjects\TwitchBot\Twitch-Bot\EeveeStuff" />
-      <recent name="C:\Users\Stephen\PycharmProjects\TwitchBot\Twitch-Bot\Eevee" />
-      <recent name="C:\Users\Stephen\PycharmProjects\TwitchBot\Twitch-Bot\Settings" />
+      <recent name="C:\Users\Stephen\PycharmProjects\TwitchBot\Twitch-Bot\Twitch\Capabilities\Tests" />
+      <recent name="C:\Users\Stephen\PycharmProjects\TwitchBot\Twitch-Bot\Twitch" />
+      <recent name="C:\Users\Stephen\PycharmProjects\TwitchBot\Twitch-Bot\Commands" />
+      <recent name="C:\Users\Stephen\PycharmProjects\TwitchBot\Twitch-Bot\BotComponents" />
+      <recent name="C:\Users\Stephen\PycharmProjects\TwitchBot\Twitch-Bot\BotParts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -230,16 +207,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2575" height="1455" extended-state="6" />
+    <frame x="23" y="28" width="2283" height="1351" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17693837" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18533513" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32930845" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.500348" side_tool="true" weight="0.542811" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.27325103" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32930845" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.2883772" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="right" x="790" y="349" width="291" height="120" id="Terminal" order="3" sideWeight="0.49965206" visible="true" weight="0.3025845" />
+      <window_info active="true" anchor="right" x="790" y="349" width="291" height="120" id="Terminal" order="3" sideWeight="0.49965206" visible="true" weight="0.4183536" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -248,7 +227,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.2736922" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -279,7 +257,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AuthenticatedUser.py">
+    <entry file="file://$PROJECT_DIR$/Twitch/AuthenticatedUser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="14" column="37" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="37" />
@@ -293,21 +271,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TwitchConnection.py">
+    <entry file="file://$PROJECT_DIR$/Twitch/TwitchConnection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AuthenticatedUser.py">
+    <entry file="file://$PROJECT_DIR$/Twitch/AuthenticatedUser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AuthenticatedUser.py">
+    <entry file="file://$PROJECT_DIR$/Twitch/AuthenticatedUser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="14" column="37" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="37" />
@@ -346,29 +324,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Eevee/__init__.py" />
     <entry file="file://$PROJECT_DIR$/EeveeStuff/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/EeveeResponses.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InvocationList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChatInterface.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/OneDrive/Streamlabs Chatbot/Services/Scripts/lib/Settings_Module.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -377,46 +333,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HealthSerializer.py" />
-    <entry file="file://$PROJECT_DIR$/Settings/eeveeSEttings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="14" lean-forward="true" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EeveeSettings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Eevee.json" />
-    <entry file="file://$PROJECT_DIR$/RockPaperScissors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="67" column="35" lean-forward="true" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PokeBlockGame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BotInstance.py">
+    <entry file="file://$PROJECT_DIR$/Commands/BotInstance.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
           <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BotComponent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -427,14 +348,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cooldown.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Response.py">
+    <entry file="file://$PROJECT_DIR$/Commands/Response.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="22" selection-start-column="22" selection-end-column="22" />
@@ -448,13 +362,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Settings/Cooldowns.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Settings/Triggers.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -462,49 +369,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Happiness.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CustomCommandGroup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="57" column="12" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Trigger.py">
+    <entry file="file://$PROJECT_DIR$/Commands/Trigger.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HealthBase.py">
+    <entry file="file://$PROJECT_DIR$/Eevee/HealthBase.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Eevee.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EeveeResponse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Hunger.py">
+    <entry file="file://$PROJECT_DIR$/Eevee/Hunger.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
@@ -518,87 +397,199 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TwitchCapability.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Settings/Eevee.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="61" column="18" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DressUp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="130" column="30" selection-start-line="130" selection-start-column="30" selection-end-line="130" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Thing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TagsTests.py">
+    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/Tests/TagsTests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TwitchConnection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="45" column="54" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MembershipCapability.py">
+    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/MembershipCapability.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MembershipTests.py">
+    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/Tests/MembershipTests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="6" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TagsCapability.py">
+    <entry file="file://$PROJECT_DIR$/Eevee/Happiness.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="105" column="68" selection-start-line="105" selection-start-column="46" selection-end-line="105" selection-end-column="68" />
+        <state relative-caret-position="306">
+          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CommandsTests.py">
+    <entry file="file://$PROJECT_DIR$/EeveeResponses.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CommandsCapability.py">
+    <entry file="file://$PROJECT_DIR$/EeveeResponse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eevee/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Commands/ChatInterface.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Commands/Cooldown.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Commands/InvocationList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Commands/BotComponent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/CommandsCapability.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChatMessage.py">
+    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/Tests/CommandsTests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="442">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eevee/EeveeSettings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Thing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eevee/Eevee.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1052">
+          <caret line="64" column="47" lean-forward="true" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BotComponents/CustomCommandGroup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BotComponents/PokeBlockGame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#1#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BotComponents/RockPaperScissors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eevee/DressUp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2210">
+          <caret line="130" column="30" selection-start-line="130" selection-start-column="30" selection-end-line="130" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitch/ChatMessageGroup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Settings/Cooldowns.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Settings/Eevee.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Settings/eeveeSEttings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="14" lean-forward="true" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/TagsCapability.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1396">
+          <caret line="105" column="68" selection-start-line="105" selection-start-column="46" selection-end-line="105" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitch/ChatMessage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitch/TwitchConnection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

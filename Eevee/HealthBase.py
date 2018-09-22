@@ -1,7 +1,7 @@
 import random
 from threading import Timer
 
-from BotComponent import BotComponent
+from Commands.BotComponent import BotComponent
 
 
 class HealthBase(BotComponent):

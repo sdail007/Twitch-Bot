@@ -1,7 +1,8 @@
-from BotComponent import BotComponent
 from threading import Timer
-from Trigger import Trigger
-from Response import *
+
+from Commands.BotComponent import BotComponent
+from Commands.Trigger import Trigger
+from Commands.Response import *
 
 
 class PokeBlockGameAddon(object):

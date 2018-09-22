@@ -15,13 +15,6 @@ class ChatMessage(object):
         self.MessageType = parts['MessageType']
         self.Channel = parts['Channel']
         self.Message = stringParts[2]
-        self.Command = None
-        self.Params = None
 
     def __str__(self):
         return self.Sender + ': ' + self.Message
-
-
-class PrivMsg(ChatMessage):
-    def __init__(self, string):
-        return

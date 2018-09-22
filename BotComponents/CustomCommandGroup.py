@@ -1,12 +1,11 @@
 import os
 import codecs
 import json
-import re
 
-from Trigger import Trigger
-from Cooldown import *
-from Response import Response
-from BotComponent import BotComponent
+from Commands.Trigger import Trigger
+from Commands.Cooldown import *
+from Commands.Response import Response
+from Commands.BotComponent import BotComponent
 
 
 class CustomCommandGroup(BotComponent):

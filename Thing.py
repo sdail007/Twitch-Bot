@@ -1,8 +1,8 @@
 import os
 import sys
-from AuthenticatedUser import AuthenticatedUser
-from BotInstance import BotInstance
-from TagsCapability import *
+from Twitch.AuthenticatedUser import AuthenticatedUser
+from Commands.BotInstance import BotInstance
+
 
 def main(argv):
     if len(argv) != 1:
@@ -28,6 +28,4 @@ def main(argv):
 
 
 if __name__ == "__main__":
-
-
     main(sys.argv[1:])

@@ -1,7 +1,7 @@
-from BotComponent import BotComponent
-from Trigger import Trigger
-from Response import *
-from Cooldown import Cooldown
+from Commands.BotComponent import BotComponent
+from Commands.Trigger import Trigger
+from Commands.Response import *
+from Commands.Cooldown import Cooldown
 from threading import Timer
 
 

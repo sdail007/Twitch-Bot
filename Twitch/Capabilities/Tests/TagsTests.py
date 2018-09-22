@@ -1,4 +1,4 @@
-from TagsCapability import *
+from Twitch.Capabilities.TagsCapability import *
 
 print "clear chat"
 clearchatMessage = r':tmi.twitch.tv CLEARCHAT #dallas :ronni @ban-reason=Follow\sthe\srules :tmi.twitch.tv CLEARCHAT #dallas :ronni'

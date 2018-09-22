@@ -1,7 +1,7 @@
-from TwitchConnection import TwitchConnection
-from CustomCommandGroup import *
-from Eevee import *
-from PokeBlockGame import PokeBlockGameAddon
+from Twitch.TwitchConnection import TwitchConnection
+from BotComponents.CustomCommandGroup import *
+from Eevee.Eevee import *
+from BotComponents.PokeBlockGame import PokeBlockGameAddon
 
 
 class BotInstance(object):

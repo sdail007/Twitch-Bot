@@ -1,4 +1,4 @@
-from CommandsCapability import *
+from Twitch.Capabilities.CommandsCapability import *
 
 print "hosttarget"
 message = r':tmi.twitch.tv HOSTTARGET #fullgrowngaming :xxshawn 86'

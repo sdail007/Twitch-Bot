@@ -1,5 +1,5 @@
-from Trigger import Trigger
-from Response import CodeResponse
+from Commands.Trigger import Trigger
+from Commands.Response import CodeResponse
 from HealthBase import HealthBase
 
 

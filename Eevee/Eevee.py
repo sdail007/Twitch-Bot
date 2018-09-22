@@ -1,5 +1,5 @@
-from RockPaperScissors import *
-from PokeBlockGame import *
+from BotComponents.RockPaperScissors import *
+from BotComponents.PokeBlockGame import *
 from Happiness import Happiness
 from Hunger import Hunger
 from DressUp import *

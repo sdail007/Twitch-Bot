@@ -1,9 +1,10 @@
 import time
 from threading import Timer
 import random
-from Trigger import *
-from Response import *
-from BotComponent import BotComponent
+
+from Commands.Trigger import *
+from Commands.Response import *
+from Commands.BotComponent import BotComponent
 
 
 class RockPaperScissorsAddon(object):

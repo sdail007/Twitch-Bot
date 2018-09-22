@@ -1,4 +1,4 @@
-from MembershipCapability import *
+from Twitch.Capabilities.MembershipCapability import *
 
 print "join"
 message = r':ronni!ronni@ronni.tmi.twitch.tv JOIN #dallas'
