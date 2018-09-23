@@ -51,13 +51,8 @@ class TwitchConnection(ChatInterface):
             self.ws.send('JOIN #' + self.channel)
 
             # get extra info with messages like subs and bits (Twitch custom)
-
             for capability in self.capabilities:
                 self.ws.send(capability.subscriptionmessage)
-
-            #self.ws.send('CAP REQ :twitch.tv/tags')
-            #self.ws.send('CAP REQ :twitch.tv/membership')
-            #self.ws.send('CAP REQ :twitch.tv/commands')
 
             print "Connected to ", self.channel
 
@@ -91,9 +86,10 @@ class TwitchConnection(ChatInterface):
             thread.start_new_thread(pong, ())
             return
 
-        # Decode message and propogate to listeners
-        chat_message = ChatMessage(message)
-        self.MessageReceived.invoke(self, chat_message)
+        if stuff['command'] == 'PRIVMSG':
+            # Decode message and propogate to listeners
+            chat_message = ChatMessage(message)
+            self.MessageReceived.invoke(self, chat_message)
 
     def on_error(self, error):
         '''
