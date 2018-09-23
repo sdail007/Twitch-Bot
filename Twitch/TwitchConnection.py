@@ -67,6 +67,14 @@ class TwitchConnection(ChatInterface):
         '''
         message = message.rstrip('\r\n')
 
+        # pong when pinged (IRC compliance)
+        if message == TwitchConnection.ping:
+            def pong(*args):
+                self.ws.send('PONG :tmi.twitch.tv')
+
+            thread.start_new_thread(pong, ())
+            return
+
         stuff = None
         for capability in self.capabilities:
             stuff = capability.Parse(message)
@@ -75,15 +83,6 @@ class TwitchConnection(ChatInterface):
 
         if stuff is None:
             print 'UNABLE TO PARSE {}'.format(message)
-
-        #print message
-
-        # pong when pinged (IRC compliance)
-        if message == TwitchConnection.ping:
-            def pong(*args):
-                self.ws.send('PONG :tmi.twitch.tv')
-
-            thread.start_new_thread(pong, ())
             return
 
         if stuff['command'] == 'PRIVMSG':

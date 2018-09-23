@@ -9,25 +9,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="SampleSet" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/SampleSet">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="340">
-                    <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="MembershipCapability.py" pinned="false" current-in-tab="false">
@@ -91,8 +72,8 @@
       <file leaf-file-name="TwitchConnection.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Twitch/TwitchConnection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
-              <caret line="88" column="41" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="41" />
+            <state relative-caret-position="319">
+              <caret line="67" column="40" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -186,10 +167,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="364" />
-    <option name="y" value="49" />
-    <option name="width" value="3467" />
-    <option name="height" value="2049" />
+    <option name="x" value="97" />
+    <option name="y" value="21" />
+    <option name="width" value="3734" />
+    <option name="height" value="2078" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -279,10 +260,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="243" y="33" width="2311" height="1366" extended-state="0" />
+    <frame x="65" y="14" width="2489" height="1385" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18117854" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1680261" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32930845" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.500348" side_tool="true" weight="0.542811" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.19017094" />
@@ -290,7 +271,7 @@
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.2883772" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" x="790" y="349" width="291" height="120" id="Terminal" order="10" sideWeight="0.49965206" visible="true" weight="0.31463414" />
+      <window_info active="true" anchor="bottom" x="790" y="349" width="291" height="120" id="Terminal" order="10" sideWeight="0.49965206" visible="true" weight="0.3098479" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -599,13 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SampleSet">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -657,10 +631,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SampleSet">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Twitch/TwitchConnection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="88" column="41" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="41" />
+        <state relative-caret-position="319">
+          <caret line="67" column="40" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
