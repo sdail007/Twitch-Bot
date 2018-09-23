@@ -4,7 +4,9 @@ import thread
 from Twitch.ChatMessage import ChatMessage
 from AuthenticatedUser import AuthenticatedUser
 from Commands.ChatInterface import ChatInterface
-
+from Capabilities.TagsCapability import TagsCapability
+from Capabilities.MembershipCapability import MembershipCapability
+from Capabilities.CommandsCapability import CommandsCapability
 
 class TwitchConnection(ChatInterface):
     ping = 'PING :tmi.twitch.tv'
@@ -15,7 +17,10 @@ class TwitchConnection(ChatInterface):
         super(TwitchConnection, self).__init__()
         self.user = user
         self.channel = channel.lower()
-        
+
+        self.capabilities = [TagsCapability(),
+                             MembershipCapability(),
+                             CommandsCapability()]
         #Load translators
         #Translators have CAP REQ to send
         #Translators have Message types they can translate
@@ -46,9 +51,13 @@ class TwitchConnection(ChatInterface):
             self.ws.send('JOIN #' + self.channel)
 
             # get extra info with messages like subs and bits (Twitch custom)
-            self.ws.send('CAP REQ :twitch.tv/tags')
-            self.ws.send('CAP REQ :twitch.tv/membership')
-            self.ws.send('CAP REQ :twitch.tv/commands')
+
+            for capability in self.capabilities:
+                self.ws.send(capability.subscriptionmessage)
+
+            #self.ws.send('CAP REQ :twitch.tv/tags')
+            #self.ws.send('CAP REQ :twitch.tv/membership')
+            #self.ws.send('CAP REQ :twitch.tv/commands')
 
             print "Connected to ", self.channel
 
@@ -63,7 +72,16 @@ class TwitchConnection(ChatInterface):
         '''
         message = message.rstrip('\r\n')
 
-        print message
+        stuff = None
+        for capability in self.capabilities:
+            stuff = capability.Parse(message)
+            if stuff is not None:
+                break
+
+        if stuff is None:
+            print 'UNABLE TO PARSE {}'.format(message)
+
+        #print message
 
         # pong when pinged (IRC compliance)
         if message == TwitchConnection.ping:

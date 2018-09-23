@@ -18,6 +18,12 @@ iter = TagsCapability.privmsg.finditer(nonBitsMessage)
 print [m.groupdict() for m in iter]
 print
 
+print "privmsg"
+privmsg = r'@badges=moderator/1,subscriber/24;color=#BB1169;display-name=Pig_;emotes=;flags=;id=90c971eb-3534-43c4-bc54-723d6d369c62;mod=1;room-id=23964412;subscriber=1;tmi-sent-ts=1537669071344;turbo=0;user-id=41932978;user-type=mod :pig_!pig_@pig_.tmi.twitch.tv PRIVMSG #fullgrowngaming :Hockey was at 2 today, not 6 like is usually is'
+iter = TagsCapability.privmsg.finditer(privmsg)
+print [m.groupdict() for m in iter]
+print
+
 print "bits message"
 bitsMessage = r'@badges=staff/1,bits/1000;bits=100;color=;display-name=dallas;emotes=;id=b34ccfc7-4977-403a-8a94-33c6bac34fb8;mod=0;room-id=1337;subscriber=0;tmi-sent-ts=1507246572675;turbo=1;user-id=1337;user-type=staff :ronni!ronni@ronni.tmi.twitch.tv PRIVMSG #dallas :cheer100'
 iter = TagsCapability.privmsg.finditer(bitsMessage)

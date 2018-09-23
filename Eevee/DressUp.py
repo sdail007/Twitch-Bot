@@ -125,7 +125,7 @@ class DressUp(BotComponent):
         favoriter.addTrigger(favoritet)
         self.triggers.append(favoritet)
 
-        self.PointsTimer.start()
+        #self.PointsTimer.start()
         return
 
     def IncrementPoints(self):

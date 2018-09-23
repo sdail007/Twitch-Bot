@@ -9,13 +9,90 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="SampleSet" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/SampleSet">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="340">
+                    <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TwitchConnection.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MembershipCapability.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/MembershipCapability.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="57" lean-forward="true" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommandsCapability.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/CommandsCapability.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChatMessageGroup.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Twitch/ChatMessageGroup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TagsCapability.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/TagsCapability.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="693">
+              <caret line="174" column="16" selection-start-line="174" selection-start-column="16" selection-end-line="174" selection-end-column="16" />
+              <folding>
+                <element signature="e#69#439#0" />
+                <element signature="e#475#999#0" />
+                <element signature="e#1027#2025#0" />
+                <element signature="e#2055#2352#0" />
+                <element signature="e#2382#3640#0" />
+                <element signature="e#3671#5212#0" />
+                <element signature="e#5243#6516#0" />
+                <element signature="e#6549#7703#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="45" column="15" lean-forward="true" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TwitchConnection.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Twitch/TwitchConnection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+            <state relative-caret-position="459">
+              <caret line="126" column="11" lean-forward="true" selection-start-line="126" selection-start-column="11" selection-end-line="126" selection-end-column="11" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -23,20 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TagsCapability.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/TagsCapability.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1396">
-              <caret line="105" column="68" selection-start-line="105" selection-start-column="46" selection-end-line="105" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ChatMessage.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Twitch/ChatMessage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="204">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -63,15 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TriggersToResponses.json" />
-        <option value="$PROJECT_DIR$/Cooldowns.json" />
-        <option value="$PROJECT_DIR$/venv/EeveeTrigger.py" />
-        <option value="$PROJECT_DIR$/InvocationList.py" />
-        <option value="$PROJECT_DIR$/EeveeResponses.json" />
-        <option value="$PROJECT_DIR$/EeveeResponse.py" />
-        <option value="$PROJECT_DIR$/Eevee/EeveeSettings.py" />
-        <option value="$PROJECT_DIR$/Eevee/Happiness.py" />
-        <option value="$PROJECT_DIR$/Eevee/Eevee.json" />
         <option value="$PROJECT_DIR$/Eevee.json" />
         <option value="$PROJECT_DIR$/Settings/Hunger.py" />
         <option value="$PROJECT_DIR$/ChatInterface.py" />
@@ -100,7 +159,6 @@
         <option value="$PROJECT_DIR$/TwitchCapability.py" />
         <option value="$PROJECT_DIR$/TwitchConnection.py" />
         <option value="$PROJECT_DIR$/TagsCapability.py" />
-        <option value="$PROJECT_DIR$/TagsTests.py" />
         <option value="$PROJECT_DIR$/MembershipCapability.py" />
         <option value="$PROJECT_DIR$/MembershipTests.py" />
         <option value="$PROJECT_DIR$/CommandsTests.py" />
@@ -112,16 +170,26 @@
         <option value="$PROJECT_DIR$/BotComponents/CustomCommandGroup.py" />
         <option value="$PROJECT_DIR$/BotComponents/PokeBlockGame.py" />
         <option value="$PROJECT_DIR$/BotComponents/RockPaperScissors.py" />
+        <option value="$PROJECT_DIR$/Eevee/DressUp.py" />
+        <option value="$PROJECT_DIR$/Twitch/Capabilities/Tests/TagsTests.py" />
+        <option value="$PROJECT_DIR$/TagsTests.py" />
+        <option value="$PROJECT_DIR$/SampleSet" />
+        <option value="$PROJECT_DIR$/Commands/BotInstance.py" />
         <option value="$PROJECT_DIR$/Twitch/ChatMessage.py" />
+        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/Twitch/TwitchConnection.py" />
+        <option value="$PROJECT_DIR$/Twitch/ChatMessageGroup.py" />
+        <option value="$PROJECT_DIR$/Twitch/Capabilities/CommandsCapability.py" />
+        <option value="$PROJECT_DIR$/Twitch/Capabilities/MembershipCapability.py" />
+        <option value="$PROJECT_DIR$/Twitch/Capabilities/TagsCapability.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="34" />
-    <option name="y" value="42" />
-    <option name="width" value="3425" />
-    <option name="height" value="2027" />
+    <option name="x" value="364" />
+    <option name="y" value="49" />
+    <option name="width" value="3467" />
+    <option name="height" value="2049" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -134,6 +202,16 @@
             <path>
               <item name="Twitch-Bot" type="b2602c69:ProjectViewProjectNode" />
               <item name="Twitch-Bot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Twitch-Bot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Twitch-Bot" type="462c0819:PsiDirectoryNode" />
+              <item name="BotComponents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Twitch-Bot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Twitch-Bot" type="462c0819:PsiDirectoryNode" />
+              <item name="Commands" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Twitch-Bot" type="b2602c69:ProjectViewProjectNode" />
@@ -166,10 +244,10 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Stephen\PycharmProjects\TwitchBot\Twitch-Bot\Twitch\Capabilities\Tests" />
+      <recent name="C:\Users\Stephen\PycharmProjects\TwitchBot\Twitch-Bot" />
       <recent name="C:\Users\Stephen\PycharmProjects\TwitchBot\Twitch-Bot\Twitch" />
       <recent name="C:\Users\Stephen\PycharmProjects\TwitchBot\Twitch-Bot\Commands" />
       <recent name="C:\Users\Stephen\PycharmProjects\TwitchBot\Twitch-Bot\BotComponents" />
-      <recent name="C:\Users\Stephen\PycharmProjects\TwitchBot\Twitch-Bot\BotParts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -207,18 +285,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="23" y="28" width="2283" height="1351" extended-state="0" />
+    <frame x="243" y="33" width="2311" height="1366" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18533513" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18117854" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32930845" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.500348" side_tool="true" weight="0.542811" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.27325103" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.19017094" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32930845" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.2883772" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="right" x="790" y="349" width="291" height="120" id="Terminal" order="3" sideWeight="0.49965206" visible="true" weight="0.4183536" />
+      <window_info active="true" anchor="bottom" x="790" y="349" width="291" height="120" id="Terminal" order="10" sideWeight="0.49965206" visible="true" weight="0.31463414" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -253,31 +331,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Twitch/AuthenticatedUser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Thing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="47" column="26" lean-forward="true" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Twitch/TwitchConnection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Twitch/AuthenticatedUser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -334,13 +391,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HealthSerializer.py" />
     <entry file="file://$PROJECT_DIR$/Eevee.json" />
-    <entry file="file://$PROJECT_DIR$/Commands/BotInstance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Settings/TriggersToResponses.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -397,27 +447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/Tests/TagsTests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/MembershipCapability.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/Tests/MembershipTests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="6" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Eevee/Happiness.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -470,20 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/CommandsCapability.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/Tests/CommandsTests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Eevee/EeveeSettings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -491,27 +506,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Thing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Eevee/Eevee.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1052">
           <caret line="64" column="47" lean-forward="true" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BotComponents/CustomCommandGroup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -528,23 +526,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Eevee/DressUp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2210">
-          <caret line="130" column="30" selection-start-line="130" selection-start-column="30" selection-end-line="130" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Twitch/ChatMessageGroup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -569,26 +550,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/TagsCapability.py">
+    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/Tests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/Tests/CommandsTests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1396">
-          <caret line="105" column="68" selection-start-line="105" selection-start-column="46" selection-end-line="105" selection-end-column="68" />
+        <state relative-caret-position="527">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/Tests/MembershipTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/Tests/TagsTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="72" column="5" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Eevee/DressUp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="127" column="9" selection-start-line="127" selection-start-column="9" selection-end-line="127" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BotComponents/CustomCommandGroup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Commands/BotInstance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="33" column="60" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Twitch/ChatMessage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Twitch/TwitchConnection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        <state relative-caret-position="459">
+          <caret line="126" column="11" lean-forward="true" selection-start-line="126" selection-start-column="11" selection-end-line="126" selection-end-column="11" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SampleSet">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="45" column="15" lean-forward="true" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/MembershipCapability.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="57" lean-forward="true" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/CommandsCapability.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitch/ChatMessageGroup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/TagsCapability.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="174" column="16" selection-start-line="174" selection-start-column="16" selection-end-line="174" selection-end-column="16" />
+          <folding>
+            <element signature="e#69#439#0" />
+            <element signature="e#475#999#0" />
+            <element signature="e#1027#2025#0" />
+            <element signature="e#2055#2352#0" />
+            <element signature="e#2382#3640#0" />
+            <element signature="e#3671#5212#0" />
+            <element signature="e#5243#6516#0" />
+            <element signature="e#6549#7703#0" />
           </folding>
         </state>
       </provider>

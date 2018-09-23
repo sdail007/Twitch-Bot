@@ -32,6 +32,8 @@ class BotInstance(object):
                     trigger.invoke(sender, msg)
 
         self.connection.MessageReceived.add(MessageReceived)
+
+    def start(self):
         self.connection.start()
 
     def shutdown(self):
