@@ -25,6 +25,7 @@ class TagsCapability(object):
                          r'(bits=(?P<bits>[^;]*);)?'
                          r'color=(?P<color>[^;]*);'
                          r'display-name=(?P<displayname>[^;]*);'
+                         r'(emote-only=(?P<emoteonly>.);)?'
                          r'emotes=(?P<emotes>[^;]*);'
                          r'(flags=(?P<flags>[^;]*);)?'
                          r'id=(?P<idofmsg>[^;]+);'

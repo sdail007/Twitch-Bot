@@ -27,7 +27,6 @@ class Outfit(object):
                 "Points": self.points}
 
 
-
 class Wardrobe(object):
     def __init__(self, settings):
         self.Outfits = {}
@@ -120,12 +119,20 @@ class DressUp(BotComponent):
         self.triggers.append(leafeon)
         self.triggers.append(sylveon)
 
+        triggerKeys = [t.Text for t in self.triggers]
+        outfitst = Trigger("!outfits")
+        message = 'Try one of these to change my outfit! ' + ', '.join(
+            triggerKeys)
+        outfitsr = Response(message)
+        outfitsr.addTrigger(outfitst)
+        self.triggers.append(outfitst)
+
         favoritet = Trigger("!favorite")
         favoriter = CodeResponse(10, PrintFave)
         favoriter.addTrigger(favoritet)
         self.triggers.append(favoritet)
 
-        #self.PointsTimer.start()
+        self.PointsTimer.start()
         return
 
     def IncrementPoints(self):

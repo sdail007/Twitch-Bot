@@ -51,11 +51,11 @@ class Eevee(BotComponent):
         else:
             self.dressUp = DressUp(connection)
 
+        self.playTimer = Timer(Eevee.GetPlayInterval(), self.PlayWithMe)
+
         self.triggers.extend(self.happiness.triggers)
         self.triggers.extend(self.hunger.triggers)
         self.triggers.extend(self.dressUp.triggers)
-
-        self.playTimer = Timer(Eevee.GetPlayInterval(), self.PlayWithMe)
         self.playTimer.start()
         return
 

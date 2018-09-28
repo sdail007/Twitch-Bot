@@ -6,5 +6,9 @@
   {
     "Trigger" : "2",
     "Response" : "2"
+  },
+  {
+    "Trigger" : "3",
+    "Response" : "3"
   }
 ]

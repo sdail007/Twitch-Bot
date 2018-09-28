@@ -1,0 +1,18 @@
+﻿{
+    "Counter1": {
+        "Response": "Something Something something {} times", 
+        "Value": 4
+    }, 
+    "Counter3": {
+        "Response": "This is my third counter FeelsOakyMan {}!", 
+        "Value": 3
+    }, 
+    "POGGERS": {
+        "Response": "{} POGGERS", 
+        "Value": 9
+    }, 
+    "Tuturu": {
+        "Response": "{} Tuturu", 
+        "Value": 4
+    }
+}

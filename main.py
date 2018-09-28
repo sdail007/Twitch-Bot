@@ -5,6 +5,7 @@ from Twitch.AuthenticatedUser import AuthenticatedUser
 from Commands.BotInstance import BotInstance
 from Twitch.TwitchConnection import TwitchConnection
 
+
 def main(argv):
     try:
         opts, args = getopt.getopt(argv, "c:f:")

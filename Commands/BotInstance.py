@@ -2,7 +2,7 @@ from Twitch.TwitchConnection import TwitchConnection
 from BotComponents.CustomCommandGroup import *
 from Eevee.Eevee import *
 from BotComponents.PokeBlockGame import PokeBlockGameAddon
-
+from BotComponents.CountersGroup import CountersGroup
 
 class BotInstance(object):
     def __init__(self, user, channel, settings_dir):
@@ -13,6 +13,14 @@ class BotInstance(object):
 
         self.extraCommands = CustomCommandGroup(settings_dir, self.connection)
         self.components.append(self.extraCommands)
+
+        countersFile = os.path.join(settings_dir, "Counters.json")
+        self.Counters = CountersGroup(countersFile, self.connection)
+        self.components.append(self.Counters)
+
+        countersFile = os.path.join(settings_dir, "OtherCounters.json")
+        self.OtherCounters = CountersGroup(countersFile, self.connection)
+        self.components.append(self.OtherCounters)
 
         settings = os.path.join(settings_dir, "Eevee.json")
         self.eevee = Eevee(self.connection, settings)

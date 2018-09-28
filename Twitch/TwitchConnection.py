@@ -86,6 +86,7 @@ class TwitchConnection(ChatInterface):
             return
 
         if stuff['command'] == 'PRIVMSG':
+            #print message
             # Decode message and propogate to listeners
             chat_message = ChatMessage(message)
             self.MessageReceived.invoke(self, chat_message)
