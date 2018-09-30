@@ -1,5 +1,6 @@
 from Twitch.TwitchConnection import TwitchConnection
 from BotComponents.CustomCommandGroup import *
+from BotComponents.BrowserSourceServer import *
 from Eevee.Eevee import *
 from BotComponents.PokeBlockGame import PokeBlockGameAddon
 from BotComponents.CountersGroup import CountersGroup
@@ -10,6 +11,9 @@ class BotInstance(object):
 
         self.components = []
         self.addons = []
+
+        self.nadeshikoSource = BrowserSourceServer(self.connection)
+        self.components.append(self.nadeshikoSource)
 
         self.extraCommands = CustomCommandGroup(settings_dir, self.connection)
         self.components.append(self.extraCommands)
@@ -43,6 +47,7 @@ class BotInstance(object):
 
     def start(self):
         self.connection.start()
+        self.nadeshikoSource.start()
 
     def shutdown(self):
         for component in self.components:

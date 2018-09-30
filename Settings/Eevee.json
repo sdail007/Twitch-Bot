@@ -1,14 +1,14 @@
 ﻿{
     "DressUp": {
-        "Outfit": "Espeon", 
+        "Outfit": "Flareon", 
         "Wardrobe": {
             "Espeon": {
                 "Color": "BlueViolet", 
-                "Points": 1035
+                "Points": 1089
             }, 
             "Flareon": {
                 "Color": "Coral", 
-                "Points": 1852
+                "Points": 2834
             }, 
             "Glaceon": {
                 "Color": "DodgerBlue", 
@@ -20,7 +20,7 @@
             }, 
             "Leafeon": {
                 "Color": "Green", 
-                "Points": 1550
+                "Points": 2856
             }, 
             "Sylveon": {
                 "Color": "HotPink", 
@@ -28,7 +28,7 @@
             }, 
             "Umbreon": {
                 "Color": "GoldenRod", 
-                "Points": 460
+                "Points": 463
             }, 
             "Vaporeon": {
                 "Color": "Blue", 
@@ -37,7 +37,7 @@
         }
     }, 
     "Happiness": {
-        "CurrentValue": 589, 
+        "CurrentValue": 369, 
         "Responses": {
             "0": [
                 "Bellly Rubs NOW", 
@@ -53,7 +53,7 @@
         }
     }, 
     "Hunger": {
-        "CurrentValue": 83, 
+        "CurrentValue": 0, 
         "Responses": {
             "0": [
                 "I'm sooooo hungrryyyyyy"

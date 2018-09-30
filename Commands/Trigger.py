@@ -45,3 +45,14 @@ class RegexTrigger(Trigger):
         if not re.match(message.Message):
             return
         self.Triggered.invoke(sender, message)
+
+
+class ContainsTrigger(Trigger):
+    def __init__(self, text):
+        super(ContainsTrigger, self).__init__(text)
+        return
+
+    def invoke(self, sender, message):
+        if self.Text not in message.Message:
+            return
+        self.Triggered.invoke(sender, message)

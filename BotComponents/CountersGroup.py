@@ -14,7 +14,7 @@ class CountersGroup(BotComponent):
         self.file = file
         pathparts = os.path.split(file)[-1]
         self.groupname = pathparts[:-5]
-        print self.groupname
+
         self.counters = {}
 
         with codecs.open(self.file, encoding="utf-8-sig", mode="r") as f:
@@ -60,7 +60,6 @@ class CountersGroup(BotComponent):
 
     def AddCounter(self, sender, message, *args):
         params = message.Message.split(' ')[1:]
-        print params
 
         if len(params) == 0:
             sender.send_message('Counters in {}: '.format(self.groupname)

@@ -8,6 +8,7 @@ from Capabilities.TagsCapability import TagsCapability
 from Capabilities.MembershipCapability import MembershipCapability
 from Capabilities.CommandsCapability import CommandsCapability
 
+
 class TwitchConnection(ChatInterface):
     ping = 'PING :tmi.twitch.tv'
 
