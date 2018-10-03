@@ -1,7 +1,8 @@
 import re
+from Twitch.ChatMessageGroup import TwitchCapability
 
 
-class TagsCapability(object):
+class TagsCapability(TwitchCapability):
     clearchat = re.compile(r':tmi\.twitch\.tv CLEARCHAT #(?P<channel>.+) '
                            r':(?P<user>.+) '
                            r'@(ban-duration=(?P<banduration>[^;]+);)?'
@@ -85,8 +86,8 @@ class TagsCapability(object):
                             r'msg-param-recipient-display-name=(?P<recipientdisplayname>[^;]+);'
                             r'msg-param-recipient-id=(?P<recipientid>[^;]+);'
                             r'msg-param-recipient-name=(?P<recipientusername>[^;]+);'
-                            r'msg-param-sub-plan-name=(?P<msgparamsubplanname>[^;]+);'
-                            r'msg-param-sub-plan=(?P<msgparamsubplan>[^;]+);'
+                            r'msg-param-sub-plan-name=(?P<subplanname>[^;]+);'
+                            r'msg-param-sub-plan=(?P<subplan>[^;]+);'
                             r'room-id=(?P<roomid>[^;]+);'
                             r'subscriber=(?P<subscriber>[^;]+);'
                             r'system-msg=(?P<systemmsg>[^;]+);'
@@ -156,21 +157,23 @@ class TagsCapability(object):
                            r'#(?P<channel>[^;]*)')
 
     def __init__(self):
-        self.subscriptionmessage = r'CAP REQ :twitch.tv/tags'
-        self.regexes = {"privmsg": TagsCapability.privmsg,
-                        "clearchat": TagsCapability.clearchat,
-                        "globaluserstate": TagsCapability.globaluserstate,
-                        "roomstate": TagsCapability.roomstate,
-                        "subnotice": TagsCapability.subnotice,
-                        "giftnotice": TagsCapability.giftnotice,
-                        "raidnotice": TagsCapability.raidnotice,
-                        "ritualnotice": TagsCapability.ritualnotice,
-                        "userstate": TagsCapability.userstate}
+        super(TagsCapability, self).__init__(r'CAP REQ :twitch.tv/tags')
+        self.regexes["privmsg"] = TagsCapability.privmsg
+        self.regexes["clearchat"] = TagsCapability.clearchat
+        self.regexes["globaluserstate"] = TagsCapability.globaluserstate
+        self.regexes["roomstate"] = TagsCapability.roomstate
+        self.regexes["subnotice"] = TagsCapability.subnotice
+        self.regexes["giftnotice"] = TagsCapability.giftnotice
+        self.regexes["raidnotice"] = TagsCapability.raidnotice
+        self.regexes["ritualnotice"] = TagsCapability.ritualnotice
+        self.regexes["userstate"] = TagsCapability.userstate
         return
 
+'''
     def Parse(self, text):
         for key in self.regexes:
             match = self.regexes[key].match(text)
             if match:
                 print key
                 return match.groupdict()
+'''

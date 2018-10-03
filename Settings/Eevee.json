@@ -1,6 +1,6 @@
 ﻿{
     "DressUp": {
-        "Outfit": "Vaporeon", 
+        "Outfit": "Jolteon", 
         "Wardrobe": {
             "Espeon": {
                 "Color": "BlueViolet", 
@@ -16,7 +16,7 @@
             }, 
             "Jolteon": {
                 "Color": "YellowGreen", 
-                "Points": 31
+                "Points": 147
             }, 
             "Leafeon": {
                 "Color": "Green", 
@@ -32,12 +32,12 @@
             }, 
             "Vaporeon": {
                 "Color": "Blue", 
-                "Points": 1681
+                "Points": 2088
             }
         }
     }, 
     "Happiness": {
-        "CurrentValue": 272, 
+        "CurrentValue": 431, 
         "Responses": {
             "0": [
                 "Bellly Rubs NOW", 

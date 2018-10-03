@@ -1,6 +1,7 @@
 import os
 import sys
 import getopt
+from threading import Event
 from Twitch.AuthenticatedUser import AuthenticatedUser
 from Commands.BotInstance import BotInstance
 from Twitch.TwitchConnection import TwitchConnection
@@ -24,27 +25,36 @@ def main(argv):
 def file(file):
     print file
 
-    with open(file) as w:
-        lines = w.readlines()
-
     tokenFile = os.path.join(os.path.dirname(__file__), "Token.json")
     botuser = AuthenticatedUser(tokenFile)
-
     connection = TwitchConnection(botuser, botuser.nick)
 
+    settings_dir = os.path.join(os.path.dirname(__file__), "Settings")
+    bot = BotInstance(connection, settings_dir)
+
+    Event().wait(10)
+
+    # Inject messages into bot ^_^b
+    with open(file) as w:
+        lines = w.readlines()
     for line in lines:
         connection.on_message(line)
+
+    bot.shutdown()
     return
 
 
 def channel(channel):
     print 'channel'
+
     tokenFile = os.path.join(os.path.dirname(__file__), "Token.json")
     botuser = AuthenticatedUser(tokenFile)
-    settings_dir = os.path.join(os.path.dirname(__file__), "Settings")
-    bot = BotInstance(botuser, channel, settings_dir)
+    connection = TwitchConnection(botuser, channel)
 
-    bot.start()
+    settings_dir = os.path.join(os.path.dirname(__file__), "Settings")
+    bot = BotInstance(connection, settings_dir)
+
+    connection.start()
 
     message = raw_input('> ')
 

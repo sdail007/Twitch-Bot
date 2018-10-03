@@ -1,5 +1,3 @@
-
-
 class InvocationList(object):
 
     def __init__(self):

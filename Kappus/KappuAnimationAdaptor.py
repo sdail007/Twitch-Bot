@@ -1,7 +1,7 @@
 from Commands.BotComponent import BotComponent
 from Commands.Trigger import ContainsTrigger
 from Commands.Response import CodeResponse
-from websocket_server import *
+from Web.websocket_server import WebsocketServer
 from Web.ThreadingSimpleServer import *
 import SimpleHTTPServer
 

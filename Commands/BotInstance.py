@@ -8,8 +8,8 @@ from WhoDis.PokeHealthGame import *
 
 
 class BotInstance(object):
-    def __init__(self, user, channel, settings_dir):
-        self.connection = TwitchConnection(user, channel)
+    def __init__(self, connection, settings_dir):
+        self.connection = connection
 
         self.components = []
         self.addons = []
@@ -50,9 +50,6 @@ class BotInstance(object):
                     trigger.invoke(sender, msg)
 
         self.connection.MessageReceived.add(MessageReceived)
-
-    def start(self):
-        self.connection.start()
 
     def shutdown(self):
         for component in self.components:

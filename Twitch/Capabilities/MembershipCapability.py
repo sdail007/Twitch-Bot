@@ -1,7 +1,8 @@
 import re
+from Twitch.ChatMessageGroup import TwitchCapability
 
 
-class MembershipCapability(object):
+class MembershipCapability(TwitchCapability):
 
     join = re.compile(r':(?P<user>[^;]+)!(?P=user)@(?P=user)'
                       r'\.tmi\.twitch\.tv '
@@ -25,18 +26,10 @@ class MembershipCapability(object):
                       r'#(?P<channel>[^;]+)')
 
     def __init__(self):
-        self.subscriptionmessage = r'CAP REQ :twitch.tv/membership'
-        self.regexes = {"join": MembershipCapability.join,
-                        "mode": MembershipCapability.mode,
-                        "names": MembershipCapability.names,
-                        "part": MembershipCapability.part,
-                        }
+        super(MembershipCapability, self).\
+            __init__(r'CAP REQ :twitch.tv/membership')
+        self.regexes["join"] = MembershipCapability.join
+        self.regexes["mode"] = MembershipCapability.mode
+        self.regexes["names"] = MembershipCapability.names
+        self.regexes["part"] = MembershipCapability.part
         return
-
-    def Parse(self, text):
-        for key in self.regexes:
-            match = self.regexes[key].match(text)
-            if match:
-                print key
-                return match.groupdict()
-

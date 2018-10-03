@@ -1,12 +1,13 @@
 from Commands.BotComponent import BotComponent
 from Commands.Trigger import Trigger
 from Commands.Response import CodeResponse
-from websocket_server import *
+from Web.websocket_server import WebsocketServer
+from Twitch.TwitchConnection import *
 
 from datetime import datetime
 import codecs
 import json
-import thread
+import threading
 
 
 class PokeHealthGame(BotComponent):
@@ -29,6 +30,8 @@ class PokeHealthGame(BotComponent):
 
         self.ConnectionHandler = WebsocketServer(1000, host='127.0.0.1')
 
+        self.connection.EventReceived.add(self.eventReceived)
+
         t = Trigger('!polarbear')
         r = CodeResponse(10, self.NewSub)
         r.addTrigger(t)
@@ -47,14 +50,14 @@ class PokeHealthGame(BotComponent):
 
         self.ConnectionHandler.set_fn_new_client(self.NewClient)
 
-        def run(*args):
-            self.ConnectionHandler.run_forever()
-        thread.start_new_thread(run, ())
+        server = threading.Thread(target=self.ConnectionHandler.run_forever)
+        server.daemon = True
+        server.start()
         return
 
     def NewClient(self, client, server):
         lastThree = self.recentEvents[:3]
-        for recentEvent in reversed(lastThree):
+        for recentEvent in lastThree:
             self.ConnectionHandler.send_message(client, recentEvent.text)
         return
 
@@ -68,6 +71,13 @@ class PokeHealthGame(BotComponent):
         with codecs.open(self.file, encoding="utf-8-sig", mode="w+") as f:
             json.dump(self.dumpAsDict(), f, encoding="utf-8", indent=4,
                       sort_keys=True)
+        return
+
+    def eventReceived(self, sender, message):
+        if 'command' in message:
+            if message['command'] == 'USERNOTICE' and 'subplan' in message:
+                self.SubmitEvent('NEW SUB', 100)
+
         return
 
     def NewSub(self, sender, message, *args):

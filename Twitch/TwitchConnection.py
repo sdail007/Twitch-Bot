@@ -92,6 +92,8 @@ class TwitchConnection(ChatInterface):
             chat_message = ChatMessage(message)
             self.MessageReceived.invoke(self, chat_message)
 
+        self.EventReceived.invoke(self, stuff)
+
     def on_error(self, error):
         '''
         Error handler for websocket

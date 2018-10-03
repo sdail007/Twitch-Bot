@@ -54,7 +54,137 @@
             "EventText": "The fox says you are a beautiful person", 
             "Time": "2018-10-02 21:37:43.214000", 
             "ValueChange": 10
+        }, 
+        {
+            "EventText": "The fox says you are a beautiful person", 
+            "Time": "2018-10-02 22:10:16.412000", 
+            "ValueChange": 10
+        }, 
+        {
+            "EventText": "Polar Bears are the Coolest Thing Ever", 
+            "Time": "2018-10-02 22:10:25.126000", 
+            "ValueChange": 100
+        }, 
+        {
+            "EventText": "Mr. Owl think you are pretty coo", 
+            "Time": "2018-10-02 22:10:30.141000", 
+            "ValueChange": 50
+        }, 
+        {
+            "EventText": "The fox says you are a beautiful person", 
+            "Time": "2018-10-02 22:19:19.662000", 
+            "ValueChange": 10
+        }, 
+        {
+            "EventText": "Mr. Owl think you are pretty coo", 
+            "Time": "2018-10-02 22:19:21.580000", 
+            "ValueChange": 50
+        }, 
+        {
+            "EventText": "Mr. Owl think you are pretty coo", 
+            "Time": "2018-10-02 22:28:51.996000", 
+            "ValueChange": 50
+        }, 
+        {
+            "EventText": "Polar Bears are the Coolest Thing Ever", 
+            "Time": "2018-10-02 22:28:57.175000", 
+            "ValueChange": 100
+        }, 
+        {
+            "EventText": "Mr. Owl think you are pretty coo", 
+            "Time": "2018-10-02 22:57:59.366000", 
+            "ValueChange": 50
+        }, 
+        {
+            "EventText": "Mr. Owl think you are pretty coo", 
+            "Time": "2018-10-02 23:09:25.576000", 
+            "ValueChange": 50
+        }, 
+        {
+            "EventText": "NEW SUB", 
+            "Time": "2018-10-02 23:22:09.604000", 
+            "ValueChange": 100
+        }, 
+        {
+            "EventText": "NEW SUB", 
+            "Time": "2018-10-02 23:25:24.433000", 
+            "ValueChange": 100
+        }, 
+        {
+            "EventText": "NEW SUB", 
+            "Time": "2018-10-02 23:25:38.970000", 
+            "ValueChange": 100
+        }, 
+        {
+            "EventText": "NEW SUB", 
+            "Time": "2018-10-02 23:27:30.386000", 
+            "ValueChange": 100
+        }, 
+        {
+            "EventText": "NEW SUB", 
+            "Time": "2018-10-02 23:27:30.397000", 
+            "ValueChange": 100
+        }, 
+        {
+            "EventText": "NEW SUB", 
+            "Time": "2018-10-02 23:30:52.321000", 
+            "ValueChange": 100
+        }, 
+        {
+            "EventText": "NEW SUB", 
+            "Time": "2018-10-02 23:30:52.337000", 
+            "ValueChange": 100
+        }, 
+        {
+            "EventText": "NEW SUB", 
+            "Time": "2018-10-02 23:34:34.036000", 
+            "ValueChange": 100
+        }, 
+        {
+            "EventText": "NEW SUB", 
+            "Time": "2018-10-02 23:34:34.047000", 
+            "ValueChange": 100
+        }, 
+        {
+            "EventText": "NEW SUB", 
+            "Time": "2018-10-02 23:35:05.663000", 
+            "ValueChange": 100
+        }, 
+        {
+            "EventText": "NEW SUB", 
+            "Time": "2018-10-02 23:35:05.675000", 
+            "ValueChange": 100
+        }, 
+        {
+            "EventText": "NEW SUB", 
+            "Time": "2018-10-02 23:35:46.429000", 
+            "ValueChange": 100
+        }, 
+        {
+            "EventText": "NEW SUB", 
+            "Time": "2018-10-02 23:35:46.439000", 
+            "ValueChange": 100
+        }, 
+        {
+            "EventText": "NEW SUB", 
+            "Time": "2018-10-02 23:36:10.629000", 
+            "ValueChange": 100
+        }, 
+        {
+            "EventText": "NEW SUB", 
+            "Time": "2018-10-02 23:36:10.639000", 
+            "ValueChange": 100
+        }, 
+        {
+            "EventText": "NEW SUB", 
+            "Time": "2018-10-02 23:36:33.445000", 
+            "ValueChange": 100
+        }, 
+        {
+            "EventText": "NEW SUB", 
+            "Time": "2018-10-02 23:36:33.457000", 
+            "ValueChange": 100
         }
     ], 
-    "Value": 630
+    "Value": 2800
 }

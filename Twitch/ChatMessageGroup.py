@@ -1,6 +1,6 @@
 class TwitchCapability(object):
-    def __init__(self):
-        self.subscriptionmessage = None
+    def __init__(self, subMessage):
+        self.subscriptionmessage = subMessage
         self.regexes = {}
         return
 
@@ -8,5 +8,4 @@ class TwitchCapability(object):
         for key in self.regexes:
             match = self.regexes[key].match(text)
             if match:
-                print key
                 return match.groupdict()
