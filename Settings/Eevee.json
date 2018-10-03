@@ -1,14 +1,14 @@
 ﻿{
     "DressUp": {
-        "Outfit": "Flareon", 
+        "Outfit": "Vaporeon", 
         "Wardrobe": {
             "Espeon": {
                 "Color": "BlueViolet", 
-                "Points": 1089
+                "Points": 1209
             }, 
             "Flareon": {
                 "Color": "Coral", 
-                "Points": 2834
+                "Points": 5448
             }, 
             "Glaceon": {
                 "Color": "DodgerBlue", 
@@ -20,11 +20,11 @@
             }, 
             "Leafeon": {
                 "Color": "Green", 
-                "Points": 2856
+                "Points": 3833
             }, 
             "Sylveon": {
                 "Color": "HotPink", 
-                "Points": 216
+                "Points": 218
             }, 
             "Umbreon": {
                 "Color": "GoldenRod", 
@@ -32,12 +32,12 @@
             }, 
             "Vaporeon": {
                 "Color": "Blue", 
-                "Points": 1185
+                "Points": 1681
             }
         }
     }, 
     "Happiness": {
-        "CurrentValue": 369, 
+        "CurrentValue": 272, 
         "Responses": {
             "0": [
                 "Bellly Rubs NOW", 

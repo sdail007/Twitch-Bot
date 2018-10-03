@@ -1,9 +1,11 @@
 from Twitch.TwitchConnection import TwitchConnection
 from BotComponents.CustomCommandGroup import *
-from BotComponents.BrowserSourceServer import *
 from Eevee.Eevee import *
 from BotComponents.PokeBlockGame import PokeBlockGameAddon
 from BotComponents.CountersGroup import CountersGroup
+from Kappus.KappuAnimationAdaptor import *
+from WhoDis.PokeHealthGame import *
+
 
 class BotInstance(object):
     def __init__(self, user, channel, settings_dir):
@@ -12,8 +14,12 @@ class BotInstance(object):
         self.components = []
         self.addons = []
 
-        self.nadeshikoSource = BrowserSourceServer(self.connection)
-        self.components.append(self.nadeshikoSource)
+        self.kappus = KappuAnimationAdaptor(self.connection)
+        self.components.append(self.kappus)
+
+        pokeHealthFile = os.path.join(settings_dir, "PokeHealthGame.json")
+        self.pokeHealth = PokeHealthGame(self.connection, pokeHealthFile)
+        self.components.append(self.pokeHealth)
 
         self.extraCommands = CustomCommandGroup(settings_dir, self.connection)
         self.components.append(self.extraCommands)
@@ -47,7 +53,6 @@ class BotInstance(object):
 
     def start(self):
         self.connection.start()
-        self.nadeshikoSource.start()
 
     def shutdown(self):
         for component in self.components:
