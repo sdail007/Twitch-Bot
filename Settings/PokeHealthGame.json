@@ -184,7 +184,17 @@
             "EventText": "NEW SUB", 
             "Time": "2018-10-02 23:36:33.457000", 
             "ValueChange": 100
+        }, 
+        {
+            "EventText": "NEW SUB", 
+            "Time": "2018-10-03 21:00:53.281000", 
+            "ValueChange": 100
+        }, 
+        {
+            "EventText": "NEW SUB", 
+            "Time": "2018-10-03 21:00:53.293000", 
+            "ValueChange": 100
         }
     ], 
-    "Value": 2800
+    "Value": 3000
 }

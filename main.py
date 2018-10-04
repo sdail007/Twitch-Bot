@@ -5,6 +5,7 @@ from threading import Event
 from Twitch.AuthenticatedUser import AuthenticatedUser
 from Commands.BotInstance import BotInstance
 from Twitch.TwitchConnection import TwitchConnection
+from Twitch.TestConnection import TestConnection
 
 
 def main(argv):
@@ -14,47 +15,20 @@ def main(argv):
         print 'main.py -c <channel> | -f <file>'
         sys.exit(2)
 
+    connection = None
+
     for opt, arg in opts:
         if opt == '-c':
-            channel(arg)
+            tokenFile = os.path.join(os.path.dirname(__file__), "Token.json")
+            botuser = AuthenticatedUser(tokenFile)
+            connection = TwitchConnection(botuser, arg)
         elif opt == '-f':
-            file(arg)
-    return
-
-
-def file(file):
-    print file
-
-    tokenFile = os.path.join(os.path.dirname(__file__), "Token.json")
-    botuser = AuthenticatedUser(tokenFile)
-    connection = TwitchConnection(botuser, botuser.nick)
+            connection = TestConnection(arg)
 
     settings_dir = os.path.join(os.path.dirname(__file__), "Settings")
     bot = BotInstance(connection, settings_dir)
 
-    Event().wait(10)
-
-    # Inject messages into bot ^_^b
-    with open(file) as w:
-        lines = w.readlines()
-    for line in lines:
-        connection.on_message(line)
-
-    bot.shutdown()
-    return
-
-
-def channel(channel):
-    print 'channel'
-
-    tokenFile = os.path.join(os.path.dirname(__file__), "Token.json")
-    botuser = AuthenticatedUser(tokenFile)
-    connection = TwitchConnection(botuser, channel)
-
-    settings_dir = os.path.join(os.path.dirname(__file__), "Settings")
-    bot = BotInstance(connection, settings_dir)
-
-    connection.start()
+    bot.start()
 
     message = raw_input('> ')
 

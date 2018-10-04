@@ -51,7 +51,12 @@ class BotInstance(object):
 
         self.connection.MessageReceived.add(MessageReceived)
 
+    def start(self):
+        self.connection.start()
+        return
+
     def shutdown(self):
+        self.connection.stop()
         for component in self.components:
             component.shutdown()
 
