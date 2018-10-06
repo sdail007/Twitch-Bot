@@ -7,6 +7,8 @@ from Commands.BotInstance import BotInstance
 from Twitch.TwitchConnection import TwitchConnection
 from Twitch.TestConnection import TestConnection
 
+from Streamlabs.StreamLabsConnection import StreamLabsConnection
+
 
 def main(argv):
     try:
@@ -16,6 +18,9 @@ def main(argv):
         sys.exit(2)
 
     connection = None
+
+    sltoken = os.path.join(os.path.dirname(__file__), "StreamLabsToken.json")
+    # slconnection = StreamLabsConnection(sltoken)
 
     for opt, arg in opts:
         if opt == '-c':

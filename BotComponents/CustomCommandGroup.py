@@ -9,7 +9,7 @@ from Commands.BotComponent import BotComponent
 
 
 class CustomCommandGroup(BotComponent):
-    def __init__(self, folder, connection):
+    def __init__(self, connection, folder):
         super(CustomCommandGroup, self).__init__(connection)
 
         self.folder = folder

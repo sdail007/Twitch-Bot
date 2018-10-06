@@ -9,7 +9,7 @@ from Commands.Response import CodeResponse
 
 
 class CountersGroup(BotComponent):
-    def __init__(self, file, connection):
+    def __init__(self, connection, file):
         super(CountersGroup, self).__init__(connection)
         self.file = file
         pathparts = os.path.split(file)[-1]

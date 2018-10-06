@@ -1,0 +1,25 @@
+{
+  "components" :
+  [
+    {
+      "type" : "BotComponents.CustomCommandGroup",
+      "file" : "CommandsGroup"
+    },
+    {
+      "type" : "BotComponents.CountersGroup",
+      "file" : "Counters.json"
+    },
+    {
+      "type" : "BotComponents.CountersGroup",
+      "file" : "OtherCounters.json"
+    },
+    {
+      "type" : "Eevee.Eevee",
+      "file" : "Eevee.json"
+    },
+    {
+      "type" : "WhoDis.PokeHealthGame",
+      "file" : "PokeHealthGame"
+    }
+  ]
+}

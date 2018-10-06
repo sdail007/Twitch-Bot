@@ -12,7 +12,7 @@ class KappuAnimationAdaptor(BotComponent):
     def __init__(self, connection):
         super(KappuAnimationAdaptor, self).__init__(connection)
 
-        self.ConnectionHandler = WebsocketServer(12345, host='192.168.1.5')
+        self.ConnectionHandler = WebsocketServer(12345, host='127.0.0.1')
         webServer = ThreadingSimpleServer(('', 8000),
                                           SimpleHTTPServer.SimpleHTTPRequestHandler)
 

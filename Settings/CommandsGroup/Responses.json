@@ -1,0 +1,17 @@
+﻿[
+    {
+        "ID": 1, 
+        "cooldown": 1, 
+        "text": "Hi I'm Eevee!"
+    }, 
+    {
+        "ID": 2, 
+        "cooldown": 10, 
+        "text": "Hi I'm Vulpix!"
+    }, 
+    {
+        "ID": 3, 
+        "cooldown": 10, 
+        "text": "Bless you!"
+    }
+]

@@ -3,8 +3,6 @@ var container;
 window.onload = async () => {
     container = document.getElementById("container");
 
-    AddEvent('Hello World');
-
     socket = new ReconnectingWebsocket('ws://127.0.0.1:1000');
     socket.onopen = (event) => {
 
@@ -15,6 +13,8 @@ window.onload = async () => {
 }
 
 function AddEvent(event) {
+    console.log(event);
+    e = JSON.parse(event)
     var itemsCount = container.childNodes.length;
 
     if(itemsCount == 3)
@@ -23,6 +23,6 @@ function AddEvent(event) {
     }
 
     var node = document.createElement("li");
-    node.innerHTML=event;
+    node.innerHTML=e.EventText;
     container.appendChild(node);
 }

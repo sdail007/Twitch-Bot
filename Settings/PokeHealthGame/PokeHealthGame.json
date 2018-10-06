@@ -1,0 +1,11 @@
+﻿{
+    "BitPoints": 2, 
+    "Purchases": {
+        "Firestone": 2000, 
+        "Pokedoll": 1000, 
+        "Thunderstone": 2000, 
+        "Waterstone": 2000
+    }, 
+    "SubPoints": 1000, 
+    "Value": 2800
+}

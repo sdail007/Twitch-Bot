@@ -12,7 +12,7 @@
             }, 
             "Glaceon": {
                 "Color": "DodgerBlue", 
-                "Points": 429
+                "Points": 1646
             }, 
             "Jolteon": {
                 "Color": "YellowGreen", 
@@ -37,7 +37,7 @@
         }
     }, 
     "Happiness": {
-        "CurrentValue": 514, 
+        "CurrentValue": 199, 
         "Responses": {
             "0": [
                 "Bellly Rubs NOW", 

@@ -1,76 +1,63 @@
 from Commands.BotComponent import BotComponent
 from Commands.Trigger import Trigger
 from Commands.Response import CodeResponse
-from Web.websocket_server import WebsocketServer
-from Twitch.TwitchConnection import *
+from Commands.Cooldown import Cooldown
+from EventsList.EventList import *
 
 from datetime import datetime
 import codecs
 import json
-import threading
+import os
 
 
 class PokeHealthGame(BotComponent):
-    def __init__(self, twitchConnection, file=None):
+    def __init__(self, twitchConnection, folder):
         super(PokeHealthGame, self).__init__(twitchConnection)
 
-        if file is not None:
-            self.file = file
+        eventsListFile = os.path.join(folder, "Events.json")
+        self.settingsFile = os.path.join(folder, "PokeHealthGame.json")
 
-            with codecs.open(self.file, encoding="utf-8-sig", mode="r") as f:
-                settings = json.load(f, encoding="utf-8")
+        self.events = EventList(PokeHealthGameEvent, eventsListFile)
 
-            self.value = settings['Value']
-            self.recentEvents = [PokeHealthGameEvent.fromSettings(recentEvent)
-                                 for recentEvent in settings['RecentEvents']]
-        else:
-            self.value = 0
-            self.recentEvents = []
-            #make a file
+        with codecs.open(self.settingsFile, encoding="utf-8-sig", mode="r") as f:
+            settings = json.load(f, encoding="utf-8")
 
-        self.ConnectionHandler = WebsocketServer(1000, host='127.0.0.1')
+            if 'Value' in settings:
+                self.value = settings['Value']
+            else:
+                self.value = 0
+
+            self.subpoints = settings['SubPoints']
+            self.bitpoints = settings['BitPoints']
+            self.purchases = settings['Purchases']
+
+            t = Trigger('!{}'.format('Purchase'))
+            r = CodeResponse(10, self.spend_points)
+            r.addTrigger(t)
+            self.triggers.append(t)
 
         self.connection.EventReceived.add(self.eventReceived)
-
-        t = Trigger('!polarbear')
-        r = CodeResponse(10, self.NewSub)
-        r.addTrigger(t)
-
-        t2 = Trigger('!owl')
-        r2 = CodeResponse(10, self.NewBits)
-        r2.addTrigger(t2)
-
-        t3 = Trigger('!fox')
-        r3 = CodeResponse(10, self.NewFollow)
-        r3.addTrigger(t3)
-
-        self.triggers.append(t)
-        self.triggers.append(t2)
-        self.triggers.append(t3)
-
-        self.ConnectionHandler.set_fn_new_client(self.NewClient)
-
-        server = threading.Thread(target=self.ConnectionHandler.run_forever)
-        server.daemon = True
-        server.start()
-        return
-
-    def NewClient(self, client, server):
-        lastThree = self.recentEvents[:3]
-        for recentEvent in lastThree:
-            self.ConnectionHandler.send_message(client, recentEvent.text)
         return
 
     def dumpAsDict(self):
-        recentEvents = []
-        for recentEvent in self.recentEvents:
-            recentEvents.append(recentEvent.dumpAsDict())
-        return {"Value": self.value, "RecentEvents": recentEvents}
+        return {"Value": self.value,
+                "SubPoints": self.subpoints,
+                "BitPoints": self.bitpoints,
+                "Purchases": self.purchases}
 
     def Save(self):
-        with codecs.open(self.file, encoding="utf-8-sig", mode="w+") as f:
+        with codecs.open(self.settingsFile, encoding="utf-8-sig", mode="w+") as f:
             json.dump(self.dumpAsDict(), f, encoding="utf-8", indent=4,
                       sort_keys=True)
+        self.events.Save()
+        return
+
+    def spend_points(self, sender, message, *args):
+        item = message.Message.split()[1]
+        if item in self.purchases:
+            print item
+            print self.purchases[item]
+
         return
 
     def eventReceived(self, sender, message):
@@ -93,21 +80,19 @@ class PokeHealthGame(BotComponent):
         return
 
     def SubmitEvent(self, text, value):
-        newEvent = PokeHealthGameEvent(datetime.now(), text,
-                                       value)
+        newEvent = PokeHealthGameEvent(datetime.now(), text, value)
         self.value += value
-        self.recentEvents.append(newEvent)
-        self.ConnectionHandler.send_message_to_all(newEvent.text)
+        self.events.add_event(newEvent)
         self.Save()
         return
 
     def shutdown(self):
-        self.ConnectionHandler.shutdown()
+        self.events.Save()
         self.Save()
         return
 
 
-class PokeHealthGameEvent(object):
+class PokeHealthGameEvent(Event):
     @classmethod
     def fromSettings(cls, settings):
         time = datetime.strptime(settings['Time'], '%Y-%m-%d %H:%M:%S.%f')
@@ -116,12 +101,15 @@ class PokeHealthGameEvent(object):
         return cls(time, text, valueChange)
 
     def __init__(self, time, text, valueChange):
+        super(PokeHealthGameEvent, self).__init__(text)
         self.time = time
-        self.text = text
-        self.valueChange =valueChange
+        self.valueChange = valueChange
         return
 
     def dumpAsDict(self):
         return {"Time": str(self.time), "EventText": self.text, "ValueChange":
             self.valueChange}
+
+    def __str__(self):
+        return self.text
 
