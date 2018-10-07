@@ -9,7 +9,7 @@ import threading
 
 
 class KappuAnimationAdaptor(BotComponent):
-    def __init__(self, connection):
+    def __init__(self, connection, file):
         super(KappuAnimationAdaptor, self).__init__(connection)
 
         self.ConnectionHandler = WebsocketServer(12345, host='127.0.0.1')

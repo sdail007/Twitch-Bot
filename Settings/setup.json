@@ -20,6 +20,10 @@
     {
       "type" : "WhoDis.PokeHealthGame",
       "file" : "PokeHealthGame"
+    },
+    {
+      "type" : "Kappus.KappuAnimationAdaptor",
+      "file" : ""
     }
   ]
 }

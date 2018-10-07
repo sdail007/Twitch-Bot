@@ -4,12 +4,39 @@
 #container {
 
 }
+@keyframes slideIn {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 li{
   font-size: 24pt;
+  font-family: "Helvetica";
   list-style-type: none;
-  color: Black;
+
   margin: 5px;
+  padding: 8px 8px 8px 20px;
+  min-width: 250px;
+
+  color: #EFDDFD;
+  border-left: 12px solid #210934;
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom right, #700CBC, #C91BFE);
+
+  animation: 1s ease-out 0s 1 slideIn;
 }
+li:nth-child(2)
+{
+  opacity: 0.8;
+}
+li:nth-child(1)
+{
+  opacity: 0.5;
+}
+
 </style>
 <head>
     <script src="/ReconnectingSocket.js"></script>

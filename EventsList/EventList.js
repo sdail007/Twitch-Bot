@@ -23,6 +23,6 @@ function AddEvent(event) {
     }
 
     var node = document.createElement("li");
-    node.innerHTML=e.EventText;
+    node.innerHTML= `${e.EventText} (${e.ValueChange > 0 ? "+" : "-"}${e.ValueChange})`;
     container.appendChild(node);
 }

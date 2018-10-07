@@ -55,8 +55,12 @@ class PokeHealthGame(BotComponent):
     def spend_points(self, sender, message, *args):
         item = message.Message.split()[1]
         if item in self.purchases:
-            print item
-            print self.purchases[item]
+            cost = self.purchases[item]
+            if self.value - cost >= 0:
+                self.value -= cost
+                sender.send_message("{} purchased! Points remaining: {}".format(item, self.value))
+            else:
+                sender.send_message("You can't afford a {}!".format(item))
 
         return
 

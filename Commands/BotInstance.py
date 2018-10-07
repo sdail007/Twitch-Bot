@@ -1,10 +1,6 @@
-from Twitch.TwitchConnection import TwitchConnection
-from BotComponents.CustomCommandGroup import *
-from Eevee.Eevee import *
-from BotComponents.PokeBlockGame import PokeBlockGameAddon
-from BotComponents.CountersGroup import CountersGroup
-from Kappus.KappuAnimationAdaptor import *
-from WhoDis.PokeHealthGame import *
+import os
+import codecs
+import json
 import importlib
 
 
@@ -21,15 +17,16 @@ class BotInstance(object):
 
             for componentSetting in setup['components']:
 
+                #Get ClassType
                 module_name = str(componentSetting['type'])
                 module = importlib.import_module(module_name)
-
                 classname = str(module_name.split('.')[-1])
+                myClass = getattr(module, classname)
 
+                #Get settings file
                 file = str(componentSetting['file'])
                 path = os.path.join(settings_dir, file)
 
-                myClass = getattr(module, classname)
                 component = myClass(self.connection, path)
 
                 self.components.append(component)

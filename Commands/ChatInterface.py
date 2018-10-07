@@ -8,6 +8,7 @@ class ChatInterface(object):
         return
 
     def send_message(self, message):
+        print message
         return
 
     def stop(self):
