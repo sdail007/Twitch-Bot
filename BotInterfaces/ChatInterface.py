@@ -1,4 +1,4 @@
-from InvocationList import InvocationList
+from Commands.InvocationList import InvocationList
 
 
 class ChatInterface(object):

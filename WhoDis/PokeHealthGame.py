@@ -1,7 +1,6 @@
-from Commands.BotComponent import BotComponent
+from BotInterfaces.BotComponent import BotComponent
 from Commands.Trigger import Trigger
 from Commands.Response import CodeResponse
-from Commands.Cooldown import Cooldown
 from EventsList.EventList import *
 
 from datetime import datetime
@@ -22,13 +21,12 @@ class PokeHealthGame(BotComponent):
         with codecs.open(self.settingsFile, encoding="utf-8-sig", mode="r") as f:
             settings = json.load(f, encoding="utf-8")
 
-            if 'Value' in settings:
-                self.value = settings['Value']
+            if 'Balance' in settings:
+                self.balance = settings['Balance']
             else:
-                self.value = 0
+                self.balance = 0
 
-            self.subpoints = settings['SubPoints']
-            self.bitpoints = settings['BitPoints']
+            self.rewardPoints = settings['RewardPoints']
             self.purchases = settings['Purchases']
 
             t = Trigger('!{}'.format('Purchase'))
@@ -40,9 +38,8 @@ class PokeHealthGame(BotComponent):
         return
 
     def dumpAsDict(self):
-        return {"Value": self.value,
-                "SubPoints": self.subpoints,
-                "BitPoints": self.bitpoints,
+        return {"Balance": self.balance,
+                "RewardPoints": self.rewardPoints,
                 "Purchases": self.purchases}
 
     def Save(self):
@@ -56,36 +53,42 @@ class PokeHealthGame(BotComponent):
         item = message.Message.split()[1]
         if item in self.purchases:
             cost = self.purchases[item]
-            if self.value - cost >= 0:
-                self.value -= cost
-                sender.send_message("{} purchased! Points remaining: {}".format(item, self.value))
+            if self.balance - cost >= 0:
+                self.balance -= cost
+                sender.send_message("{} purchased! Points remaining: {}".format(item, self.balance))
             else:
                 sender.send_message("You can't afford a {}!".format(item))
 
         return
 
     def eventReceived(self, sender, message):
+
         if 'command' in message:
             if message['command'] == 'USERNOTICE' and 'subplan' in message:
-                self.SubmitEvent('NEW SUB', 100)
+                if message['subplan'] == 'Prime':
+                    planPoints = 1000
+                    planText = message['subplan']
+                else:
+                    planPoints = int(message['subplan'])
+                    planText = "TIER " + message['subplan'][0]
 
-        return
+                rewardRatio = self.rewardPoints['SubPoints']
+                moneyAwarded = planPoints * rewardRatio
+                self.SubmitEvent('NEW {} SUB'.format(planText), moneyAwarded)
 
-    def NewSub(self, sender, message, *args):
-        self.SubmitEvent('Polar Bears are the Coolest Thing Ever', 100)
-        return
+            if message['command'] == 'PRIVMSG' \
+                    and 'bits' in message\
+                    and message['bits'] is not None:
+                bitCount = int(message['bits'])
+                rewardRatio = self.rewardPoints['BitPoints']
+                moneyAwarded = bitCount * rewardRatio
+                self.SubmitEvent('Bits get!', moneyAwarded)
 
-    def NewBits(self, sender, message, *args):
-        self.SubmitEvent('Mr. Owl think you are pretty coo', 50)
-        return
-
-    def NewFollow(self, sender, message, *args):
-        self.SubmitEvent('The fox says you are a beautiful person', 10)
         return
 
     def SubmitEvent(self, text, value):
         newEvent = PokeHealthGameEvent(datetime.now(), text, value)
-        self.value += value
+        self.balance += value
         self.events.add_event(newEvent)
         self.Save()
         return

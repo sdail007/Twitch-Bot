@@ -23,7 +23,7 @@
     },
     {
       "type" : "Kappus.KappuAnimationAdaptor",
-      "file" : ""
+      "file" : "Kappus.json"
     }
   ]
 }

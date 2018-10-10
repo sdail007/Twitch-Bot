@@ -1,13 +1,10 @@
 import os
 import sys
 import getopt
-from threading import Event
 from Twitch.AuthenticatedUser import AuthenticatedUser
-from Commands.BotInstance import BotInstance
+from BotInterfaces.BotInstance import BotInstance
 from Twitch.TwitchConnection import TwitchConnection
 from Twitch.TestConnection import TestConnection
-
-from Streamlabs.StreamLabsConnection import StreamLabsConnection
 
 
 def main(argv):

@@ -1,4 +1,8 @@
 ﻿{
+  "ConnectionInfo": {
+    "IP": "127.0.0.1", 
+    "Port": 1111
+  }, 
   "RecentEvents": [
     {
       "EventText": "1st", 
@@ -26,24 +30,184 @@
       "ValueChange": 100
     }, 
     {
-      "EventText": "NEW SUB", 
-      "Time": "2018-10-07 00:37:57.706000", 
-      "ValueChange": 100
+      "EventText": "NEW Prime SUB", 
+      "Time": "2018-10-07 12:02:54.683000", 
+      "ValueChange": 1000000
     }, 
     {
-      "EventText": "NEW SUB", 
-      "Time": "2018-10-07 00:37:57.761000", 
-      "ValueChange": 100
+      "EventText": "NEW TIER 1 SUB", 
+      "Time": "2018-10-07 12:02:54.725000", 
+      "ValueChange": 1000000
     }, 
     {
-      "EventText": "NEW SUB", 
-      "Time": "2018-10-07 00:42:19.467000", 
-      "ValueChange": 100
+      "EventText": "NEW Prime SUB", 
+      "Time": "2018-10-07 12:09:10.384000", 
+      "ValueChange": 1000000
     }, 
     {
-      "EventText": "NEW SUB", 
-      "Time": "2018-10-07 00:42:19.503000", 
-      "ValueChange": 100
+      "EventText": "NEW TIER 1 SUB", 
+      "Time": "2018-10-07 12:09:10.539000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "NEW Prime SUB", 
+      "Time": "2018-10-07 12:10:21.747000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "NEW TIER 1 SUB", 
+      "Time": "2018-10-07 12:10:21.813000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "Bits Get!", 
+      "Time": "2018-10-07 12:11:33.703000", 
+      "ValueChange": 100000
+    }, 
+    {
+      "EventText": "Bits get!", 
+      "Time": "2018-10-07 12:14:01.683000", 
+      "ValueChange": 200
+    }, 
+    {
+      "EventText": "NEW Prime SUB", 
+      "Time": "2018-10-07 12:14:01.746000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "NEW TIER 1 SUB", 
+      "Time": "2018-10-07 12:14:01.786000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "Bits get!", 
+      "Time": "2018-10-07 17:23:12.040000", 
+      "ValueChange": 200
+    }, 
+    {
+      "EventText": "NEW Prime SUB", 
+      "Time": "2018-10-07 17:23:12.170000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "NEW TIER 1 SUB", 
+      "Time": "2018-10-07 17:23:12.253000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "Bits get!", 
+      "Time": "2018-10-08 17:05:25.861000", 
+      "ValueChange": 200
+    }, 
+    {
+      "EventText": "NEW Prime SUB", 
+      "Time": "2018-10-08 17:05:25.907000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "NEW TIER 1 SUB", 
+      "Time": "2018-10-08 17:05:25.949000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "NEW TIER 1 SUB", 
+      "Time": "2018-10-08 21:15:44.328000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "Bits get!", 
+      "Time": "2018-10-08 21:15:45.478000", 
+      "ValueChange": 200
+    }, 
+    {
+      "EventText": "NEW TIER 1 SUB", 
+      "Time": "2018-10-08 21:17:13.569000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "Bits get!", 
+      "Time": "2018-10-08 21:17:14.646000", 
+      "ValueChange": 200
+    }, 
+    {
+      "EventText": "NEW Prime SUB", 
+      "Time": "2018-10-08 21:17:15.695000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "NEW TIER 1 SUB", 
+      "Time": "2018-10-08 21:17:41.714000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "Bits get!", 
+      "Time": "2018-10-08 21:17:42.853000", 
+      "ValueChange": 200
+    }, 
+    {
+      "EventText": "NEW Prime SUB", 
+      "Time": "2018-10-08 21:17:44.048000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "NEW TIER 1 SUB", 
+      "Time": "2018-10-08 21:25:02.632000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "Bits get!", 
+      "Time": "2018-10-08 21:25:03.761000", 
+      "ValueChange": 200
+    }, 
+    {
+      "EventText": "NEW Prime SUB", 
+      "Time": "2018-10-08 21:25:04.940000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "NEW TIER 1 SUB", 
+      "Time": "2018-10-08 21:33:35.808000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "Bits get!", 
+      "Time": "2018-10-08 21:33:36.877000", 
+      "ValueChange": 200
+    }, 
+    {
+      "EventText": "NEW Prime SUB", 
+      "Time": "2018-10-08 21:33:37.977000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "NEW TIER 1 SUB", 
+      "Time": "2018-10-08 21:38:01.710000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "Bits get!", 
+      "Time": "2018-10-08 21:38:02.834000", 
+      "ValueChange": 200
+    }, 
+    {
+      "EventText": "NEW Prime SUB", 
+      "Time": "2018-10-08 21:38:04.027000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "NEW TIER 1 SUB", 
+      "Time": "2018-10-08 21:38:37.983000", 
+      "ValueChange": 1000000
+    }, 
+    {
+      "EventText": "Bits get!", 
+      "Time": "2018-10-08 21:38:39.150000", 
+      "ValueChange": 200
+    }, 
+    {
+      "EventText": "NEW Prime SUB", 
+      "Time": "2018-10-08 21:38:40.309000", 
+      "ValueChange": 1000000
     }
   ]
 }

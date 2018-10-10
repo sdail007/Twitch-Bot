@@ -1,4 +1,4 @@
-from Commands.BotComponent import BotComponent
+from BotInterfaces.BotComponent import BotComponent
 from Commands.Trigger import Trigger
 from Commands.Response import *
 from Commands.Cooldown import Cooldown

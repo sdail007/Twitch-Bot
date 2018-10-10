@@ -5,7 +5,7 @@ import json
 from Commands.Trigger import Trigger
 from Commands.Cooldown import *
 from Commands.Response import Response
-from Commands.BotComponent import BotComponent
+from BotInterfaces.BotComponent import BotComponent
 
 
 class CustomCommandGroup(BotComponent):

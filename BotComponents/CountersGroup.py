@@ -2,7 +2,7 @@ import os
 import codecs
 import json
 
-from Commands.BotComponent import BotComponent
+from BotInterfaces.BotComponent import BotComponent
 from Commands.Counter import Counter
 from Commands.Trigger import Trigger
 from Commands.Response import CodeResponse

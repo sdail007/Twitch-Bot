@@ -1,12 +1,15 @@
-from Commands.ChatInterface import *
+from BotInterfaces.ChatInterface import *
 from Twitch.ChatMessage import *
 from Capabilities.TagsCapability import TagsCapability
 from Capabilities.MembershipCapability import MembershipCapability
 from Capabilities.CommandsCapability import CommandsCapability
 from threading import Event
+import re
 
 
 class TestConnection(ChatInterface):
+    wait = re.compile(r'^\$[Ww]ait\s?(?P<time>[0-9]*)?$')
+
     def __init__(self, file):
         super(TestConnection, self).__init__()
         with open(file) as w:
@@ -17,10 +20,18 @@ class TestConnection(ChatInterface):
         return
 
     def start(self):
-        Event().wait(10)    # pretend to connect lol
 
         for line in self.lines:
-            self.postMessage(line)
+            Event().wait(1)
+            line = line.rstrip('\r\n')
+            match = self.wait.match(line)
+            if match:
+                tWait = 1
+                if 'time' in match.groupdict():
+                    tWait = int(match.groupdict()['time'])
+                Event().wait(tWait)
+            else:
+                self.postMessage(line.rstrip('\r\n'))
         return
 
     def postMessage(self, message):

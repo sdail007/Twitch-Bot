@@ -4,18 +4,15 @@ import random
 
 from Commands.Trigger import *
 from Commands.Response import *
-from Commands.BotComponent import BotComponent
 
 
 class RockPaperScissorsAddon(object):
-    def __init__(self, component, adaptor):
-        if not isinstance(component, BotComponent):
-            raise TypeError('component must be BotComponent')
-
+    def __init__(self, adaptor):
         if not isinstance(adaptor, RockPaperScissorsAdaptor):
             raise TypeError('adaptor must be RockPaperScissorsAdaptor')
 
         self.triggers = []
+        self.startTriggers = []
         self.adaptor = adaptor
         self.Games = {}
 
@@ -71,21 +68,17 @@ class RockPaperScissorsAddon(object):
         rpsPlayResp.addTrigger(rpsP)
         rpsPlayResp.addTrigger(rpsS)
 
-        component.triggers.append(rps1)
-        component.triggers.append(rps2)
-        component.triggers.append(rpsR)
-        component.triggers.append(rpsP)
-        component.triggers.append(rpsS)
-
         self.triggers.append(rps1)
         self.triggers.append(rps2)
-        self.adaptor.register(self)
+        self.triggers.append(rpsR)
+        self.triggers.append(rpsP)
+        self.triggers.append(rpsS)
+
+        self.startTriggers.append(rps1)
+        self.startTriggers.append(rps2)
 
 
 class RockPaperScissorsAdaptor(object):
-    def register(self, addon):
-        return
-
     def started(self):
         return
 

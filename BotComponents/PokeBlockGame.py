@@ -1,20 +1,21 @@
 from threading import Timer
 
-from Commands.BotComponent import BotComponent
 from Commands.Trigger import Trigger
 from Commands.Response import *
 
 
 class PokeBlockGameAddon(object):
-    def __init__(self, component, adaptor):
+    def __init__(self, adaptor):
+        '''
         if not isinstance(component, BotComponent):
             raise TypeError('component must be BotComponent')
+        '''
 
         if not isinstance(adaptor, PokeBlockGameAdaptor):
             raise TypeError('adaptor must be PokeBlockGameAdaptor')
 
         self.triggers = []
-        self.component = component
+        self.startTriggers = []
         self.adaptor = adaptor
         self.game = None
 
@@ -50,21 +51,17 @@ class PokeBlockGameAddon(object):
                                  ", ".join(PokeBlockGame.berries))
         berryResponse.addTrigger(berryTrigger)
 
-        component.triggers.append(start)
-        component.triggers.append(start2)
-        component.triggers.append(spin)
-        component.triggers.append(berryTrigger)
-
         self.triggers.append(start)
         self.triggers.append(start2)
-        self.adaptor.register(self)
+        self.triggers.append(spin)
+        self.triggers.append(berryTrigger)
+
+        self.startTriggers.append(start)
+        self.startTriggers.append(start2)
         return
 
 
 class PokeBlockGameAdaptor(object):
-    def register(self, addon):
-        return
-
     def started(self):
         return
 

@@ -3,7 +3,7 @@ import thread
 
 from Twitch.ChatMessage import ChatMessage
 from AuthenticatedUser import AuthenticatedUser
-from Commands.ChatInterface import ChatInterface
+from BotInterfaces.ChatInterface import ChatInterface
 from Capabilities.TagsCapability import TagsCapability
 from Capabilities.MembershipCapability import MembershipCapability
 from Capabilities.CommandsCapability import CommandsCapability
@@ -118,6 +118,7 @@ class TwitchConnection(ChatInterface):
         def run(*args):
             self.ws.run_forever()
         thread.start_new_thread(run, ())
+
 
     def stop(self):
         '''

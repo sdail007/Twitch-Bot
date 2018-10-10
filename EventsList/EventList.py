@@ -19,8 +19,6 @@ class Event(object):
 
 class EventList(object):
     def __init__(self, cls=Event, eventsFile=None):
-        self.ConnectionHandler = WebsocketServer(1000, host='127.0.0.1')
-
         self.file = eventsFile
 
         if self.file is not None:
@@ -29,9 +27,16 @@ class EventList(object):
 
             self.recentEvents = [cls.fromSettings(recentEvent)
                                  for recentEvent in settings['RecentEvents']]
+            self.connectioninfo = settings['ConnectionInfo']
+            port = self.connectioninfo['Port']
+            ip = self.connectioninfo['IP']
         else:
             self.recentEvents = []
+            port = 1000,
+            ip = '127.0.0.1'
 
+
+        self.ConnectionHandler = WebsocketServer(port, host=ip)
         self.ConnectionHandler.set_fn_new_client(self.NewClient)
 
         serverThread = threading.Thread(target=self.ConnectionHandler.run_forever)
@@ -52,7 +57,7 @@ class EventList(object):
         recentEvents = []
         for recentEvent in self.recentEvents:
             recentEvents.append(recentEvent.dumpAsDict())
-        return {"RecentEvents": recentEvents}
+        return {"ConnectionInfo": self.connectioninfo,"RecentEvents": recentEvents}
 
     def Save(self):
         with codecs.open(self.file, encoding="utf-8-sig", mode="w+") as f:
