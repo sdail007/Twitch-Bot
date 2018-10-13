@@ -3,7 +3,7 @@ var container;
 window.onload = async () => {
     container = document.getElementById("container");
 
-    socket = new ReconnectingWebsocket('ws://127.0.0.1:1000');
+    socket = new ReconnectingWebsocket('ws://127.0.0.1:1111');
     socket.onopen = (event) => {
 
     }
@@ -23,6 +23,6 @@ function AddEvent(event) {
     }
 
     var node = document.createElement("li");
-    node.innerHTML= `${e.EventText} (${e.ValueChange > 0 ? "+" : "-"}${e.ValueChange})`;
+    node.innerHTML= `${e.EventText} (${e.ValueChange})`;
     container.appendChild(node);
 }

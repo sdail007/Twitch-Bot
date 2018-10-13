@@ -57,7 +57,8 @@ class EventList(object):
         recentEvents = []
         for recentEvent in self.recentEvents:
             recentEvents.append(recentEvent.dumpAsDict())
-        return {"ConnectionInfo": self.connectioninfo,"RecentEvents": recentEvents}
+        return {"ConnectionInfo": self.connectioninfo, "RecentEvents":
+            recentEvents}
 
     def Save(self):
         with codecs.open(self.file, encoding="utf-8-sig", mode="w+") as f:

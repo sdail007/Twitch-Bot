@@ -1,10 +1,10 @@
 ﻿{
     "DressUp": {
-        "Outfit": "Espeon", 
+        "Outfit": "Umbreon", 
         "Wardrobe": {
             "Espeon": {
                 "Color": "BlueViolet", 
-                "Points": 1411
+                "Points": 1623
             }, 
             "Flareon": {
                 "Color": "Coral", 
@@ -28,7 +28,7 @@
             }, 
             "Umbreon": {
                 "Color": "GoldenRod", 
-                "Points": 509
+                "Points": 1155
             }, 
             "Vaporeon": {
                 "Color": "Blue", 
@@ -37,7 +37,7 @@
         }
     }, 
     "Happiness": {
-        "CurrentValue": 600, 
+        "CurrentValue": 427, 
         "Responses": {
             "0": [
                 "Bellly Rubs NOW", 
@@ -53,7 +53,7 @@
         }
     }, 
     "Hunger": {
-        "CurrentValue": 2, 
+        "CurrentValue": 0, 
         "Responses": {
             "0": [
                 "I'm sooooo hungrryyyyyy"

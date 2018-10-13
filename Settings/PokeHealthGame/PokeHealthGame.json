@@ -1,14 +1,50 @@
 ﻿{
-    "Balance": 25089200, 
+    "Balance": 0, 
+    "Players": [
+        "whodis__", 
+        "truelove429"
+    ], 
     "Purchases": {
-        "Firestone": 2000, 
-        "Pokedoll": 1000, 
-        "Thunderstone": 2000, 
-        "Waterstone": 2000
+        "antidote": 400, 
+        "awakening": 1000, 
+        "burnheal": 1000, 
+        "calcium": 15000, 
+        "carbos": 15000, 
+        "direhit": 4550, 
+        "escaperope": 2200, 
+        "fullheal": 2400, 
+        "fullrestore": 24000, 
+        "greatball": 3000, 
+        "guardspec": 4900, 
+        "hpup": 15000, 
+        "hyperpotion": 7200, 
+        "iceheal": 1000, 
+        "iron": 15000, 
+        "maxpotion": 10500, 
+        "maxrevive": 30000, 
+        "paralyzheal": 800, 
+        "pokeball": 800, 
+        "pokedoll": 5000, 
+        "potion": 1200, 
+        "protein": 15000, 
+        "revive": 15000, 
+        "stone": 10000, 
+        "superpotion": 3500, 
+        "tm": 5000, 
+        "ultraball": 7200, 
+        "xaccuracy": 6650, 
+        "xattack": 3500, 
+        "xdefend": 3850, 
+        "xspecial": 2450, 
+        "xspeed": 2450
     }, 
+    "Queue": [], 
     "RewardPoints": {
-        "BitPoints": 2, 
+        "BitPoints": 1, 
         "DonationPoints": 100, 
-        "SubPoints": 1000
+        "FollowPoints": 50, 
+        "GiftSubPoints": 25000, 
+        "RaidPoints": 100, 
+        "SubPoints": 10
     }
 }

@@ -56,3 +56,15 @@ class ContainsTrigger(Trigger):
         if self.Text not in message.Message:
             return
         self.Triggered.invoke(sender, message)
+
+
+class UserSpecificTrigger(Trigger):
+    def __init__(self, text, users):
+        super(UserSpecificTrigger, self).__init__(text)
+        self.users = [user.lower() for user in users]
+        return
+
+    def invoke(self, sender, message):
+        if message.Sender not in self.users:
+            return
+        super(UserSpecificTrigger, self).invoke(sender, message)
