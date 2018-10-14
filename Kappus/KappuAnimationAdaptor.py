@@ -26,8 +26,6 @@ class KappuAnimationAdaptor(BotComponent):
             ip = '127.0.0.1'
 
         self.ConnectionHandler = WebsocketServer(port, host=ip)
-        webServer = ThreadingSimpleServer(('', 8000),
-                                          SimpleHTTPServer.SimpleHTTPRequestHandler)
 
         t = ContainsTrigger('KappuNadeshiko')
         r = CodeResponse(10, self.SendMessage, 'KappuNadeshiko')
@@ -42,6 +40,9 @@ class KappuAnimationAdaptor(BotComponent):
 
         server = threading.Thread(target=self.ConnectionHandler.run_forever)
         server.daemon = True
+
+        webServer = ThreadingSimpleServer(('', 8000),
+                                          SimpleHTTPServer.SimpleHTTPRequestHandler)
 
         webServerThread = threading.Thread(target=webServer.serve_forever)
         webServerThread.daemon = True

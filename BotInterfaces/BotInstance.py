@@ -16,7 +16,6 @@ class BotInstance(object):
             setup = json.load(f, encoding="utf-8")
 
             for componentSetting in setup['components']:
-
                 #Get ClassType
                 module_name = str(componentSetting['type'])
                 module = importlib.import_module(module_name)
@@ -82,3 +81,6 @@ class BotInstance(object):
 
     def send_message(self, msg):
         self.connection.send_message(msg)
+
+    def __del__(self):
+        self.shutdown()

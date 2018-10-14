@@ -52,18 +52,18 @@ class Eevee(BotComponent):
             self.dressUp = DressUp(connection, self.happiness,
                                    settings=settings["DressUp"])
         else:
-            self.dressUp = DressUp(connection)
+            self.dressUp = DressUp(connection, self.happiness)
 
         self.playTimer = Timer(Eevee.GetPlayInterval(), self.PlayWithMe)
 
         self.PokeBlockGameAdaptor = EeveePokeBlockGameAdaptor(self)
         self.PokeBlockGame = PokeBlockGameAddon(self.PokeBlockGameAdaptor)
-        self.happiness.triggers.extend(self.PokeBlockGame.startTriggers)
-        self.hunger.triggers.extend(self.PokeBlockGame.startTriggers)
+        self.happiness.game_triggers.extend(self.PokeBlockGame.startTriggers)
+        self.hunger.game_triggers.extend(self.PokeBlockGame.startTriggers)
 
         self.rpsAdaptor = RockPaperScissorsEeveeAdaptor(self)
         self.rpsAddon = RockPaperScissorsAddon(self.rpsAdaptor)
-        self.happiness.triggers.extend(self.rpsAddon.startTriggers)
+        self.happiness.game_triggers.extend(self.rpsAddon.startTriggers)
 
         self.triggers.extend(self.happiness.triggers)
         self.triggers.extend(self.hunger.triggers)

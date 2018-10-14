@@ -4,11 +4,11 @@
         "Wardrobe": {
             "Espeon": {
                 "Color": "BlueViolet", 
-                "Points": 1623
+                "Points": 1632
             }, 
             "Flareon": {
                 "Color": "Coral", 
-                "Points": 5450
+                "Points": 5504
             }, 
             "Glaceon": {
                 "Color": "DodgerBlue", 
@@ -28,16 +28,16 @@
             }, 
             "Umbreon": {
                 "Color": "GoldenRod", 
-                "Points": 1155
+                "Points": 2069
             }, 
             "Vaporeon": {
                 "Color": "Blue", 
-                "Points": 2088
+                "Points": 2327
             }
         }
     }, 
     "Happiness": {
-        "CurrentValue": 427, 
+        "CurrentValue": 594, 
         "Responses": {
             "0": [
                 "Bellly Rubs NOW", 

@@ -27,6 +27,8 @@ class HealthBase(BotComponent):
             self.CurrentValue = None
             self.Responses = {}
 
+        self.game_triggers = []
+
         self.Updated = None
 
         self.healthTimer = Timer(HealthBase.Tick, self.HealthTick)

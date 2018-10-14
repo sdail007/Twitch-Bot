@@ -2,6 +2,8 @@ from BotInterfaces.BotComponent import BotComponent
 from Commands.Trigger import Trigger, UserSpecificTrigger
 from Commands.Response import CodeResponse
 from EventsList.EventList import *
+from Web.ThreadingSimpleServer import *
+import SimpleHTTPServer
 
 from datetime import datetime
 import codecs
@@ -61,6 +63,13 @@ class PokeHealthGame(BotComponent):
 
         self.ConnectionHandler = None
         self.start_server('127.0.0.1', 1112)
+
+        webServer = ThreadingSimpleServer(('127.0.0.1', 8000),
+                                          SimpleHTTPServer.SimpleHTTPRequestHandler)
+
+        webServerThread = threading.Thread(target=webServer.serve_forever)
+        webServerThread.daemon = True
+        webServerThread.start()
         return
 
     def start_server(self, ip, port):
@@ -106,7 +115,10 @@ class PokeHealthGame(BotComponent):
 
     def add_donation_points(self, sender, message, *args):
         param = message.Message.split()[1]
-        points = int(param)
+        points = float(param)
+        points = round(points, 2)
+
+        print points
 
         multiplier = self.rewardPoints['DonationPoints']
         earnedPoints = points * multiplier
