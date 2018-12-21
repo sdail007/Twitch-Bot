@@ -1,0 +1,9 @@
+{
+  "components" :
+  [
+    {
+      "type" : "MovieNightVotingModule.MovieNightPoll",
+      "file" : "MovieNightSettings"
+    }
+  ]
+}

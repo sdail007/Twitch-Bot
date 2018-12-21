@@ -18,12 +18,12 @@
       "file" : "Eevee.json"
     },
     {
-      "type" : "Nuzlomizer.PokeHealthGame",
-      "file" : "PokeHealthGame"
-    },
-    {
       "type" : "Kappus.KappuAnimationAdaptor",
       "file" : "Kappus.json"
+    },
+    {
+      "type" : "MovieNightVotingModule.MovieNightPoll",
+      "file" : "MovieNightSettings.json"
     }
   ]
 }

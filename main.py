@@ -6,12 +6,13 @@ from BotInterfaces.BotInstance import BotInstance
 from Twitch.TwitchConnection import TwitchConnection
 from Twitch.TestConnection import TestConnection
 
+import pygsheets
 
 def main(argv):
     try:
         opts, args = getopt.getopt(argv, "c:f:")
     except getopt.GetoptError:
-        print 'main.py -c <channel> | -f <file>'
+        print('main.py -c <channel> | -f <file>')
         sys.exit(2)
 
     connection = None
@@ -21,7 +22,8 @@ def main(argv):
 
     for opt, arg in opts:
         if opt == '-c':
-            tokenFile = os.path.join(os.path.dirname(__file__), "Token.json")
+            tokenFile = os.path.join(os.path.dirname(__file__),
+                                     "TwitchToken.json")
             botuser = AuthenticatedUser(tokenFile)
             connection = TwitchConnection(botuser, arg)
         elif opt == '-f':
@@ -37,7 +39,7 @@ def main(argv):
     while message != 'q':
         bot.send_message(message)
         message = raw_input('> ')
-        print str(message)
+        print(str(message))
 
     bot.shutdown()
     return

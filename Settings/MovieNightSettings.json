@@ -1,0 +1,7 @@
+{
+  "WindowLength" : 300,
+  "IntervalLength" : 1800,
+  "ConfirmVotes" : true,
+  "SpreadsheetUrl" : "https://docs.google.com/spreadsheets/d/1C9UT5beEnnPhocs7EJNnX50BpNou6rRJTNE9K4QpPBs",
+  "SpreadsheetName" : "FGG Movie Night Votes!"
+}

@@ -1,5 +1,5 @@
  window.onload = async () => {
-    socket = new ReconnectingWebsocket('ws://127.0.0.1:12345');
+    socket = new ReconnectingWebsocket('ws://192.168.1.5:12345');
     socket.onopen = (event) => {
         Move()
     }

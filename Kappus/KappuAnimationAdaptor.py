@@ -3,7 +3,6 @@ from Commands.Trigger import ContainsTrigger
 from Commands.Response import CodeResponse
 from Web.websocket_server import WebsocketServer
 from Web.ThreadingSimpleServer import *
-import SimpleHTTPServer
 
 import threading
 import codecs
@@ -41,14 +40,8 @@ class KappuAnimationAdaptor(BotComponent):
         server = threading.Thread(target=self.ConnectionHandler.run_forever)
         server.daemon = True
 
-        webServer = ThreadingSimpleServer(('', 8000),
-                                          SimpleHTTPServer.SimpleHTTPRequestHandler)
-
-        webServerThread = threading.Thread(target=webServer.serve_forever)
-        webServerThread.daemon = True
-
+        ThreadingSimpleServer.Start()
         server.start()
-        webServerThread.start()
         return
 
     def SendMessage(self, sender, message, *args):
