@@ -2,28 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b641beeb-938b-489b-8034-54985b222c3e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/MovieNightVotingModule/MovieNightPoll.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MovieNightVotingModule/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Settings/MovieNightSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TwitchToken.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KappuNadeshikoFull.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KappuRinFull.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kappus/KappuAnimationAdaptor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kappus/KappuAnimationAdaptor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kappus/KappuListener.js" beforeDir="false" afterPath="$PROJECT_DIR$/Kappus/KappuListener.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kappus/Nadeshiko.html" beforeDir="false" afterPath="$PROJECT_DIR$/Kappus/Nadeshiko.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kappus/Rin.html" beforeDir="false" afterPath="$PROJECT_DIR$/Kappus/Rin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Settings/CommandsGroup/Responses.json" beforeDir="false" afterPath="$PROJECT_DIR$/Settings/CommandsGroup/Responses.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Settings/CommandsGroup/Triggers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Settings/CommandsGroup/Triggers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Settings/CommandsGroup/TriggersToResponses.json" beforeDir="false" afterPath="$PROJECT_DIR$/Settings/CommandsGroup/TriggersToResponses.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Settings/Counters.json" beforeDir="false" afterPath="$PROJECT_DIR$/Settings/Counters.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Settings/Eevee.json" beforeDir="false" afterPath="$PROJECT_DIR$/Settings/Eevee.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Settings/Kappus.json" beforeDir="false" afterPath="$PROJECT_DIR$/Settings/Kappus.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Settings/OtherCounters.json" beforeDir="false" afterPath="$PROJECT_DIR$/Settings/OtherCounters.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Settings/setup.json" beforeDir="false" afterPath="$PROJECT_DIR$/Settings/setup.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/ThreadingSimpleServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Web/ThreadingSimpleServer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Twitch/Capabilities/TagsCapability.py" beforeDir="false" afterPath="$PROJECT_DIR$/Twitch/Capabilities/TagsCapability.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,11 +16,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
+      <file leaf-file-name="setup.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Settings/setup.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="350">
+              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TagsCapability.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/TagsCapability.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="153" column="27" selection-start-line="153" selection-start-column="27" selection-end-line="153" selection-end-column="27" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -46,68 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovieNightPoll.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MovieNightVotingModule/MovieNightPoll.py">
+      <file leaf-file-name="TagsTests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/Tests/TagsTests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
-              <caret line="68" column="14" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setup.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Settings/setup.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="106" column="33" selection-start-line="106" selection-start-column="33" selection-end-line="106" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setup.json.back" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Settings/setup.json.back">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="6" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MovieNightSettings.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Settings/MovieNightSettings.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sounds_StreamlabsSystem.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/OneDrive/Streamlabs Chatbot/Services/Scripts/Sounds_StreamlabsSystem.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.spec" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.spec">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+            <state>
+              <caret column="10" selection-start-column="10" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -143,9 +77,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Commands/Response.py" />
-        <option value="$PROJECT_DIR$/RockPaperScissorsChat" />
-        <option value="$PROJECT_DIR$/Twitch/TwitchConnection.py" />
         <option value="$PROJECT_DIR$/Tests/Kappus" />
         <option value="$PROJECT_DIR$/Twitch/TestConnection.py" />
         <option value="$PROJECT_DIR$/EventsList/EventList.html" />
@@ -183,7 +114,6 @@
         <option value="$PROJECT_DIR$/Web/ThreadingSimpleServer.py" />
         <option value="$PROJECT_DIR$/Kappus/KappuAnimationAdaptor.py" />
         <option value="$USER_HOME$/OneDrive/Stream Stuff/LastPost/index.html" />
-        <option value="$PROJECT_DIR$/BotComponents/CustomCommandGroup.py" />
         <option value="$PROJECT_DIR$/MovieNightVotingModule/__init__.js.py" />
         <option value="$PROJECT_DIR$/Token.json" />
         <option value="$PROJECT_DIR$/sheets.googleapis.com-python.json" />
@@ -192,23 +122,26 @@
         <option value="$PROJECT_DIR$/Settings/MovieNightSettings" />
         <option value="$PROJECT_DIR$/MovieNightVotingModule/MovieNightPoll.py" />
         <option value="$PROJECT_DIR$/Settings/setup.json.back" />
-        <option value="$PROJECT_DIR$/Settings/setup.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$USER_HOME$/OneDrive/Streamlabs Chatbot/Services/Scripts/PositiveQuotes/Quotes.json" />
+        <option value="$USER_HOME$/OneDrive/Streamlabs Chatbot/Services/Scripts/PositiveQuotes_StreamlabsSystem.py" />
+        <option value="$PROJECT_DIR$/BotComponents/CustomCommandGroup.py" />
+        <option value="$PROJECT_DIR$/Settings/setup.json" />
+        <option value="$PROJECT_DIR$/Twitch/Capabilities/TagsCapability.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1554" />
-    <option name="y" value="21" />
-    <option name="width" value="2196" />
-    <option name="height" value="2067" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="286" />
+    <option name="y" value="-14" />
+    <option name="width" value="1257" />
+    <option name="height" value="980" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -219,12 +152,26 @@
             <path>
               <item name="Twitch-Bot" type="b2602c69:ProjectViewProjectNode" />
               <item name="Twitch-Bot" type="462c0819:PsiDirectoryNode" />
-              <item name="Settings" type="462c0819:PsiDirectoryNode" />
+              <item name="Twitch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Twitch-Bot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Twitch-Bot" type="462c0819:PsiDirectoryNode" />
+              <item name="Twitch" type="462c0819:PsiDirectoryNode" />
+              <item name="Capabilities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Twitch-Bot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Twitch-Bot" type="462c0819:PsiDirectoryNode" />
+              <item name="Twitch" type="462c0819:PsiDirectoryNode" />
+              <item name="Capabilities" type="462c0819:PsiDirectoryNode" />
+              <item name="Tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -232,7 +179,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Stephen/PycharmProjects/TwitchBot/Twitch-Bot/Commands/Counter.py" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../superhotgame" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -308,17 +255,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1036" y="14" width="1464" height="1378" extended-state="0" />
+    <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9113924" visible="true" weight="0.17450142" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9113924" visible="true" weight="0.09304175" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32930845" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5010973" side_tool="true" weight="0.29643297" />
       <window_info anchor="right" id="Version Control" order="3" weight="0.32928804" />
-      <window_info anchor="bottom" id="Python Console" order="8" weight="0.28536284" />
+      <window_info anchor="bottom" id="Python Console" order="8" weight="0.28482586" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.4710947" />
       <window_info id="Structure" order="1" sideWeight="0.088607594" side_tool="true" weight="0.18366164" />
-      <window_info anchor="bottom" x="790" y="349" width="291" height="120" id="Terminal" order="9" sideWeight="0.4989027" visible="true" weight="0.44283414" />
+      <window_info active="true" anchor="bottom" x="790" y="349" width="291" height="120" id="Terminal" order="9" sideWeight="0.4989027" visible="true" weight="0.25488663" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4403444" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -327,26 +274,26 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.5921288" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.59150326" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9113924" visible="true" weight="0.1912" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9113924" visible="true" weight="0.109866664" />
       <window_info id="Structure" order="1" sideWeight="0.088607594" side_tool="true" weight="0.18366164" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32930845" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32930845" />
+      <window_info anchor="right" id="Version Control" order="3" weight="0.32928804" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.4710947" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4403444" />
-      <window_info anchor="bottom" x="790" y="349" width="291" height="120" id="Terminal" order="10" sideWeight="0.4989027" visible="true" weight="0.45027125" />
+      <window_info anchor="bottom" x="790" y="349" width="291" height="120" id="Terminal" order="9" sideWeight="0.4989027" visible="true" weight="0.23638344" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5010973" side_tool="true" weight="0.29643297" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.399754" />
-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.28536284" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.5921288" />
+      <window_info anchor="bottom" id="Python Console" order="8" weight="0.28536284" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -376,7 +323,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="22" />
+      <option name="time" value="23" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -429,41 +376,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Settings/setup.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Kappus/KappuAnimationAdaptor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Settings/Kappus.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Kappus/KappuListener.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Settings/Eevee.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="44" lean-forward="true" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Settings/setup.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -570,13 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Settings/Eevee.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Kappus/KappuListener.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -649,13 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BotComponents/CustomCommandGroup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="56" column="61" selection-start-line="56" selection-start-column="61" selection-end-line="56" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Nuzlomizer/PokeHealthGame.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -680,65 +578,111 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MovieNightVotingModule/MovieNightPoll.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="68" column="14" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.spec">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state>
           <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Settings/MovieNightSettings.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state>
           <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/OneDrive/Streamlabs Chatbot/Services/Scripts/Sounds_StreamlabsSystem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
+        <state>
           <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Settings/setup.json.back">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state>
           <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="6" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Settings/setup.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
+        <state>
           <caret line="106" column="33" selection-start-line="106" selection-start-column="33" selection-end-line="106" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Settings/Eevee.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MovieNightVotingModule/MovieNightPoll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="68" column="14" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/OneDrive/Streamlabs Chatbot/Services/Scripts/dance_StreamlabsSystem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1675">
+          <caret line="67" column="72" lean-forward="true" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/OneDrive/Streamlabs Chatbot/Services/Scripts/PositiveQuotes/Quotes.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="22" column="57" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/OneDrive/Streamlabs Chatbot/Services/Scripts/PositiveQuotes_StreamlabsSystem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BotComponents/CustomCommandGroup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Settings/setup.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/Tests/TagsTests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitch/Capabilities/TagsCapability.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="153" column="27" selection-start-line="153" selection-start-column="27" selection-end-line="153" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -12,7 +12,8 @@ class TagsCapability(TwitchCapability):
                            r'#(?P=channel) '
                            r':(?P=user)')
 
-    globaluserstate = re.compile(r'@badges=(?P<badges>[^;]*);'
+    globaluserstate = re.compile(r'@badge-info=(?P<badgeinfo>[^;]*);'
+                                 r'badges=(?P<badges>[^;]*);'
                                  r'color=(?P<color>[^;]*);'
                                  r'display-name=(?P<displayname>[^;]*);'
                                  r'emote-sets=(?P<emotesets>[^;]+);'
@@ -22,7 +23,8 @@ class TagsCapability(TwitchCapability):
                                  r':tmi\.twitch\.tv '
                                  r'(?P<command>GLOBALUSERSTATE)')
 
-    privmsg = re.compile(r'@badges=(?P<badges>[^;]*);'
+    privmsg = re.compile(r'@badge-info=(?P<badgeinfo>[^;]*);'
+                         r'badges=(?P<badges>[^;]*);'
                          r'(bits=(?P<bits>[^;]*);)?'
                          r'color=(?P<color>[^;]*);'
                          r'display-name=(?P<displayname>[^;]*);'
@@ -51,7 +53,8 @@ class TagsCapability(TwitchCapability):
                            r'(?P<command>ROOMSTATE) '
                            r'#(?P<channel>.+)')
 
-    subnotice = re.compile(r'@badges=(?P<badges>[^;]*);'
+    subnotice = re.compile(r'@badge-info=(?P<badgeinfo>[^;]*);'
+                           r'badges=(?P<badges>[^;]*);'
                            r'color=(?P<color>[^;]+);'
                            r'display-name=(?P<displayname>[^;]+);'
                            r'emotes=(?P<emotes>[^;]*);'
@@ -74,7 +77,8 @@ class TagsCapability(TwitchCapability):
                            r'#(?P<channel>.+) '
                            r':(?P<message>.+)')
 
-    giftnotice = re.compile(r'@badges=(?P<badges>[^;]*);'
+    giftnotice = re.compile(r'@badge-info=(?P<badgeinfo>[^;]*);'
+                            r'badges=(?P<badges>[^;]*);'
                             r'color=(?P<color>[^;]*);'
                             r'display-name=(?P<displayname>[^;]+);'
                             r'emotes=(?P<emotes>[^;]*);'
@@ -100,7 +104,8 @@ class TagsCapability(TwitchCapability):
                             r'#(?P<channel>.+)'
                             r'( :(?P<message>.+))?')
 
-    raidnotice = re.compile(r'@badges=(?P<badges>[^;]*);'
+    raidnotice = re.compile(r'@badge-info=(?P<badgeinfo>[^;]*);'
+                            r'badges=(?P<badges>[^;]*);'
                             r'color=(?P<color>[^;]*);'
                             r'display-name=(?P<displayname>[^;]*);'
                             r'emotes=(?P<emotes>[^;]*);'
@@ -123,7 +128,8 @@ class TagsCapability(TwitchCapability):
                             r'#(?P<channel>.+)'
                             r'( :(?P<message>.+))?')
 
-    ritualnotice = re.compile(r'@badges=(?P<badges>[^;]*);'
+    ritualnotice = re.compile(r'@badge-info=(?P<badgeinfo>[^;]*);'
+                              r'badges=(?P<badges>[^;]*);'
                               r'color=(?P<color>[^;]*);'
                               r'display-name=(?P<displayname>[^;]*);'
                               r'emotes=(?P<emotes>[^;]*);'
@@ -144,7 +150,8 @@ class TagsCapability(TwitchCapability):
                               r'#(?P<channel>.+)'
                               r'( :(?P<message>.+))?')
 
-    userstate = re.compile(r'@badges=(?P<badges>[^;]*);'
+    userstate = re.compile(r'@badge-info=(?P<badgeinfo>[^;]*);'
+                           r'badges=(?P<badges>[^;]*);'
                            r'color=(?P<color>[^;]*);'
                            r'display-name=(?P<displayname>[^;]*);'
                            r'emote-sets=(?P<emotes>[^;]*);'

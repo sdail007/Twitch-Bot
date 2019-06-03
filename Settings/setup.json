@@ -14,16 +14,8 @@
       "file" : "OtherCounters.json"
     },
     {
-      "type" : "Eevee.Eevee",
-      "file" : "Eevee.json"
-    },
-    {
       "type" : "Kappus.KappuAnimationAdaptor",
       "file" : "Kappus.json"
-    },
-    {
-      "type" : "MovieNightVotingModule.MovieNightPoll",
-      "file" : "MovieNightSettings.json"
     }
   ]
 }
