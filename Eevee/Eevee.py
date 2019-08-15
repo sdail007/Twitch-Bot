@@ -11,7 +11,7 @@ import json
 
 
 class Eevee(BotComponent):
-    waitMedian = 10 * 60
+    waitMedian = 30 * 60
     waitDelta = 2 * 60
 
     @classmethod
@@ -28,52 +28,58 @@ class Eevee(BotComponent):
                 "Hunger": self.hunger.dump_as_dict(),
                 "DressUp": self.dressUp.dump_as_dict()}
 
-    def __init__(self, connection, settings_file):
-        super(Eevee, self).__init__(connection)
+    def __init__(self, settings_file):
+        super(Eevee, self).__init__()
         self.save_file = settings_file
+
+        self.happiness = None
+        self.hunger = None
+        self.dressUp = None
+        self.playTimer = None
+        self.PokeBlockGameAdaptor = None
+        self.PokeBlockGame = None
+        self.rpsAdaptor = None
+        self.rpsAddon = None
+        return
+
+    def initialize(self, adaptor):
+        self.adaptor = adaptor
 
         with codecs.open(self.save_file, encoding="utf-8-sig", mode="r") \
                 as f:
             settings = json.load(f, encoding="utf-8")
 
         if "Happiness" in settings:
-            self.happiness = Happiness(connection,
-                                       settings=settings["Happiness"])
+            self.happiness = Happiness(self, settings=settings[
+                "Happiness"])
         else:
-            self.happiness = Happiness(connection)
+            self.happiness = Happiness(self)
 
         if "Hunger" in settings:
-            self.hunger = Hunger(connection,
-                                 settings=settings["Hunger"])
+            self.hunger = Hunger(self, settings=settings["Hunger"])
         else:
-            self.hunger = Hunger(connection)
+            self.hunger = Hunger(self)
 
         if "DressUp" in settings:
-            self.dressUp = DressUp(connection, self.happiness,
+            self.dressUp = DressUp(self,
                                    settings=settings["DressUp"])
         else:
-            self.dressUp = DressUp(connection, self.happiness)
+            self.dressUp = DressUp(self)
 
         self.playTimer = Timer(Eevee.GetPlayInterval(), self.PlayWithMe)
 
         self.PokeBlockGameAdaptor = EeveePokeBlockGameAdaptor(self)
         self.PokeBlockGame = PokeBlockGameAddon(self.PokeBlockGameAdaptor)
-        self.happiness.game_triggers.extend(self.PokeBlockGame.startTriggers)
-        self.hunger.game_triggers.extend(self.PokeBlockGame.startTriggers)
-
         self.rpsAdaptor = RockPaperScissorsEeveeAdaptor(self)
         self.rpsAddon = RockPaperScissorsAddon(self.rpsAdaptor)
-        self.happiness.game_triggers.extend(self.rpsAddon.startTriggers)
 
-        self.triggers.extend(self.happiness.triggers)
-        self.triggers.extend(self.hunger.triggers)
-        self.triggers.extend(self.dressUp.triggers)
-        self.triggers.extend(self.PokeBlockGame.triggers)
-        self.triggers.extend(self.rpsAddon.triggers)
         self.playTimer.start()
         return
 
     def PlayWithMe(self):
+        if self.adaptor is None:
+            return
+
         happiness = int(self.happiness.CurrentValue)
         happiness = happiness - (happiness % 200)
         responseDict = self.happiness.Responses
@@ -85,7 +91,7 @@ class Eevee(BotComponent):
 
         response = responses[index]
 
-        self.connection.send_message(response)
+        self.adaptor.send_message(response)
         self.playTimer = Timer(Eevee.GetPlayInterval(), self.PlayWithMe)
         self.playTimer.start()
         return

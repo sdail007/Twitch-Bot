@@ -4,17 +4,20 @@ import json
 
 from BotInterfaces.BotComponent import BotComponent
 from Commands.Counter import Counter
-from Commands.Trigger import Trigger
 from Commands.Response import CodeResponse
 
 
 class CountersGroup(BotComponent):
-    def __init__(self, connection, file):
-        super(CountersGroup, self).__init__(connection)
+    def __init__(self, file):
+        super(CountersGroup, self).__init__()
         self.file = file
         pathparts = os.path.split(file)[-1]
         self.groupname = pathparts[:-5]
 
+        self.counters = None
+
+    def initialize(self, adaptor):
+        self.adaptor = adaptor
         self.counters = {}
 
         with codecs.open(self.file, encoding="utf-8-sig", mode="r") as f:
@@ -27,10 +30,9 @@ class CountersGroup(BotComponent):
         for ctr in self.counters:
             self.createCounterTriggers(self.counters[ctr])
 
-        t = Trigger("!" + self.groupname)
+        t = adaptor.trigger_factory.create_trigger("!" + self.groupname)
         r = CodeResponse(10, self.AddCounter)
         r.addTrigger(t)
-        self.triggers.append(t)
         return
 
     def dump_as_dict(self):
@@ -52,10 +54,9 @@ class CountersGroup(BotComponent):
         return
 
     def createCounterTriggers(self, ctr):
-        t = Trigger("!" + ctr.name)
+        t = self.adaptor.trigger_factory.create_trigger("!" + ctr.name)
         r = CodeResponse(10, self.increment, ctr)
         r.addTrigger(t)
-        self.triggers.append(t)
         return
 
     def AddCounter(self, sender, message, *args):

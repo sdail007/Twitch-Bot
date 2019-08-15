@@ -9,10 +9,10 @@ from BotInterfaces.BotComponent import BotComponent
 
 
 class CustomCommandGroup(BotComponent):
-    def __init__(self, connection, folder):
-        super(CustomCommandGroup, self).__init__(connection)
-
+    def __init__(self, folder):
+        super(CustomCommandGroup, self).__init__()
         self.folder = folder
+
         self.cooldowns = []
         self.responses = []
         provider = CooldownProvider(self.cooldowns)

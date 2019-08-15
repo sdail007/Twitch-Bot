@@ -1,14 +1,12 @@
 import random
 from threading import Timer
 
-from BotInterfaces.BotComponent import BotComponent
 
-
-class HealthBase(BotComponent):
+class HealthBase(object):
     MIN_VALUE = 0
     MAX_VALUE = 600
 
-    Tick = 36
+    Tick = 100 #36
 
     def dump_as_dict(self):
         '''
@@ -17,9 +15,7 @@ class HealthBase(BotComponent):
         return {"CurrentValue": self.CurrentValue,
                 "Responses": self.Responses}
 
-    def __init__(self, connection, settings):
-        super(HealthBase, self).__init__(connection)
-
+    def __init__(self, settings):
         if settings:
             self.CurrentValue = settings["CurrentValue"]
             self.Responses = settings["Responses"]

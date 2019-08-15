@@ -1,28 +1,28 @@
-from Commands.Trigger import Trigger
 from Commands.Response import CodeResponse
 from HealthBase import HealthBase
 
 
 class Hunger(HealthBase):
-    def __init__(self, connection, settings=None):
-        super(Hunger, self).__init__(connection, settings)
-        eeveeTrigger = Trigger('!eat')
-        eeveeResponse = CodeResponse(5, self.printEatCommands)
-        eeveeResponse.addTrigger(eeveeTrigger)
-        self.triggers.append(eeveeTrigger)
+    def __init__(self, eevee, settings=None):
+        super(Hunger, self).__init__(settings)
+        self.eevee = eevee
 
-        eeveeTrigger = Trigger('!treat')
-        eeveeResponse = CodeResponse(5, self.treat)
-        eeveeResponse.addTrigger(eeveeTrigger)
-        self.triggers.append(eeveeTrigger)
+        eatR = CodeResponse(5, self.printEatCommands)
+        treatR = CodeResponse(5, self.treat)
+
+        eatT = eevee.adaptor.trigger_factory.create_trigger("!eat")
+        treatT = eevee.adaptor.trigger_factory.create_trigger("!treat")
+
+        eatR.addTrigger(eatT)
+        treatR.addTrigger(treatT)
 
     def treat(self, sender, msg, *args):
         self.Update(50)
-        self.connection.send_message("om nom nom nom")
+        self.eevee.adaptor.send_message("om nom nom nom")
         return
 
     def printEatCommands(self, sender, msg, *args):
         cmds = ", ".join(map(str, self.game_triggers))
         output = "I can eat things! " + cmds
-        self.connection.send_message(output)
+        self.eevee.adaptor.send_message(output)
         return

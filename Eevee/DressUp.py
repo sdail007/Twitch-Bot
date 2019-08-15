@@ -1,5 +1,4 @@
 from BotInterfaces.BotComponent import BotComponent
-from Commands.Trigger import Trigger
 from Commands.Response import *
 from Commands.Cooldown import Cooldown
 from threading import Timer
@@ -51,25 +50,16 @@ class Wardrobe(object):
 
 
 class DressUp(BotComponent):
-    def __init__(self, connection, happiness, settings):
-        super(DressUp, self).__init__(connection)
+    def __init__(self, eevee, settings=None):
+        super(DressUp, self).__init__()
 
-        self.happiness = happiness
+        self.eevee = eevee
         self.outfitKey = settings["Outfit"]
         self.Wardrobe = Wardrobe(settings["Wardrobe"])
         self.outfit = self.Wardrobe.Outfits[self.outfitKey]
         self.PointsTimer = Timer(10, self.IncrementPoints)
 
         stone = Cooldown(10)
-
-        flareon = Trigger("!fire")
-        vaporeon = Trigger("!water")
-        jolteon = Trigger("!thunder")
-        espeon = Trigger("!sunlight")
-        umbreon = Trigger("!moonlight")
-        glaceon = Trigger("!ice")
-        leafeon = Trigger("!moss")
-        sylveon = Trigger("!amie")
 
         def ChangeForms(sender, msg, *args):
             newForm = args[0][0]
@@ -80,7 +70,7 @@ class DressUp(BotComponent):
             self.PointsTimer = Timer(10, self.IncrementPoints)
             self.PointsTimer.start()
 
-            self.happiness.Update(50)
+            self.eevee.happiness.Update(50)
 
             sender.send_message("/color {}".format(self.outfit.color))
             sleep(0.5)
@@ -91,6 +81,19 @@ class DressUp(BotComponent):
             favorite = self.Wardrobe.GetFavoriteOutfit()
             sender.send_message("My favorite outfit is {}!".format(favorite))
             return
+
+        flareon = self.eevee.adaptor.trigger_factory.create_trigger("!fire")
+        vaporeon = self.eevee.adaptor.trigger_factory.create_trigger("!water")
+        jolteon = self.eevee.adaptor.trigger_factory.create_trigger("!thunder")
+        espeon = self.eevee.adaptor.trigger_factory.create_trigger("!sunlight")
+        umbreon = self.eevee.adaptor.trigger_factory .create_trigger\
+            ("!moonlight")
+        glaceon = self.eevee.adaptor.trigger_factory.create_trigger("!ice")
+        leafeon = self.eevee.adaptor.trigger_factory.create_trigger("!moss")
+        sylveon = self.eevee.adaptor.trigger_factory.create_trigger("!amie")
+        outfitst = self.eevee.adaptor.trigger_factory.create_trigger("!outfits")
+        favoritet = self.eevee.adaptor.trigger_factory\
+            .create_trigger("!favorite")
 
         flareonr = CodeResponse(stone, ChangeForms, "Flareon")
         vaporeonr = CodeResponse(stone, ChangeForms, "Vaporeon")
@@ -110,27 +113,19 @@ class DressUp(BotComponent):
         leafeonr.addTrigger(leafeon)
         sylveonr.addTrigger(sylveon)
 
-        self.triggers.append(flareon)
-        self.triggers.append(vaporeon)
-        self.triggers.append(jolteon)
-        self.triggers.append(espeon)
-        self.triggers.append(umbreon)
-        self.triggers.append(glaceon)
-        self.triggers.append(leafeon)
-        self.triggers.append(sylveon)
+        triggers = [flareon, vaporeon, jolteon, espeon, umbreon, leafeon,
+                    glaceon, sylveon]
 
-        triggerKeys = [t.Text for t in self.triggers]
-        outfitst = Trigger("!outfits")
+        triggerKeys = [t.Text for t in triggers]
+
         message = 'Try one of these to change my outfit! ' + ', '.join(
             triggerKeys)
+
         outfitsr = Response(message)
         outfitsr.addTrigger(outfitst)
-        self.triggers.append(outfitst)
 
-        favoritet = Trigger("!favorite")
         favoriter = CodeResponse(10, PrintFave)
         favoriter.addTrigger(favoritet)
-        self.triggers.append(favoritet)
 
         self.PointsTimer.start()
         return

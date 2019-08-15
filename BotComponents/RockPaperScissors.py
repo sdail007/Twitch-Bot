@@ -11,8 +11,6 @@ class RockPaperScissorsAddon(object):
         if not isinstance(adaptor, RockPaperScissorsAdaptor):
             raise TypeError('adaptor must be RockPaperScissorsAdaptor')
 
-        self.triggers = []
-        self.startTriggers = []
         self.adaptor = adaptor
         self.Games = {}
 
@@ -54,31 +52,30 @@ class RockPaperScissorsAddon(object):
             self.Games[msg.Sender].Play(move)
             return
 
-        rps1 = Trigger('!rockpaperscissors')
-        rps2 = Trigger('!rps')
+        rps1 = adaptor.generate_start_trigger('!rockpaperscissors')
+        rps2 = adaptor.generate_start_trigger('!rps')
+
+        rpsR = adaptor.generate_trigger('!rock')
+        rpsP = adaptor.generate_trigger('!paper')
+        rpsS = adaptor.generate_trigger('!scissors')
+
         rpsResp = CodeResponse(5, startRPS)
+        rpsPlayResp = CodeResponse(5, playRPS)
+
         rpsResp.addTrigger(rps1)
         rpsResp.addTrigger(rps2)
-
-        rpsR = Trigger('!rock')
-        rpsP = Trigger('!paper')
-        rpsS = Trigger('!scissors')
-        rpsPlayResp = CodeResponse(5, playRPS)
         rpsPlayResp.addTrigger(rpsR)
         rpsPlayResp.addTrigger(rpsP)
         rpsPlayResp.addTrigger(rpsS)
 
-        self.triggers.append(rps1)
-        self.triggers.append(rps2)
-        self.triggers.append(rpsR)
-        self.triggers.append(rpsP)
-        self.triggers.append(rpsS)
-
-        self.startTriggers.append(rps1)
-        self.startTriggers.append(rps2)
-
 
 class RockPaperScissorsAdaptor(object):
+    def generate_start_trigger(self, text):
+        return
+
+    def generate_trigger(self, text):
+        return
+
     def started(self):
         return
 

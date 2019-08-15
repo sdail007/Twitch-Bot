@@ -5,8 +5,8 @@ from Twitch.AuthenticatedUser import AuthenticatedUser
 from BotInterfaces.BotInstance import BotInstance
 from Twitch.TwitchConnection import TwitchConnection
 from Twitch.TestConnection import TestConnection
+from ComponentLoader import ComponentLoader
 
-import pygsheets
 
 def main(argv):
     try:
@@ -29,8 +29,13 @@ def main(argv):
         elif opt == '-f':
             connection = TestConnection(arg)
 
+    bot = BotInstance(connection)
+
     settings_dir = os.path.join(os.path.dirname(__file__), "Settings")
-    bot = BotInstance(connection, settings_dir)
+    components = ComponentLoader.get_components(settings_dir)
+
+    for component in components:
+        bot.add_component(component)
 
     bot.start()
 

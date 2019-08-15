@@ -2,10 +2,6 @@
   "components" :
   [
     {
-      "type" : "BotComponents.CustomCommandGroup",
-      "file" : "CommandsGroup"
-    },
-    {
       "type" : "BotComponents.CountersGroup",
       "file" : "Counters.json"
     },
@@ -14,8 +10,8 @@
       "file" : "OtherCounters.json"
     },
     {
-      "type" : "Kappus.KappuAnimationAdaptor",
-      "file" : "Kappus.json"
+      "type" : "Eevee.Eevee",
+      "file" : "Eevee.json"
     }
   ]
 }

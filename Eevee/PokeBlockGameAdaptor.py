@@ -16,13 +16,18 @@ class EeveePokeBlockGameAdaptor(PokeBlockGameAdaptor):
         self.eevee = eevee
         return
 
-    def register(self, addon):
-        self.eevee.happiness.triggers.extend(addon.triggers)
-        self.eevee.hunger.triggers.extend(addon.triggers)
-        return
+    def generate_start_trigger(self, text):
+        trigger = self.eevee.adaptor.trigger_factory.create_trigger(text)
+        self.eevee.happiness.game_triggers.append(trigger)
+        self.eevee.hunger.game_triggers.append(trigger)
+        return trigger
+
+    def generate_trigger(self, text):
+        trigger = self.eevee.adaptor.trigger_factory.create_trigger(text)
+        return trigger
 
     def started(self):
-        self.eevee.connection.send_message("I LOVE POKEBLOCKS")
+        self.eevee.adaptor.send_message("I LOVE POKEBLOCKS")
         return
 
     def gameover(self, result):
@@ -32,7 +37,7 @@ class EeveePokeBlockGameAdaptor(PokeBlockGameAdaptor):
         self.eevee.hunger.Update(reward)
 
         response = EeveePokeBlockGameAdaptor.responses[count]
-        self.eevee.connection.send_message(response)
+        self.eevee.adaptor.send_message(response)
         return
 
     def unexpected_command(self, msg):

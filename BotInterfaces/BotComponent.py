@@ -1,7 +1,10 @@
 class BotComponent(object):
-    def __init__(self, connection):
-        self.connection = connection
-        self.triggers = []
+    def __init__(self):
+        self.adaptor = None
+        return
+
+    def initialize(self, adaptor):
+        self.adaptor = adaptor
         return
 
     def shutdown(self):

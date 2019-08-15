@@ -1,6 +1,5 @@
 from threading import Timer
 
-from Commands.Trigger import Trigger
 from Commands.Response import *
 
 
@@ -14,8 +13,6 @@ class PokeBlockGameAddon(object):
         if not isinstance(adaptor, PokeBlockGameAdaptor):
             raise TypeError('adaptor must be PokeBlockGameAdaptor')
 
-        self.triggers = []
-        self.startTriggers = []
         self.adaptor = adaptor
         self.game = None
 
@@ -36,32 +33,32 @@ class PokeBlockGameAddon(object):
 
         pbcd = Cooldown(60)
 
-        start = Trigger("!BerryBlender")
-        start2 = Trigger("!bb")
         startResponse = CodeResponse(pbcd, game_start)
+        playResponse = CodeResponse(0, play)
+        berryResponse = Response(
+            "My favorite cooking ingredients: " + ", ".join(
+                PokeBlockGame.berries))
+
+        start = adaptor.generate_start_trigger("!BerryBlender")
+        start2 = adaptor.generate_start_trigger("!bb")
+
+        spin = adaptor.generate_trigger("!spin")
+        berryTrigger = adaptor.generate_trigger("!berries")
+
         startResponse.addTrigger(start)
         startResponse.addTrigger(start2)
-
-        spin = Trigger("!spin")
-        playResponse = CodeResponse(0, play)
         playResponse.addTrigger(spin)
-
-        berryTrigger = Trigger("!berries")
-        berryResponse = Response("My favorite cooking ingredients: " +
-                                 ", ".join(PokeBlockGame.berries))
         berryResponse.addTrigger(berryTrigger)
-
-        self.triggers.append(start)
-        self.triggers.append(start2)
-        self.triggers.append(spin)
-        self.triggers.append(berryTrigger)
-
-        self.startTriggers.append(start)
-        self.startTriggers.append(start2)
         return
 
 
 class PokeBlockGameAdaptor(object):
+    def generate_start_trigger(self, text):
+        return
+
+    def generate_trigger(self, text):
+        return
+
     def started(self):
         return
 

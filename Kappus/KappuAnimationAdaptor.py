@@ -10,8 +10,8 @@ import json
 
 
 class KappuAnimationAdaptor(BotComponent):
-    def __init__(self, connection, file):
-        super(KappuAnimationAdaptor, self).__init__(connection)
+    def __init__(self, file):
+        super(KappuAnimationAdaptor, self).__init__()
         self.file = file
         if self.file is not None:
             with codecs.open(self.file, encoding="utf-8-sig", mode="r") as f:
