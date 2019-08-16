@@ -14,7 +14,8 @@ class BotComponentAdaptor:
             trigger.invoke(sender, msg)
 
     def send_message(self, message):
-        self.connection.send_message(message)
+        if self.enabled:
+            self.connection.send_message(message)
         return
 
     def enable(self, connection):
@@ -34,5 +35,12 @@ class BotComponentAdaptor:
 
         self.enabled = False
         self.connection.MessageReceived.remove(self.MessageReceived)
+
+        #this should only happen when deleted
+        self.component.shutdown()
+        return
+
+    def __del__(self):
+        del self.component
         return
 

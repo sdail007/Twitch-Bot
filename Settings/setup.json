@@ -2,6 +2,14 @@
   "components" :
   [
     {
+      "type" : "Kappus.KappuAnimationAdaptor",
+      "file" : "Kappus.json"
+    },
+    {
+      "type" : "BotComponents.CustomCommandGroup",
+      "file" : "CommandsGroup"
+    },
+    {
       "type" : "BotComponents.CountersGroup",
       "file" : "Counters.json"
     },

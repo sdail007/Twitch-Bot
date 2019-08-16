@@ -3,19 +3,10 @@ import re
 
 
 class Trigger(object):
-    @classmethod
-    def fromSettings(cls, settings):
-        ID = settings["ID"]
-        Text = settings["Text"]
-        return cls(Text, ID)
-
     def __init__(self, Text, ID=0):
         self.Triggered = InvocationList()
         self.ID = ID
         self.Text = Text
-
-    def dumpAsDict(self):
-        return {"ID": self.ID, "Text": self.Text}
 
     def invoke(self, sender, message):
         parts = message.Message.split(' ', 1)
@@ -42,7 +33,7 @@ class RegexTrigger(Trigger):
         self.Regex = re.compile(text)
 
     def invoke(self, sender, message):
-        if not re.match(message.Message):
+        if not self.Regex.match(message.Message):
             return
         self.Triggered.invoke(sender, message)
 

@@ -29,7 +29,7 @@ def main(argv):
         elif opt == '-f':
             connection = TestConnection(arg)
 
-    bot = BotInstance(connection)
+    bot = BotInstance()
 
     settings_dir = os.path.join(os.path.dirname(__file__), "Settings")
     components = ComponentLoader.get_components(settings_dir)
@@ -37,7 +37,7 @@ def main(argv):
     for component in components:
         bot.add_component(component)
 
-    bot.start()
+    bot.start(connection)
 
     message = raw_input('> ')
 

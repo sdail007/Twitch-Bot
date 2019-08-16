@@ -1,14 +1,14 @@
-﻿{
+{
     "Death": {
-        "Response": "trueLove has died {} times!", 
+        "Response": "trueLove has died {} times!",
         "Value": 0
-    }, 
+    },
     "POGGERS": {
-        "Response": "{} POGGERS", 
+        "Response": "{} POGGERS",
         "Value": 3
-    }, 
+    },
     "Tuturu": {
-        "Response": "{} Tuturu", 
+        "Response": "{} Tuturu",
         "Value": 6
     }
 }

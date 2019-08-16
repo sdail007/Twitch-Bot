@@ -25,17 +25,19 @@ class KappuAnimationAdaptor(BotComponent):
             ip = '127.0.0.1'
 
         self.ConnectionHandler = WebsocketServer(port, host=ip)
+        return
 
-        t = ContainsTrigger('KappuNadeshiko')
+    def initialize(self, adaptor):
+        t = adaptor.trigger_factory\
+            .create_regex_trigger(r".*KappuNadeshiko.*")
+        t2 = adaptor.trigger_factory\
+            .create_regex_trigger(r".*KappuRin.*")
+
         r = CodeResponse(10, self.SendMessage, 'KappuNadeshiko')
-        r.addTrigger(t)
-
-        t2 = ContainsTrigger('KappuRin')
         r2 = CodeResponse(10, self.SendMessage, 'KappuRin')
-        r2.addTrigger(t2)
 
-        self.triggers.append(t)
-        self.triggers.append(t2)
+        r.addTrigger(t)
+        r2.addTrigger(t2)
 
         server = threading.Thread(target=self.ConnectionHandler.run_forever)
         server.daemon = True

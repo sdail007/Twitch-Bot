@@ -20,8 +20,8 @@ class MovieNightPoll(BotComponent):
 
     RankingsMessage = 'Current Movie Night submission Rankings and Rules: {}'
 
-    def __init__(self, connection, file):
-        super(MovieNightPoll, self).__init__(connection)
+    def __init__(self, file):
+        super(MovieNightPoll, self).__init__()
 
         #read settings in from file
         if file is not None:
@@ -40,21 +40,23 @@ class MovieNightPoll(BotComponent):
         print self.submissionWindowLength, self.intervalLength,\
             self.confirmSubmissions
 
-        vote = Trigger("!vote")
+        return
+
+    def initialize(self, adaptor):
+        self.adaptor = adaptor
+
+        vote = adaptor.trigger_factory.create_trigger("!vote")
         voter = CodeResponse(0, self.RegisterVote)
         voter.addTrigger(vote)
-        self.triggers.append(vote)
 
-        openpoll = Trigger("!openpoll")
+        openpoll = adaptor.trigger_factory.create_trigger("!openpoll")
         openpollr = CodeResponse(0, self.OpenPollResponse)
         openpollr.addTrigger(openpoll)
-        #self.triggers.append(openpoll)
 
-        rankingst = Trigger("!movies")
+        rankingst = adaptor.trigger_factory.create_trigger("!movies")
         rankingsr = Response(MovieNightPoll.RankingsMessage
                              .format(self.spreadsheetUrl), 30)
         rankingsr.addTrigger(rankingst)
-        self.triggers.append(rankingst)
 
         self.poll = PollWriter(self.spreadsheetName)
 
@@ -91,7 +93,7 @@ class MovieNightPoll(BotComponent):
         self.submissionWindowTimer.start()
 
         #notify chat the poll has started
-        self.connection.send_message(MovieNightPoll.OpenPollMessage)
+        self.adaptor.send_message(MovieNightPoll.OpenPollMessage)
 
         self.voters = []
         self.PollOpen = True
@@ -109,7 +111,7 @@ class MovieNightPoll(BotComponent):
 
         self.submissionWindowTimer = None
 
-        self.connection.send_message(MovieNightPoll.ClosePollMessage)
+        self.adaptor.send_message(MovieNightPoll.ClosePollMessage)
         print 'poll closed'
         return
 

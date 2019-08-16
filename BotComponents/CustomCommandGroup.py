@@ -2,7 +2,6 @@ import os
 import codecs
 import json
 
-from Commands.Trigger import Trigger
 from Commands.Cooldown import *
 from Commands.Response import Response
 from BotInterfaces.BotComponent import BotComponent
@@ -13,64 +12,97 @@ class CustomCommandGroup(BotComponent):
         super(CustomCommandGroup, self).__init__()
         self.folder = folder
 
-        self.cooldowns = []
-        self.responses = []
-        provider = CooldownProvider(self.cooldowns)
+        self.triggers = {}
+        self.responses = {}
+        self.cooldowns = {}
+        return
+
+    def initialize(self, adaptor):
+        self.cooldowns.clear()
+        self.triggers.clear()
+        self.responses.clear()
 
         file = os.path.join(self.folder, "Triggers.json")
         with codecs.open(file, encoding="utf-8-sig", mode="r") as f:
             for trigger in json.load(f, encoding="utf-8"):
-                self.triggers.append(Trigger.fromSettings(trigger))
+                trigger_id = trigger["ID"]
+                trigger_text = trigger["Text"]
+                t = adaptor.trigger_factory.create_trigger(trigger_text)
+                self.triggers[trigger_id] = t
 
         file = os.path.join(self.folder, "Cooldowns.json")
 
         with codecs.open(file, encoding="utf-8-sig", mode="r") as f:
             for cd in json.load(f, encoding="utf-8"):
-                self.cooldowns.append(Cooldown.fromSettings(cd))
+                alias = cd["Alias"]
+                seconds = cd["Seconds"]
+                cooldown = Cooldown(seconds, alias)
+                self.cooldowns[alias] = cooldown
 
         file = os.path.join(self.folder, "Responses.json")
 
         with codecs.open(file, encoding="utf-8-sig", mode="r") as f:
             for response in json.load(f, encoding="utf-8"):
-                self.responses.append(Response.fromSettings(response, provider))
+                ID = response["ID"]
+                string = response["text"]
+                cooldown = response["cooldown"]
+
+                if isinstance(cooldown, basestring):
+                    cd = self.cooldowns[cooldown]
+                elif isinstance(cooldown, int):
+                    cd = Cooldown(cooldown)
+                else:
+                    raise TypeError
+
+                r = Response(string, cd)
+                self.responses[ID] = r
 
         file = os.path.join(self.folder, "TriggersToResponses.json")
         with codecs.open(file, encoding="utf-8-sig", mode="r") as f:
             for link in json.load(f, encoding="utf-8"):
-                responseKey = link["Response"]
                 triggerKey = link["Trigger"]
-                r = next((x for x in self.responses if x.ID == int(responseKey)),
-                     None)
-                t = next((x for x in self.triggers if x.ID == int(triggerKey)),
-                     None)
+                responseKey = link["Response"]
+                t = self.triggers[triggerKey]
+                r = self.responses[responseKey]
                 r.addTrigger(t)
+        return
 
     def save(self):
         file = os.path.join(self.folder, "Triggers.json")
         with codecs.open(file, encoding="utf-8-sig", mode="w+") as f:
-            output = [t.dumpAsDict() for t in self.triggers]
+            output = [CustomCommandGroup.SerializeTrigger(tid, trigger)
+                      for tid, trigger in self.triggers.items()]
             json.dump(output, f, encoding="utf-8", indent=4,
                       sort_keys=True)
 
         file = os.path.join(self.folder, "Cooldowns.json")
         with codecs.open(file, encoding="utf-8-sig", mode="w+") as f:
-            output = [t.dumpAsDict() for t in self.cooldowns]
+            output = [CustomCommandGroup.SerializeCooldown(id, cooldown)
+                      for id, cooldown in self.cooldowns.items()]
             json.dump(output, f, encoding="utf-8", indent=4,
                       sort_keys=True)
 
         file = os.path.join(self.folder, "Responses.json")
         with codecs.open(file, encoding="utf-8-sig", mode="w+") as f:
-            output = [t.dumpAsDict() for t in self.responses]
+            output = [CustomCommandGroup.SerializeResponse(id, response)
+                      for id, response in self.responses.items()]
             json.dump(output, f, encoding="utf-8", indent=4,
                       sort_keys=True)
-            '''
-        file = os.path.join(self.folder, "TriggersToResponses.json")
-        with codecs.open(file, encoding="utf-8-sig", mode="w+") as f:
-            json.dump(self.triggers, f, encoding="utf-8", indent=4,
-                      sort_keys=True)
-                      '''
         return
 
     def shutdown(self):
         self.save()
         return
+
+    @classmethod
+    def SerializeTrigger(cls, trigger_id, trigger):
+        return {"ID": trigger_id, "Text": trigger.Text}
+
+    @classmethod
+    def SerializeCooldown(cls, alias, cooldown):
+        return {"Alias": alias, "Seconds": cooldown.cooldown}
+
+    @classmethod
+    def SerializeResponse(cls, response_id, response):
+        return {"ID": response_id, "text": response.string,
+                "cooldown": response.cooldown.getKey()}

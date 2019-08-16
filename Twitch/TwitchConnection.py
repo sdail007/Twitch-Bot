@@ -18,7 +18,7 @@ class TwitchConnection(ChatInterface):
         super(TwitchConnection, self).__init__()
         self.user = user
         self.channel = channel.lower()
-
+        self.disposed = False
         self.capabilities = [TagsCapability(),
                              MembershipCapability(),
                              CommandsCapability()]
@@ -119,14 +119,15 @@ class TwitchConnection(ChatInterface):
             self.ws.run_forever()
         thread.start_new_thread(run, ())
 
-
     def stop(self):
         '''
         Stop Twitch Connection
         :return:
         '''
-        self.ws.send('PART #' + self.channel)
-        self.ws.close()
+        if not self.disposed:
+            self.ws.send('PART #' + self.channel)
+            self.ws.close()
+        self.disposed = True
         return
 
     def send_message(self, message):

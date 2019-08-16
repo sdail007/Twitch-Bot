@@ -2,14 +2,6 @@
   "components" :
   [
     {
-      "type" : "BotComponents.CustomCommandGroup",
-      "file" : "CommandsGroup"
-    },
-    {
-      "type" : "Kappus.KappuAnimationAdaptor",
-      "file" : "Kappus.json"
-    },
-    {
       "type" : "MovieNightVotingModule.MovieNightPoll",
       "file" : "MovieNightSettings"
     }
