@@ -21,11 +21,14 @@ class CountersGroup(BotComponent):
         self.counters = {}
 
         with codecs.open(self.file, encoding="utf-8-sig", mode="r") as f:
-            fileCounters = json.load(f, encoding="utf-8")
-            for counterName in fileCounters:
-                counter = Counter.fromSettings(counterName, fileCounters[
-                    counterName])
-                self.counters[counterName] = counter
+            try:
+                fileCounters = json.load(f, encoding="utf-8")
+                for counterName in fileCounters:
+                    counter = Counter.fromSettings(counterName, fileCounters[
+                        counterName])
+                    self.counters[counterName] = counter
+            except ValueError:
+                print "failed to load {0}".format(f)
 
         for ctr in self.counters:
             self.createCounterTriggers(self.counters[ctr])
@@ -95,3 +98,4 @@ class CountersGroup(BotComponent):
                 self.counters[name].Reset()
 
         return
+

@@ -3,9 +3,9 @@ from TriggerFactory import TriggerFactory
 
 class BotComponentAdaptor:
     def __init__(self, component):
-        self.trigger_factory = TriggerFactory()
+        self.trigger_factory = None
         self.component = component
-        self.connection = None
+        self.connection = None  #todo: remove
         self.enabled = None
         return
 
@@ -22,6 +22,8 @@ class BotComponentAdaptor:
         if self.enabled:
             return
 
+        self.trigger_factory = TriggerFactory()
+
         self.connection = connection
         self.enabled = True
 
@@ -32,6 +34,8 @@ class BotComponentAdaptor:
     def disable(self):
         if not self.enabled:
             return
+
+        print 'enabled {0}'.format(str(type(self.component)))
 
         self.enabled = False
         self.connection.MessageReceived.remove(self.MessageReceived)

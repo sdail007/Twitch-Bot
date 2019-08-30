@@ -100,7 +100,6 @@ class TwitchConnection(ChatInterface):
         :param error:
         :return:
         '''
-        print 'error'
         print error
 
     def on_close(self):
@@ -108,7 +107,6 @@ class TwitchConnection(ChatInterface):
         Handler for closing socket
         :return:
         '''
-        print 'Closed'
 
     def start(self):
         '''

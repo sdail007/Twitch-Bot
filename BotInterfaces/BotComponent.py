@@ -11,5 +11,4 @@ class BotComponent(object):
         return
 
     def __del__(self):
-        self.shutdown()
         return

@@ -1,52 +1,69 @@
 import os
 import sys
 import getopt
+import json
+
 from Twitch.AuthenticatedUser import AuthenticatedUser
 from BotInterfaces.BotInstance import BotInstance
 from Twitch.TwitchConnection import TwitchConnection
 from Twitch.TestConnection import TestConnection
 from ComponentLoader import ComponentLoader
 
+import redis
 
-def main(argv):
-    try:
-        opts, args = getopt.getopt(argv, "c:f:")
-    except getopt.GetoptError:
-        print('main.py -c <channel> | -f <file>')
-        sys.exit(2)
+r = redis.Redis()
 
-    connection = None
+bot = None
+botuser = None
+componentLoader = None
 
-    sltoken = os.path.join(os.path.dirname(__file__), "StreamLabsToken.json")
-    # slconnection = StreamLabsConnection(sltoken)
+def Connect(channel):
+    connection = TwitchConnection(botuser, channel)
+    bot.set_connection(connection)
+    bot.start()
 
-    for opt, arg in opts:
-        if opt == '-c':
-            tokenFile = os.path.join(os.path.dirname(__file__),
-                                     "TwitchToken.json")
-            botuser = AuthenticatedUser(tokenFile)
-            connection = TwitchConnection(botuser, arg)
-        elif opt == '-f':
-            connection = TestConnection(arg)
 
-    bot = BotInstance()
-
-    settings_dir = os.path.join(os.path.dirname(__file__), "Settings")
-    components = ComponentLoader.get_components(settings_dir)
+def load_components():
+    components = componentLoader.activate_all()
 
     for component in components:
         bot.add_component(component)
 
-    bot.start(connection)
 
-    message = raw_input('> ')
+def main(argv):
+    global botuser, bot, componentLoader
 
-    while message != 'q':
-        bot.send_message(message)
-        message = raw_input('> ')
-        print(str(message))
+    #Get token from instance directory
+    tokenFile = os.path.join(os.path.dirname(__file__), "TwitchToken.json")
+    botuser = AuthenticatedUser(tokenFile)
 
-    bot.shutdown()
+    bot = BotInstance()
+
+    settings_dir = os.path.join(os.path.dirname(__file__), "Settings")
+    componentLoader = ComponentLoader(settings_dir)
+
+    load_components()
+
+    PAUSE = True
+
+    while PAUSE:
+        kvp = r.blpop(['messages', 'connection', 'quit'], timeout=1)
+
+        if kvp:
+            print kvp
+
+            if kvp[0] == 'messages':
+                command = json.loads(kvp[1])
+                bot.send_message(command["args"]["content"])
+            elif kvp[0] == 'connection':
+                command = json.loads(kvp[1])
+                if command["command"] == 'connect':
+                    Connect(command["args"]["channel"])
+                elif command["command"] == 'disconnect':
+                    bot.stop()
+            elif kvp[0] == 'quit':
+                PAUSE = False
+    bot.stop()
     return
 
 
